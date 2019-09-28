@@ -1,0 +1,60 @@
+<div class="page-banner">
+  <!-- <img src="/assets/images/cat-01.png" class="banner-image"> -->
+<img src="assets/hyattplaza-images/events/banner.png" class="banner-image original-size"  >  
+
+  <div class="banner-box-shadow">
+    <div class="banner-title">
+    EVENTS
+    </div>
+  </div>
+   
+</div>
+
+
+<div class="stay-up">
+  <div class="item">
+ 
+        <h4 style="text-align:center;" >Stay Updated</h4>
+        <p class="tag">{{update[0].tag}}</p>
+ 
+        <div style="text-align:center;" class="subscription-box">
+            <input type="text" name="email" placeholder="Enter email" class="subscription">
+            <input type="button" name="subscribe" class="subscribe-button" value="Subscribe">
+          </div>
+  </div>
+</div>
+
+<hr />
+
+<h5 style="text-align:center;">WHAT'S BEEN HAPPENING</h5>
+<div class="stories-images container">
+
+<div class="row">
+    <div class="col-5">
+      <img src="{{stories[0].image}}">
+      <div class="stories-image-content" style="background-image: url('assets/icons/Rectangle_242.png');background-size: cover;">
+        <div class="image-caption">
+          <div class="ev-image-caption-large">
+            <p class="ev-tag">{{stories[0].tag}}</p>
+            <p class="ev-title" innerHTML="{{stories[0].title}}"></p>
+          <button class="cus-btn btn-3" type="button"  mdbWavesEffect> EXPLORE more</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-7">
+      <img src="{{stories[1].image}}">
+      <div class="stories-image-content" style="background-image: url('assets/icons/Rectangle_113.png');background-size: cover;">
+        <div class="image-caption">
+          <div class="ev-image-caption-small">
+            <p class="ev-tag">{{stories[1].tag}}</p>
+            <p class="ev-title" innerHTML="{{stories[0].title}}"></p>
+          <button class="cus-btn btn-3" type="button"  mdbWavesEffect> EXPLORE more</button>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

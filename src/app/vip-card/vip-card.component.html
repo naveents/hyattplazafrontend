@@ -1,0 +1,38 @@
+<div class="view">
+    <img
+    class="banner-image original-size fullsize"
+      src="assets/hyattplaza-images/VIP card/Group 797.png"
+       
+      style="width:100%;"
+    />
+    <div class="mask  ">
+      <h1>Vip card offers</h1>
+      <br>
+      <p class="get-exclu">Get exclusive discount at various stores across Hyattplaza for more details, please visit information desk</p>
+    </div>
+  </div>
+  <h4>Offers for vip card members</h4>
+  <!-- OfferCards -->
+ 
+  <!-- class="img-fluid"   -->
+
+  <!-- OfferCards -->
+
+<div class="margin-aling"> 
+  <div class="blog-des "  >
+   
+      <div class="blog-des-img1  " *ngFor="let blog of blogs">
+        <div class="item">
+        <img  class="fx-h"  src="{{blog.img}}"  style="width:100%;" (click)="basicModal.show()" />
+        <div class="text-block">
+            <p  class="p" style="text-align:center;">Lorem Ipsum</p>    
+              </div>
+      </div>
+    
+        <p><b>{{blog.time}}</b> </p>
+        <hr/>
+        <p class="des">{{blog.des}} <a> [Read More]</a></p>
+    
+      </div>
+  </div>
+</div>

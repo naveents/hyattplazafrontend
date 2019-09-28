@@ -1,0 +1,253 @@
+<div class="page-banner">
+  <!-- <img src="/assets/images/cat-01.png" class="banner-image"> -->
+<img src="assets/hyattplaza-images/blog/banner.png" class="banner-image original-size" style="width:100%;" >  
+
+  <div class="banner-box-shadow">
+    <div class="banner-title">
+    ALL OFFERS
+    </div>
+  </div>
+   
+</div>
+<h5 style="text-align:center;">ONGOING OFFERS</h5>
+
+ <!-- LOOP FUNCTION -->
+
+ <!-- <div class="blog-des" >
+    <div class="blog-des-img1" *ngFor="let blog of blogs">
+      <img  class="fx-h"  src="{{blog.img}}"  style="width:100%;" (click)="basicModal.show()" />
+      <p><b>{{blog.time}}</b> </p>
+      <hr/>
+      <p class="des">{{blog.des}} <a> [Read More]</a></p>
+  
+    </div>
+</div> -->
+ 
+
+<!-- END LOOP -->
+  <div class="margin-align"> 
+   <div class="blog-des">
+  <div class="blog-des-img1 ">
+    <div class="item">
+    <img  class="fx-h"  src="{{blogs[0].img}}"  style="width:100%;" (click)="basicModal.show()">
+   
+    <div class="text-block">
+        <p  class="p" style="text-align:center;">Lorem Ipsum</p>    
+          </div>
+  </div>
+    <p><b>{{blogs[0].time}}</b> </p>
+    <hr/>
+    <p class="des">{{blogs[0].des}} <a> [Read More]</a></p>
+
+  </div>
+  <div class="blog-des-img2 ">
+    <div class="item">
+            <img  class="fx-h"  src="{{blogs[1].img}}"  style="width:100%;" (click)="basicModal2.show()">
+      <div class="text-block">
+          <p  class="p" style="text-align:center;">Lorem Ipsum</p>    
+            </div>
+    </div>
+
+      <p><b>{{blogs[1].time}}</b> </p>
+      <hr/>
+      <p class="des">{{blogs[1].des}}  <a>[Read More]</a></p>
+  </div>
+  <div class="blog-des-img3 ">
+    <div class="item">
+      <img   class="fx-h" src="{{blogs[2].img}}"  style="width:100%;" (click)="basicModal3.show()">
+      <div class="text-block">
+          <p  class="p" style="text-align:center;">Lorem Ipsum</p>    
+            </div>
+    </div>
+      <p><b>{{blogs[2].time}}</b> </p>
+      <hr/>
+      <p class="des">{{blogs[2].des}}  <a>[Read More]</a></p>
+  </div>
+  <div class="blog-des-img4 ">
+    <div class="item">
+
+      <img class="fx-h" src="{{blogs[3].img}}" style="width:100%;" (click)="basicModal4.show()">
+      <div class="text-block">
+          <p  class="p" style="text-align:center;">Lorem Ipsum</p>    
+            </div>
+    </div>
+      <p><b>{{blogs[3].time}}</b> </p>
+      <hr/>
+      <p class="des">{{blogs[3].des}}  <a>[Read More]</a></p>
+  </div>
+  <div class="blog-des-img5 ">
+    <div class="item">
+      <img  class="fx-h"  src="{{blogs[4].img}}" style="width:100%;" (click)="basicModal.show()">
+      <div class="text-block">
+          <p  class="p" style="text-align:center;">Lorem Ipsum</p>    
+            </div>
+    </div>
+      <p><b>{{blogs[4].time}}</b> </p>
+      <hr/>
+      <p class="des">{{blogs[4].des}}  <a>[Read More]</a></p>
+  </div>
+  <div class="blog-des-img6 ">
+    <div class="item">
+      <img  class="fx-h"  src="{{blogs[5].img}}" style="width:100%;" (click)="basicModal2.show()" >
+      <div class="text-block">
+          <p  class="p" style="text-align:center;">Lorem Ipsum</p>    
+            </div>
+    </div>
+      <p><b>{{blogs[5].time}}</b> </p>
+      <hr/>
+      <p class="des">{{blogs[5].des}}  <a>[Read More]</a></p>
+
+  </div>
+
+</div>   
+ 
+  
+
+ <!-- TEST -->
+
+
+   
+
+<h5 style="text-align:center;">EXPIRED OFFERS</h5>
+ 
+ 
+
+<div class="blog-des" >
+    <div class="blog-des-img1" *ngFor="let blog of expired_blogs">
+     <div class="item">
+      <img  class="fx-h"  src="{{blog.img}}"  style="width:100%;" (click)="basicModal.show()" />
+      <div class="text-block">
+          <p  class="p" style="text-align:center;">Lorem Ipsum</p>    
+            </div>
+    </div>
+      <p><b>{{blog.time}}</b> </p>
+      <hr/>
+      <p class="des">{{blog.des}} <a> [Read More]</a></p>
+  
+    </div>
+</div>
+
+</div>
+
+
+ <!-- ALERT BOX -->
+<!-- ALERT DIVISION -->
+<div
+  mdbModal  
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myBasicModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <form>
+          <div class="modal-body" >
+            <img  class="alert-img"  src="{{blogs[0].img}}"  style="width:100%;" >
+            <p><b>{{blogs[0].time}}</b> </p>
+    <hr/>
+    <p class="des">{{blogs[0].des}} <a> [Read More]</a></p>
+          </div>
+ <div style="text-align:center">
+    <button class="btn-alert" routerLink="/shopping/shop_storeview">VIEW STORE</button>
+</div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECONDBOX -->
+<div
+  mdbModal  
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myBasicModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <form>
+          <div class="modal-body" >
+            <img  class="alert-img"  src="{{blogs[1].img}}"  style="width:100%;" >
+            <p><b>{{blogs[3].time}}</b> </p>
+    <hr/>
+    <p class="des">{{blogs[0].des}} <a> [Read More]</a></p>
+          </div>
+ <div style="text-align:center">
+    <button class="btn-alert" routerLink="/shopping/storeview_hypermarket">VIEW STORE</button>
+</div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ThirdBOX -->
+<div
+  mdbModal  
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myBasicModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <form>
+          <div class="modal-body" >
+            <img  class="alert-img"  src="{{blogs[2].img}}"  style="width:100%;" >
+            <p><b>{{blogs[3].time}}</b> </p>
+    <hr/>
+    <p class="des">{{blogs[0].des}} <a> [Read More]</a></p>
+          </div>
+ <div style="text-align:center">
+    <button class="btn-alert" routerLink="/shopping/storeview_hypermarket" >VIEW STORE</button>
+</div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Four AlertBox -->
+<div
+mdbModal
+class="modal fade"
+tabindex="-1"
+role="dialog"
+aria-labelledby="myBasicModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-body">
+      <form>
+        <div class="modal-body" >
+          <img  class="alert-img"  src="{{blogs[3].img}}"  style="width:100%;" >
+          <p><b>{{blogs[3].time}}</b> </p>
+  <hr/>
+  <p class="des">{{blogs[0].des}} <a> [Read More]</a></p>
+        </div>
+<div style="text-align:center">
+  <button class="btn-alert" routerLink="/shopping/shop_view">VIEW STORE</button>
+</div>
+        
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- END ALERT DIVISION -->
+  
+ 
+ 

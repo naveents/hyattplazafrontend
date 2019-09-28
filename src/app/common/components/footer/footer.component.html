@@ -1,0 +1,142 @@
+<div class="shop-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-9">
+        <div class="footer-content">
+          <div class="footer-top">
+            <div class="container">
+              <div class="row">
+                <div class="col-5">
+                  <div class="social">
+                    <div class="social-title">FOLLOW US</div>
+                    <div class="social-icons">
+                      <div class="social-icon">
+                      <a target="_blank" href="https://www.facebook.com/HyattPlaza">   <img src="assets/icons/facebook.png"> </a>
+                      </div>
+                      <div class="social-icon">
+                          <a target="_blank" href="https://twitter.com/hyattplaza">    <img src="assets/icons/twitter.png"></a>
+                      </div>
+                      <div class="social-icon">
+                          <a target="_blank" href="https://www.instagram.com/hyattplaza/"><img src="assets/icons/insta.png"></a>
+                      </div>
+                      <div class="social-icon">
+                        <a target="_blank" href="https://www.youtube.com/user/hyattplazaqatar"><img src="assets/icons/youtube.png"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-7">
+                  <div class="subscription">
+                    <div class="subscription-title">
+                      RECEIVE OUR NEWSLETTER
+                    </div>
+                    <form #subForm="ngForm" (ngSubmit)="subscription(subForm.value)">
+                      <div class="subscription-box">
+                        <input type="email" required name="email" ngModel class="subscription">
+                        <input type="submit"  name="subscribe" class="subscribe-button"  value="Subscribe" (click)="basicModal.show()">
+                      </div>
+                  </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-separator"></div>
+          <div class="footer-bottom">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="footer-link-main"><a  routerLink="">VISITOR INFORMATION</a></div>
+                  <div class="footer-link-sub"><a routerLink="shopping">SHOPPING</a></div>
+                  <div class="footer-link-sub"><a routerLink="dining">DINING</a></div>
+                  <div class="footer-link-sub"><a routerLink="guest-services">GUEST SERVICES</a></div>
+                  <div class="footer-link-sub"><a routerLink="entertainment">ENTERTAINMENT</a></div>
+                  <div class="footer-link-sub"><a routerLink="events">EVENTS</a></div>
+                  <div class="footer-link-sub"><a routerLink="all-offers">OFFERS</a></div>
+                </div>
+                <div class="col">
+                  <div class="footer-link-main"><a routerLink="careers">CAREER</a></div>
+                  <div class="footer-link-main"><a routerLink="media">MEDIA</a></div>
+                  <div class="footer-link-main"><a routerLink="about-us">ABOUT US</a></div>
+                  <div class="footer-link-sub"><a routerLink="leasing">LEASING ENQUIRIES</a></div>
+                  <div class="footer-link-sub"><a routerLink="privacy">PRIVACY POLICY</a></div>
+                  <div class="footer-link-sub"><a routerLink="terms">TERMS & CONDITIONS</a></div>
+                </div>
+                <div class="col">
+                  <div class="footer-link-main"><a routerLink="contact-us">CONTACT US</a></div>
+                  <div class="footer-link-text">
+                     <!-- Hyatt Plaza Shopping Mall Management Offices<br>  -->
+          
+                   <div>Hyatt Plaza Shopping Mall</div>
+                   Doha,Qatar <br>
+                  Tel:44999666, Fax: 44699454</div>
+                  <div class="footer-link-text">Email: info@hyattplaza.com</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="footer-apps">
+          <div class="apps-box">
+            <div class="coming-soon-title">
+              COMING SOON
+            </div>
+            <div class="app-icon">
+              <img src="assets/icons/app-ios.png">
+            </div>
+            <div class="app-icon">
+              <img src="assets/icons/app-android.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="footer-copyright">
+  © 2019 Hyatt Mall. All rights reserved.
+</div>
+
+
+
+<!-- ALERT DIVISION -->
+ 
+<div 
+  mdbModal  
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myBasicModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div id="req-form"> 
+      <div class="modal-body">
+        
+          <form  id="myForm" >
+
+
+        <!-- <form > -->
+      <div class="modal-body" >
+
+            <h4 style="text-align:center;">Thank you for subscribing!</h4>
+            <p style="text-align:center;">You will be the first to know about new arrivals, exciting offers and awesome events. Stay tuned</p>
+     
+     
+        </div>    
+        </form>
+
+       
+      </div>
+    </div> 
+    </div>
+  </div>
+</div>
+ 
+
+<!-- END ALERT DIVISION -->

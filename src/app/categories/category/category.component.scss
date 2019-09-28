@@ -1,0 +1,140 @@
+.page-banner {
+    
+    display: block;
+    position: relative;
+    .banner-image {
+        width:100%;
+        height: 380px;
+    }
+    .banner-box-shadow {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+       // background-image: url('/assets/icons/Rectangle_137-page.png');
+       background-image: url('http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/icons/Rectangle_137-page.png');
+       
+       background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .banner-title {
+            text-align: center;
+            color: #ffffff;
+            font-family: Marcellus;
+            font-size: 3vw;
+            font-weight: 400;
+            text-transform: uppercase;
+            justify-content: center;
+            max-width: 50%;
+        }
+    }
+    .banner-search {
+        position: absolute;
+        bottom:0;
+        height:120px;
+        background-image: url('/assets/icons/Rectangle_141.png');
+        background-size: cover;
+        width:100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .search-select {
+            width: 200px;
+            height: 40px;
+            color:#ffffff;
+            border: 1px solid #ffffff;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-right:20px;
+        }
+        .search-text {
+            width: 245px;
+            height: 40px;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-right:20px;
+        }
+        .search-button {
+            height: 40px;
+            border: 1px solid #ffffff;
+            background-color: #ffffff;
+            margin:auto;
+            width:60px;
+            float:right;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+h4 {
+    font-family: Marcellus;
+    margin: 22px;
+}
+
+.store-list{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-gap:6px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 3%;
+
+}
+
+
+
+// TEXTBLOCK
+.item {
+    position: relative;
+  }
+.text-block {
+    position: absolute;
+    bottom: 0;
+    //right: 20px;
+    background-color: black;
+    opacity: .6;
+    color: white;
+    width: 100%;
+    height: 22%;
+    //padding-left: 20px;
+   // padding-right: 20px;
+  // padding-top: 5%;
+  }
+
+ 
+  p {
+      margin-top: 3%;
+  }
+
+  .box {
+    transition: box-shadow .3s;
+}
+ 
+  .box:hover{
+  //  box-shadow: 0 0 11px rgba(33,33,33,.2) !important; 
+    box-shadow: 0 0 11px rgba(216, 198, 198, 0.2) !important; 
+    transform: rotate(11deg);
+    -moz-transform: rotateY(11deg);
+  -o-transform: rotateY(11deg);
+	transform: rotateY(11deg);
+
+  }
+   
+  p {
+      font-family: Marcellus;
+  }
+
+  @media only screen 
+  and (min-width : 1920px) {
+
+  p {
+    padding-top: 2% !important;
+    font-size: 20px;
+}
+  }

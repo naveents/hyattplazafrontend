@@ -1,0 +1,25 @@
+<!--  
+ 
+  <div class="categories-slider4">
+    <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig4">
+      <div ngxSlickItem *ngFor="let offer of categories" class="slide record4">
+        <img [src]="offer.image" class="category-image4">
+ 
+      </div>
+    </ngx-slick>
+  </div>  -->
+
+  <div class="categories-slider">
+    <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
+      <div ngxSlickItem *ngFor="let category of rel_shop" class="slide record">
+        <img [src]="category.image" class="category-image">
+
+        <div class="category-details">
+         
+        </div>
+        <div class="category-title">
+            {{category.title}}
+          </div>
+      </div>
+    </ngx-slick>
+  </div>

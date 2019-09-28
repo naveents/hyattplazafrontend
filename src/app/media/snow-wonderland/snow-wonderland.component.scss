@@ -1,0 +1,40 @@
+.page-banner {
+    display: block;
+    position: relative;
+    .banner-image {
+        width: 100%;
+        height: 333px;
+        object-fit: cover;
+    }
+    .banner-box-shadow {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+       // background-image: url('/assets/icons/Rectangle_137-page.png');
+   background-image: url('http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/icons/Rectangle_137.png');
+        
+       background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .banner-title {
+            text-align: center;
+            color: #ffffff;
+            font-family: Marcellus;
+            font-size: 30px;
+            font-weight: 400;
+            text-transform: uppercase;
+            justify-content: center;
+            max-width: 50%;
+        }
+    }
+}
+
+
+.marg {
+    margin: 3% !important;
+  
+}

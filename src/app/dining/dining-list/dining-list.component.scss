@@ -1,0 +1,83 @@
+.page-banner {
+    display: block;
+    position: relative;
+    .banner-image {
+        width: 100%;
+       // height: 525px !important;
+        // height: auto;
+    }
+    .banner-box-shadow {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+       // background-image: url('/assets/icons/Rectangle_137-page.png');
+       background-image: url('http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/icons/Rectangle_137.png');
+        
+       background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .banner-title {
+            text-align: center;
+            color: #ffffff;
+            font-family: Marcellus;
+            font-size: 38px;
+            font-weight: 400;
+            text-transform: uppercase;
+            justify-content: center;
+            max-width: 50%;
+        }
+    }
+}
+
+
+// TEXT BLOCK
+.item-overlay {
+    position: relative;
+  }
+.text-block {
+    position: absolute;
+    bottom: 0;
+    //right: 20px;
+    background-color: black;
+    opacity: .6;
+    color: white;
+    width: 100%;
+    height: 22%;
+    //padding-left: 20px;
+   // padding-right: 20px;
+  }
+
+ 
+  p {
+      margin-top: 3%;
+      font-family: Marcellus;
+  }
+
+  //END TEXTBLOCK
+  h4 {
+    font-family: Marcellus;
+    margin: 22px;
+}
+
+.store-list{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-gap:6px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 3%;
+
+}
+
+@media only screen 
+and (min-width : 1920px) {
+
+p {
+  padding-top: 2% !important;
+  font-size: 20px  !important;
+}
+}

@@ -1,0 +1,59 @@
+<div class="view">
+  <img
+    class="gif"
+    src="assets/hyattplaza-images/Gift voucher/Rectangle 137.png"
+    class="img-fluid"
+    style="width:100%;"
+  />
+  <div class="mask flex-center rgba-stylish-light">
+    <h1 class="con white-text">Gift voucher</h1>
+  </div>
+</div>
+
+<!-- HIDE -->
+
+<!-- NW -->
+<div class="voucher-del" *ngFor="let gift of gift_card "> 
+<div class="gif-img"  >
+    <img class="gif" src="{{gift.card_img}}">
+    
+  </div>
+  <div class="gif-del">
+    <p>{{gift.des}}</p>
+    <button class="online"><a routerLink="/gift-voucher/buy-online">BUY ONLINE </a> </button> 
+    <h6 class="cs-on">(cash on delivery)</h6>
+
+</div>
+</div>
+<!-- ENDNW -->
+
+<hr />
+
+<h5>List of participating stores</h5>
+ 
+
+
+<!-- </div> -->
+<!-- ENDHIDE -->
+
+  
+   
+<div class="store-list">
+    <!-- ITEM -->
+    <div *ngFor="let item of shops" class="item">
+      <img
+        class="mens_fasion_img"
+        src="{{ item.img }}"
+        style="width:100%;"
+      />
+      <div class="text-block">
+        <p class="hd" style="text-align:center;">{{ item.store_name }}</p>
+      </div>
+    </div>
+  
+  
+  </div>
+ 
+
+ 
+ 

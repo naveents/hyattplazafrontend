@@ -1,0 +1,235 @@
+.page-banner {
+    display: block;
+    position: relative;
+    .banner-image {
+        width: 100%;
+        height: 333px;
+    }
+    .banner-box-shadow {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        //background-image: url('/assets/icons/Rectangle_137-page.png');
+        background-image: url('http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/icons/Rectangle_137.png');
+         
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .banner-title {
+            text-align: center;
+            color: #ffffff;
+            font-family: Marcellus;
+            font-size: 30px;
+            font-weight: 400;
+            text-transform: uppercase;
+            justify-content: center;
+            max-width: 50%;
+        }
+    }
+}
+
+
+.stay-up{
+    display: grid;
+    background: #f2f2f2;
+    margin: 3% 28% 3% 28%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 4fr;
+     
+}
+.item {
+    margin-bottom: 3% !important; 
+}
+
+h4{
+    font-family: Marcellus;
+    font-size: 33px;
+    font-weight: 100;
+    margin: 3% 0 0 0;
+}
+
+ 
+ .subscribe-button{
+     height: 33px;
+     border: 1px solid black;
+ }
+
+ .subscribe-button{
+     border: 1px solid black;
+ }
+ .subscription{
+   border: 1px solid #aaa;
+     width: 222px;
+     height: 33px;
+
+ }
+
+ .subscribe-button{
+     background: black;
+     color: #ffffff;
+     border: 1px solid black;
+     text-transform: uppercase;
+     font-weight: lighter;
+     //font-family: Akkuret-Light;
+     
+ } 
+ 
+ .tag {
+     font-family: Marcellus;
+     text-align: center;
+     margin: 3%;
+ }
+ h5 {
+     font-family: Marcellus;
+ }
+
+
+ .stories-images {
+    margin:1px 0 0 0;
+    width:100%;
+    text-align: center;
+
+    .stories-title {
+        color: #000000;
+        font-family: Marcellus;
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    .col-5, .col-7 {
+        padding:0px;
+        border:1px solid #ffffff;
+    }
+    .row {
+        margin:0px;
+    }
+}
+
+
+
+.stories-image-content {
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height: 100%;
+
+    .image-caption {
+        text-align: left;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        height: 100%;    
+        .ev-tag {
+            color: #ffffff;
+            font-family: Marcellus;
+            font-size: 20px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        .ev-title {
+            color: #ffffff;
+            font-family: Marcellus;
+            font-size: 44px;
+            font-weight: 400;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+        .ev-link-button {
+            width: 260px;
+            height: 50px;
+            border: 2px solid #ffffff;
+            margin-block-end: auto;
+            text-align: center;
+            padding:10px;
+            color: #ffffff;
+            font-family: Akkurat;
+            font-size: 18px;
+            font-weight: 400;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+    }
+
+    .ev-image-caption-small {
+        display: inline-block;
+        padding-left: 88px !important;
+         margin-top: 160px !important;
+    }
+    .ev-image-caption-large{
+        display: inline-block;
+        padding-left: 88px !important;
+        margin-top: 160px !important;
+         
+     }
+
+// .image-caption-small {
+//     display: inline-block;
+//     padding-left: 88px;
+// }
+// .image-caption-large{
+//     display: inline-block;
+//     padding-left: 88px;
+// }
+    
+//     .image-caption-small {
+//         display: inline-block;
+//         padding-left:20%;
+//       padding-top:42%;
+//     }
+//     .image-caption-large {
+//         display: inline-block;
+//         padding-left:10%;
+//   padding-top:30%;
+//     }
+    // .image-caption-elarge {
+    //     display: inline-block;
+    //     padding-left:15%;
+    // }
+}
+
+
+@media only screen 
+and (max-width : 768px) {
+
+   
+  
+  .stories-image-content{
+  .ev-image-caption-small {
+      display: inline-block;
+      padding-left: 55px !important;
+       margin-top: 16px !important;
+  }
+  .ev-image-caption-large{
+      display: inline-block;
+      padding-left: 55px !important;
+      margin-top: 16px !important;
+       
+   }
+   .image-caption {
+
+      .ev-tag{
+         font-size: 11px !important;
+       }
+       .ev-title{
+         font-size: 33px !important;
+       }
+        
+     }
+
+  
+
+  }
+
+ 
+}

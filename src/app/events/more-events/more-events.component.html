@@ -1,0 +1,32 @@
+<div class="page-banner">
+    <!-- <img src="/assets/images/cat-01.png" class="banner-image"> -->
+  <img src="assets/hyattplaza-images/events/banner.png" class="banner-image original-size"  >  
+  
+    <div class="banner-box-shadow">
+      <div class="banner-title">
+      EVENTS
+      </div>
+    </div>
+     
+  </div>
+
+
+
+  <h4>ONGOING EVENTS</h4>
+  <!-- OfferCards -->
+ 
+  <!-- class="img-fluid"   -->
+
+  <!-- OfferCards -->
+
+<div class="margin-aling"> 
+  <div class="blog-des" >
+      <div class="blog-des-img1" *ngFor="let blog of blogs">
+        <img  class="fx-h"  src="{{blog.img}}"  style="width:100%;" (click)="basicModal.show()" />
+        <p><b>{{blog.time}}</b> </p>
+        <hr/>
+        <p class="des">{{blog.des}}</p>
+    
+      </div>
+  </div>
+</div>

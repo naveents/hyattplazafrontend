@@ -1,0 +1,76 @@
+// .categories-slider {
+//     width:88%;
+//     //height: 188px !important;
+ 
+//     display: inline-block;
+//     margin-left: 33px;
+//     margin-right: 33px;
+//     bottom: 10px;
+    
+//     .record {
+//         //box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
+//         background-color: #ffffff;
+//         padding:0px;
+//         margin:3px;
+//         position: relative;
+//         display:block;
+//     }
+//     .category-image {
+//         // width:400px;
+//         // height: 200px;
+//         border:1px solid #aaaaaa;
+//     }
+// }
+
+
+// // NEWOFFERS SLIDER 4
+// .categories-slider4 {
+//     width:88%;
+// //height: 388px !important;
+//  height: 70%;
+//     display: inline-block;
+//     margin: 35px;
+//     //bottom: 10px;
+    
+//     .record4 {
+//         //box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
+//         background-color: #ffffff;
+//         padding:0px;
+//         margin:3px;
+//         position: relative;
+//         display:block;
+//     }
+//     .category-image4 {
+//         width:88%;
+//         height: 222px;
+//         border:  1px solid black;
+//         object-fit: center;
+         
+//     }
+// }
+
+.categories-slider {
+    width:88%;
+    //height: 188px !important;
+ 
+    display: inline-block;
+    margin-left: 35px;
+    //bottom: 10px;
+    
+    .record {
+        //box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
+        background-color: #ffffff;
+        padding:0px;
+        margin:3px;
+        position: relative;
+        display:block;
+    }
+    .category-image {
+        width:100%;
+        height: 100%;
+    }
+}
+
+.categories-slider {
+    display:  block !important;
+}
