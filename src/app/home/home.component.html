@@ -1,24 +1,25 @@
 <div class="home-banners">
-  <ngb-carousel *ngIf="banners" (slide)="onSlide($event)" [showNavigationIndicators]="showNavigationIndicators">
-    <div *ngFor="let banner of banners;let i=index">
-      <ng-template ngbSlide id="home-banner-{{i}}">
-        <img [src]="banner.image" class="banner-image" [alt]="banner.title">
-        <div class="home-banner-shadow"></div>
-        <div class="carousel-caption">
-          <p class="banner-tag">{{banner.tag}}</p>
-          <p class="banner-title">{{banner.title}}</p>
-          <p class="banner-description">{{banner.shortDesc}}</p>
-          <div class="link-button">Learn More</div>
-        </div>
-      </ng-template>
-    </div>
-  </ngb-carousel>
+ <ngb-carousel *ngIf="topBannerLoaded" (slide)="onSlide($event)" [showNavigationIndicators]="showNavigationIndicators">
+
+  <div *ngFor="let banner of topBanners.data;let i=index">
+    <ng-template ngbSlide id="home-banner-{{i}}">
+      <img [src]="banner.image" class="banner-image" [alt]="banner.title_en">
+      <div class="home-banner-shadow"></div>
+      <div class="carousel-caption">
+        <p class="banner-tag">{{banner.title_en}}</p>
+        <p class="banner-title">{{banner.title_en}}</p>
+        <p class="banner-description">{{banner.desc_en}}</p>
+        <div class="link-button">Learn More</div>
+      </div>
+    </ng-template>
+  </div>
+</ngb-carousel>
   <div class="banner-timings">
     <div class="timing-records container">
       <div class="row">
-        <div class="col record" *ngFor="let banner of banners;let i=index">
-          <div class="timing-title">{{banner.scheduleTitle}}</div>
-          <div class="timing-schedule">{{banner.schedule}}</div>
+        <div class="col record" *ngFor="let shop of shopOpenHours;let i=index">
+          <div class="timing-title">{{shop.shopName}}</div>
+          <div class="timing-schedule">{{shop.openHours}}</div>
         </div>
       </div>
     </div>

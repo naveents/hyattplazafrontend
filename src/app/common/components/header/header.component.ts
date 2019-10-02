@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CommonService } from 'src/app/core';
 
 @Component({
   selector: 'app-header',
@@ -8,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  topCategories: Array<string> = [];
+  topCategoriesLoaded: boolean = false;
+
+  constructor(private commonService: CommonService) { }
 
   ngOnInit() {
+    this.commonService.getNavigationCategories()
+    .subscribe(cats => {
+      this.topCategories = cats;
+      this.topCategoriesLoaded = true;
+    });
   }
 
 }
