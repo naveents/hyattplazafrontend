@@ -31,31 +31,10 @@
         </div>
 
         <div class="col-8">
-          <div class="menus">
-            <div class="menu">
-              SHOPPING
-            </div>
-            <div class="menu">
-              DINING
-            </div>
-            <div class="menu">
-              ENTERTAINMENT
-            </div>
-            <div class="menu">
-              EVENTS
-            </div>
-            <div class="menu">
-              OFFERS
-            </div>
-            <div class="menu">
-              GUEST SERVICES
-            </div>
-            <div class="menu">
-              BLOG
-            </div>
-            <div class="menu">
-              ABOUT US
-            </div>
+          <div class="menus" *ngIf="topCategoriesLoaded">
+            <div class="menu" *ngFor="let category of topCategories.data;">
+              {{ category.name}}
+            </div>         
           </div>
         </div>
         <div class="col-2 search-bar">

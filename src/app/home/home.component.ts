@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { HomeService } from '../core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -9,62 +11,6 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class HomeComponent implements OnInit {
 
-  banners = [
-    {
-      tag: 'LOREM IPSUM',
-      title: 'Lorem ipsum dolor sit amet, meis idque petentium mel',
-      shortDesc: `Lorem ipsum dolor sit amet, meis idque petentium mel ex,
-                  usu an wisi delectus appellantur. No qui magna doming oportere, mutat`,
-      scheduleTitle: 'Lorem ipsum dolor',
-      schedule: '12:30 PM - 12:00 PM',
-      image: '/assets/images/home-banner-1.png'
-    },
-    {
-      tag: 'LOREM IPSUM',
-      title: 'Lorem ipsum dolor sit amet, meis idque petentium mel',
-      shortDesc: `Lorem ipsum dolor sit amet, meis idque petentium mel ex,
-                  usu an wisi delectus appellantur. No qui magna doming oportere, mutat`,
-      scheduleTitle: 'Lorem ipsum dolor',
-      schedule: '02:00 PM - 11:00 PM',
-      image: '/assets/images/home-banner-2.png'
-    },
-    {
-      tag: 'LOREM IPSUM',
-      title: 'Lorem ipsum dolor sit amet, meis idque petentium mel',
-      shortDesc: `Lorem ipsum dolor sit amet, meis idque petentium mel ex,
-                  usu an wisi delectus appellantur. No qui magna doming oportere, mutat`,
-      scheduleTitle: 'Lorem ipsum dolor',
-      schedule: '09:00 AM - 12:00 AM',
-      image: '/assets/images/home-banner-3.png'
-    },
-    {
-      tag: 'LOREM IPSUM',
-      title: 'Lorem ipsum dolor sit amet, meis idque petentium mel',
-      shortDesc: `Lorem ipsum dolor sit amet, meis idque petentium mel ex,
-                  usu an wisi delectus appellantur. No qui magna doming oportere, mutat`,
-      scheduleTitle: 'Lorem ipsum dolor',
-      schedule: '12:30 PM - 12:00 PM',
-      image: '/assets/images/home-banner-1.png'
-    },
-    {
-      tag: 'LOREM IPSUM',
-      title: 'Lorem ipsum dolor sit amet, meis idque petentium mel',
-      shortDesc: `Lorem ipsum dolor sit amet, meis idque petentium mel ex,
-                  usu an wisi delectus appellantur. No qui magna doming oportere, mutat`,
-      scheduleTitle: 'Lorem ipsum dolor',
-      schedule: '02:00 PM - 11:00 PM',
-      image: '/assets/images/home-banner-2.png'
-    },
-    {
-      tag: 'LOREM IPSUM',
-      title: 'Lorem ipsum dolor sit amet, meis idque petentium mel',
-      shortDesc: `Lorem ipsum dolor sit amet, meis idque petentium mel ex,
-                  usu an wisi delectus appellantur. No qui magna doming oportere, mutat`,
-      scheduleTitle: 'Lorem ipsum dolor',
-      schedule: '09:00 AM - 12:00 AM',
-      image: '/assets/images/home-banner-3.png'
-    }
-  ];
   currentSlideNum = 0;
   images = [
     {
@@ -145,20 +91,46 @@ export class HomeComponent implements OnInit {
   ];
   showNavigationIndicators = false;
 
+  topBanners: Array<string> = [];
+  topBannerLoaded: boolean = false;
+  shopOpenHours = [
+    {
+        'shopName': 'Geant Hypermarket',
+        'openHours': '12:30 PM - 5:30 PM'
+    },
+    {
+        'shopName': 'Retail Outlets',
+        'openHours': '02:30 PM - 8:30 PM'
+    },
+    {
+      'shopName': 'Food Court',
+      'openHours': '09:00 AM - 8:30 PM'
+    },
+    {
+      'shopName': 'F&B Outlets',
+      'openHours': '02:30 PM - 8:30 PM'
+    },
+    {
+      'shopName': 'Cafes',
+      'openHours': '09:00 AM - 8:30 PM'
+    },    
+  ];
+
 
   slideConfig = {
     dots: false,
     arrows: true,
-    speed: 300,
+    speed: 4000,
     slidesToShow: 3,
     slidesToScroll: 3,
     //  nextArrow: '<i class="fal fa-chevron-right"></i>',
     // prevArrow: '<a class="carousel-control-prev" role="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span><span class="sr-only">Prev</span></a>',
   };
 
-  constructor(config: NgbCarouselConfig) {
+
+  constructor(config: NgbCarouselConfig, private homeService: HomeService) {
     // customize default values of carousels used by this component tree
-    config.interval = 1000;
+    config.interval = 10000;
     config.wrap = true;
     config.keyboard = false;
     config.pauseOnHover = false;
@@ -166,8 +138,13 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.homeService.getHomeBanners()
+      .subscribe(banners => {
+        this.topBanners = banners;
+        this.topBannerLoaded = true;
+      });
   }
+
   onSlide(slideData) {
     this.currentSlideNum = 1;
   }

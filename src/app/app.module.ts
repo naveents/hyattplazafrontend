@@ -7,8 +7,10 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home.component';
 import { CategoriesComponent } from './categories/categories.component';
+
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { CategoriesComponent } from './categories/categories.component';
   imports: [
     BrowserModule,
     NgbModule,
+    CoreModule,
     SharedModule,
     AppRoutingModule,
     SlickModule.forRoot(),
