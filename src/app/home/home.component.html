@@ -6,9 +6,9 @@
       <img [src]="banner.image" class="banner-image" [alt]="banner.title_en">
       <div class="home-banner-shadow"></div>
       <div class="carousel-caption">
-        <p class="banner-tag">{{banner.title_en}}</p>
-        <p class="banner-title">{{banner.title_en}}</p>
-        <p class="banner-description">{{banner.desc_en}}</p>
+        <p class="banner-tag">{{banner.title}}</p>
+        <p class="banner-title">{{banner.title}}</p>
+        <p class="banner-description">{{banner.desc}}</p>
         <div class="link-button">Learn More</div>
       </div>
     </ng-template>
@@ -25,24 +25,25 @@
     </div>
   </div>
 </div>
+
 <div class="home-images container">
   <div class="row">
     <div class="col-7">
-      <img src="{{images[0].image}}">
+      <img src="{{ homeCategories.data[0].image }}">
       <div class="home-image-content" style="background-image: url('/assets/icons/home-gradient-1.png');background-size: cover;">
         <div class="image-caption image-caption-large">
-          <p class="tag">{{images[0].tag}}</p>
-          <p class="title" innerHTML="{{images[0].title}}"></p>
+          <p class="tag">{{ homeCategories.data[0].name }}</p>
+          <p class="title" innerHTML="{{ homeCategories.data[0].name }}"></p>
           <div class="link-button">EXPLORE MORE</div>
         </div>
       </div>
     </div>
     <div class="col-5">
-      <img src="{{images[1].image}}">
+      <img src="{{ homeCategories.data[1].image }}">
       <div class="home-image-content" style="background-image: url('/assets/icons/home-gradient-2.png');background-size: cover;">
         <div class="image-caption image-caption-small">
-          <p class="tag">{{images[1].tag}}</p>
-          <p class="title" innerHTML="{{images[0].title}}"></p>
+          <p class="tag">{{ homeCategories.data[1].name }}</p>
+          <p class="title" innerHTML="{{ homeCategories.data[1].name }}"></p>
           <div class="link-button">EXPLORE MORE</div>
         </div>
       </div>
@@ -50,21 +51,21 @@
   </div>
   <div class="row">
     <div class="col-5">
-      <img src="{{images[2].image}}">
+      <img src="{{ homeCategories.data[2].image }}">
       <div class="home-image-content" style="background-image: url('/assets/icons/home-gradient-2.png');background-size: cover;">
         <div class="image-caption image-caption-small">
-          <p class="tag">{{images[2].tag}}</p>
-          <p class="title" innerHTML="{{images[0].title}}"></p>
+          <p class="tag">{{ homeCategories.data[2].name }}</p>
+          <p class="title" innerHTML="{{ homeCategories.data[2].name }}"></p>
           <div class="link-button">EXPLORE MORE</div>
         </div>
       </div>
     </div>
     <div class="col-7">
-      <img src="{{images[3].image}}">
+      <img src="{{ homeCategories.data[3].image }}">
       <div class="home-image-content" style="background-image: url('/assets/icons/home-gradient-1.png');background-size: cover;">
         <div class="image-caption image-caption-large">
-          <p class="tag">{{images[3].tag}}</p>
-          <p class="title" innerHTML="{{images[0].title}}"></p>
+          <p class="tag">{{ homeCategories.data[3].name }}</p>
+          <p class="title" innerHTML="{{ homeCategories.data[3].name }}"></p>
           <div class="link-button">EXPLORE MORE</div>
         </div>
       </div>
@@ -72,17 +73,18 @@
   </div>
   <div class="row">
     <div class="col-12">
-      <img src="{{images[4].image}}">
+      <img src="{{ homeCategories.data[4].image }}">
       <div class="home-image-content" style="background-image: url('/assets/icons/home-gradient-3.png');background-size: cover;">
         <div class="image-caption image-caption-elarge">
-          <p class="tag">{{images[4].tag}}</p>
-          <p class="title" innerHTML="{{images[0].title}}"></p>
+          <p class="tag">{{ homeCategories.data[4].name }}</p>
+          <p class="title" innerHTML="{{ homeCategories.data[4].name }}"></p>
           <div class="link-button">EXPLORE MORE</div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 <div class="news-events container">
   <div class="news-title">
     NEWS & EVENTS

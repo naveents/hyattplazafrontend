@@ -276,3 +276,10 @@ and (max-width : 768px) {
 .slick-next:before {
   content: none;
 }
+a {
+  cursor: pointer;
+}
+
+.menu > a {
+  color: #ffffff;
+}

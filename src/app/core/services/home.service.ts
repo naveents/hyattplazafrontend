@@ -11,8 +11,13 @@ export class HomeService {
     private apiService: ApiService
   ) {}
 
-  getHomeBanners(): Observable<any> {
-      return this.apiService.post('/HomeBanner/loadHomeBanner')
+  getHomeBanners(lang: string = 'en'): Observable<any> {
+      return this.apiService.get('/HomeBanner/loadHomeBanner?pageKey=Home&language=' + lang)
         .pipe(map(data => data));    
+  }
+
+  getHomeCategories(lang: string = 'en'): Observable<any> {
+    return this.apiService.get('/Category/loadAllCategoris?language=' + lang)
+    .pipe(map(data => data)); 
   }
 }

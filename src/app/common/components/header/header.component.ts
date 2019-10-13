@@ -8,17 +8,37 @@ import { CommonService } from 'src/app/core';
 })
 export class HeaderComponent implements OnInit {
 
-  topCategories: Array<string> = [];
-  topCategoriesLoaded: boolean = false;
+  topMenu: Array<string> = [];
+  topMenuLoaded: boolean = false;
+  
+  language: string ='en';
+  currentLanguages = [
+    'en', 'ar'
+  ];
+  activeLanguage = '';
 
   constructor(private commonService: CommonService) { }
 
   ngOnInit() {
-    this.commonService.getNavigationCategories()
-    .subscribe(cats => {
-      this.topCategories = cats;
-      this.topCategoriesLoaded = true;
+
+    if (localStorage.getItem('lang') === null) {
+      localStorage.setItem('lang', 'en');
+    }
+
+    this.commonService.getMainMenu(localStorage.getItem('lang'))
+    .subscribe(menu => {
+      this.topMenu = menu;
+      this.topMenuLoaded = true;
     });
+
+
+    this.activeLanguage = localStorage.getItem('lang');
+
+  }
+
+  changeLang( lang: string){
+    localStorage.setItem('lang', lang);
+    window.location = window.location;
   }
 
 }
