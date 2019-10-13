@@ -20,6 +20,7 @@
       <span class="link-icon"><img src="../../../../assets/icons/lnr-phone-handset.png"></span>
       <span class="link-icon"><img src="../../../../assets/icons/header-separator.png"></span>
       <span class="link-icon"><img src="../../../../assets/icons/hindi.png"></span>
+      <a (click)="changeLang('en')" > English </a> | <a (click)="changeLang('ar')" > Arabic </a>
     </div>
   </div>
   <div class="shop-menu">
@@ -31,11 +32,13 @@
         </div>
 
         <div class="col-8">
-          <div class="menus" *ngIf="topCategoriesLoaded">
-            <div class="menu" *ngFor="let category of topCategories.data;">
-              {{ category.name}}
+          <div class="menus" *ngIf="topMenuLoaded">
+            <div class="menu" *ngFor="let menu of topMenu.data;">
+              <a href=""> {{ menu.serviceName }} </a>
             </div>         
           </div>
+
+          
         </div>
         <div class="col-2 search-bar">
           <div class="menu menu-search">

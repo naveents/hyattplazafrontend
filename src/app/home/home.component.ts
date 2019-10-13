@@ -93,6 +93,10 @@ export class HomeComponent implements OnInit {
 
   topBanners: Array<string> = [];
   topBannerLoaded: boolean = false;
+
+  homeCategories: Array<string> =[];
+  homeCategoryLoaded: boolean = false
+
   shopOpenHours = [
     {
         'shopName': 'Geant Hypermarket',
@@ -138,11 +142,17 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.homeService.getHomeBanners()
+    this.homeService.getHomeBanners(localStorage.getItem('lang'))
       .subscribe(banners => {
         this.topBanners = banners;
         this.topBannerLoaded = true;
       });
+
+      this.homeService.getHomeCategories(localStorage.getItem('lang'))
+      .subscribe(categories => {
+        this.homeCategories = categories;
+        this.homeCategoryLoaded = true;
+      }); 
   }
 
   onSlide(slideData) {

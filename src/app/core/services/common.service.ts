@@ -11,8 +11,8 @@ export class CommonService {
     private apiService: ApiService
   ) {}
 
-  getNavigationCategories(): Observable<any> {
-      return this.apiService.post('/Category/loadAllCategoris')
+  getMainMenu(lang: string = 'en'): Observable<any> {
+      return this.apiService.get('/Category/getMainMenu?language=' + lang)
         .pipe(map(data => data));    
   }
 }
