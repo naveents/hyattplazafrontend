@@ -15,4 +15,15 @@ export class CommonService {
       return this.apiService.get('/Category/getMainMenu?language=' + lang)
         .pipe(map(data => data));    
   }
+
+  getFooterSocialIcons(): Observable<any> {
+    return this.apiService.get('/Category/socialMedia')
+      .pipe(map(data => data));
+  }
+
+  getFooterLinks(lang: string ='en'): Observable<any> {
+    return this.apiService.get('/HomeBanner/loadFooter?language=' + lang)
+    .pipe(map(data => data));    
+  }
+
 }

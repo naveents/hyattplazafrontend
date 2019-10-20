@@ -9,19 +9,10 @@
                 <div class="col-5">
                   <div class="social">
                     <div class="social-title">FOLLOW US</div>
-                    <div class="social-icons">
-                      <div class="social-icon">
-                        <img src="/assets/icons/facebook.png">
-                      </div>
-                      <div class="social-icon">
-                        <img src="/assets/icons/twitter.png">
-                      </div>
-                      <div class="social-icon">
-                        <img src="/assets/icons/twitter.png">
-                      </div>
-                      <div class="social-icon">
-                        <img src="/assets/icons/youtube.png">
-                      </div>
+                    <div class="social-icons" *ngIf="socialIcons">
+                      <div class="social-icon" *ngFor="let icon of socialIcons.data;" >
+                          <a href="{{ icon.link }}" target="_blank"> <img src="{{ icon.icon }}"> </a>
+                      </div>  
                     </div>
                   </div>
                 </div>
@@ -43,29 +34,22 @@
           <div class="footer-bottom">
             <div class="container">
               <div class="row">
-                <div class="col">
-                  <div class="footer-link-main"><a href="#">VISITOR INFORMATION</a></div>
-                  <div class="footer-link-sub"><a href="#">SHOPPING</a></div>
-                  <div class="footer-link-sub"><a href="#">DINING</a></div>
-                  <div class="footer-link-sub"><a href="#">GUEST SERVICES</a></div>
-                  <div class="footer-link-sub"><a href="#">ENTERTAINMENT</a></div>
-                  <div class="footer-link-sub"><a href="#">EVENTS</a></div>
-                  <div class="footer-link-sub"><a href="#">OFFERS</a></div>
+                <div class="col" *ngIf="footerColOne">
+                  <div class="footer-link-{{ (i === 0) ? 'main': 'sub' }}" *ngFor="let link of footerColOne; let i = index;">
+                    <a href="{{ link.itemLink }}" *ngIf="i === 0">{{ link.itemName }}</a>
+                    <a href="{{ link.itemLink }}" *ngIf="i !== 0"> {{ link.itemName }}</a>
+                  </div>  
                 </div>
-                <div class="col">
-                  <div class="footer-link-main"><a href="#">CAREER</a></div>
-                  <div class="footer-link-main"><a href="#">MEDIA</a></div>
-                  <div class="footer-link-main"><a href="#">ABOUT US</a></div>
-                  <div class="footer-link-sub"><a href="#">LEASING ENQUIRIES</a></div>
-                  <div class="footer-link-sub"><a href="#">PRIVACY POLICY</a></div>
-                  <div class="footer-link-sub"><a href="#">TERMS & CONDITIONS</a></div>
+                <div class="col" *ngIf="footerColTwo">
+                    <div class="footer-link-{{ ( j < 3 ) ? 'main': 'sub' }}" *ngFor="let link of footerColTwo; let j = index;">
+                        <a href="{{ link.itemLink }}" *ngIf="j < 3">{{ link.itemName }}</a>
+                        <a href="{{ link.itemLink }}" *ngIf="j > 2">{{ link.itemName }}</a>
+                    </div>
                 </div>
-                <div class="col">
-                  <div class="footer-link-main"><a href="#">CONTACT US</a></div>
-                  <div class="footer-link-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                    ultricies ante eu metus pharetra
-                    accumsan. Vivamus sit amet eros a dolor scelerisque accumsan.</div>
-                  <div class="footer-link-text">Phone : 1234567879</div>
+                <div class="col" *ngIf="footerContact">
+                  
+                  <div class="footer-link-main"><a href="#">{{footerContact[0].title}}</a></div>
+                    <div class="footer-link-text">{{footerContact[0].description2}}</div>
                 </div>
               </div>
             </div>
