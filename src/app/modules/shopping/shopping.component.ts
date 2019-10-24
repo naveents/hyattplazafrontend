@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
+import { CommonService, GenericPageService } from '../../core';
 
 @Component({
   selector: 'app-shopping',
@@ -7,40 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingComponent implements OnInit {
 
-  categories = [
-    {
-      title: 'Lrem Ipsum',
-      image: '/assets/images/cat-03.png'
-    },
-    {
-      title: 'Lrem Ipsum',
-      image: '/assets/images/cat-04.png'
-    },
-    {
-      title: 'Lrem Ipsum',
-      image: '/assets/images/cat-05.png'
-    },
-    {
-      title: 'Lrem Ipsum',
-      image: '/assets/images/cat-06.png'
-    },
-    {
-      title: 'Lrem Ipsum',
-      image: '/assets/images/cat-03.png'
-    },
-    {
-      title: 'Lrem Ipsum',
-      image: '/assets/images/cat-04.png'
-    },
-    {
-      title: 'Lrem Ipsum',
-      image: '/assets/images/cat-05.png'
-    },
-    {
-      title: 'Lrem Ipsum',
-      image: '/assets/images/cat-06.png'
-    }
-  ];
+  pageBanner: Array<string> = [];
+  dropDownCategories: Array<string> = [];
+  pageBannerLoaded: boolean = false;
+  selectedCategory = '';
+  categoryBlock: boolean = true;
+  brandBlock: boolean = false;
+  featuredItems: Array<string> = [];
+
   stories = [
     {
       tag: 'LOREM IPSUM',
@@ -81,9 +56,50 @@ export class ShoppingComponent implements OnInit {
     slidesToShow: 4,
     slidesToScroll: 4
   };
-  constructor() { }
+
+
+  constructor(
+     private commonService: CommonService,
+     private genericService: GenericPageService
+     ) { }
 
   ngOnInit() {
+ this.commonService.getPageBanner('shopping')
+    .subscribe(banner => {
+      this.pageBanner = banner.data;
+      this.pageBannerLoaded = true;
+    });
+
+    this.loadCategories();
+    this.loadFeaturedItems();
+  }
+
+  loadCategories()
+  {
+    this.genericService.getInnerPageCategories(1, localStorage.getItem('lang'))
+      .subscribe( category =>{
+          this.dropDownCategories = category;
+    });
+  }
+
+  loadFeaturedItems()
+  {
+    this.genericService.getFeaturedShopOrDine('shopping', localStorage.getItem('lange'))
+      .subscribe( featuredItem => {
+          this.featuredItems = featuredItem.data;
+      });
+  }
+
+  toggleBlock( section: string)
+  {
+      if(section == 'category-block'){
+        this.brandBlock = false;
+        this.categoryBlock = true;
+      }
+      else {        
+        this.categoryBlock = false;
+        this.brandBlock = true;
+      }
   }
 
 }

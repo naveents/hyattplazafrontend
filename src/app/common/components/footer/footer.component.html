@@ -46,10 +46,9 @@
                         <a href="{{ link.itemLink }}" *ngIf="j > 2">{{ link.itemName }}</a>
                     </div>
                 </div>
-                <div class="col" *ngIf="footerContact">
-                  
-                  <div class="footer-link-main"><a href="#">{{footerContact[0].title}}</a></div>
-                    <div class="footer-link-text">{{footerContact[0].description2}}</div>
+                <div class="col" *ngIf="footerContact">                  
+                  <div class="footer-link-main"><a href="#">{{ (footerContact[0]) ? footerContact[0].title : ''}}</a></div>
+                    <div class="footer-link-text">{{ (footerContact[0]) ? footerContact[0].description2: ''}}</div>
                 </div>
               </div>
             </div>

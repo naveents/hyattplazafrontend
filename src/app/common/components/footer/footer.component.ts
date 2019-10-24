@@ -33,8 +33,8 @@ export class FooterComponent implements OnInit {
 
   formatLinks()
   {
-    this.footerColOne = this.footerLinks.filter( col => col.itemColumn == 1);
-    this.footerColTwo = this.footerLinks.filter( col => col.itemColumn == 2);
+    this.footerColOne = this.footerLinks.filter( col => col['itemColumn'] == 1);
+    this.footerColTwo = this.footerLinks.filter( col => col['itemColumn'] == 2);
   }
 
 }

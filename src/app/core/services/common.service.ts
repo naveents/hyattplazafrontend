@@ -26,4 +26,9 @@ export class CommonService {
     .pipe(map(data => data));    
   }
 
+  getPageBanner(pageKey: string): Observable<any> {
+    return this.apiService.get('/PageBanner/loadPageBanner?pageKey=' + pageKey)
+      .pipe(map(data => data));    
+  }
+
 }
