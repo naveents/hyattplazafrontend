@@ -16,39 +16,6 @@ export class ShoppingComponent implements OnInit {
   brandBlock: boolean = false;
   featuredItems: Array<string> = [];
 
-  stories = [
-    {
-      tag: 'LOREM IPSUM',
-      title: 'LOREM IPSUM<br>DOLOR SIT',
-      image: '/assets/images/cat-07.png'
-    },
-    {
-      tag: 'LOREM IPSUM',
-      title: 'LOREM IPSUM<br>DOLOR SIT',
-      image: '/assets/images/cat-08.png'
-    },
-    {
-      tag: 'LOREM IPSUM',
-      title: 'LOREM IPSUM<br>DOLOR SIT',
-      image: '/assets/images/cat-09.png'
-    },
-    {
-      tag: 'LOREM IPSUM',
-      title: 'LOREM IPSUM<br>DOLOR SIT',
-      image: '/assets/images/cat-10.png'
-    },
-    {
-      tag: 'LOREM IPSUM',
-      title: 'LOREM IPSUM<br>DOLOR SIT',
-      image: '/assets/images/cat-12.png'
-    },
-    {
-      tag: 'LOREM IPSUM',
-      title: 'LOREM IPSUM<br>DOLOR SIT',
-      image: '/assets/images/cat-11.png'
-    }
-  ];
-
   slideConfig = {
     dots: false,
     arrows: true,
@@ -84,7 +51,7 @@ export class ShoppingComponent implements OnInit {
 
   loadFeaturedItems()
   {
-    this.genericService.getFeaturedShopOrDine('shopping', localStorage.getItem('lange'))
+    this.genericService.getFeaturedShopOrDine('shopping', localStorage.getItem('lang'))
       .subscribe( featuredItem => {
           this.featuredItems = featuredItem.data;
       });

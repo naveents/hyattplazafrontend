@@ -11,13 +11,15 @@ import { CoreModule } from './core/core.module';
 import { InnerModule } from './modules/inner.module';
 import { HomeComponent } from './home/home.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { ShopDetailsComponent } from './shop-details/shop-details.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    ShopDetailsComponent
   ],
   imports: [
     BrowserModule,

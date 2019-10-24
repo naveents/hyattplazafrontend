@@ -8,10 +8,10 @@ import { CommonService } from 'src/app/core';
 })
 export class HeaderComponent implements OnInit {
 
+  collapsed = true;
   topMenu: Array<string> = [];
   topMenuLoaded: boolean = false;
-  
-  language: string ='en';
+  language: string = 'en';
   currentLanguages = [
     'en', 'ar'
   ];

@@ -12,6 +12,7 @@ export class DiningComponent implements OnInit {
   dropDownCategories: Array<string> = [];
   pageBannerLoaded: boolean = false;
   selectedCategory = '';
+  featuredItems: Array<string> =[];
 
   slideConfig = {
     dots: false,
@@ -35,7 +36,16 @@ export class DiningComponent implements OnInit {
     });
 
     this.loadCategories();
+    this.loadFeaturedItems();
   }
+
+  loadFeaturedItems()
+  {
+    this.genericService.getFeaturedShopOrDine('dining', localStorage.getItem('lang'))
+      .subscribe( featuredItem => {
+          this.featuredItems = featuredItem.data;
+      });
+  }  
 
   loadCategories()
   {
