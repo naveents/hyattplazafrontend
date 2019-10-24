@@ -21,4 +21,8 @@ export class GenericPageService {
         .pipe(map(data => data));    
   }
 
+  getFeaturedEntertainments(lang: string = 'en'): Observable<any> {
+     return this.apiService.get('/Brands/loadAllEntertainmentWithDetails?language=' + lang)
+        .pipe(map(data => data));    
+  }
 }

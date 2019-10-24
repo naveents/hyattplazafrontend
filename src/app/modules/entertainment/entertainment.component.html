@@ -1,0 +1,83 @@
+<div class="page-banner">
+        <img src="{{ (pageBannerLoaded ? pageBanner[0].cover : '') }}" class="banner-image">
+        <div class="banner-box-shadow">
+          <div class="banner-title">
+            {{ (pageBannerLoaded ? pageBanner[0].title : '') }}
+          </div>
+        </div>
+</div>
+
+<div class="stories-images container" *ngIf="featuredItems" >
+        <div class="row">
+          <div class="col-6" *ngIf="featuredItems[0]">
+            <img src="{{featuredItems[0].image[0]}}">
+            <div class="stories-image-content" style="background-image: url('/assets/icons/Rectangle_245.png');background-size: cover;">
+              <div class="image-caption">
+                <div class="image-caption-elarge">                  
+                  <p class="title" innerHTML="{{featuredItems[0].title}}"></p>
+                  <div class="link-button">EXPLORE MORE</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6"  *ngIf="featuredItems[1]">
+            <img src="{{featuredItems[1].image[0]}}">
+            <div class="stories-image-content" style="background-image: url('/assets/icons/Rectangle_244.png');background-size: cover;">
+              <div class="image-caption">
+                <div class="image-caption-elarge">                
+                  <p class="title" innerHTML="{{featuredItems[1].title}}"></p>
+                  <div class="link-button">EXPLORE MORE</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-7"  *ngIf="featuredItems[2]">
+            <img src="{{featuredItems[2].image[0]}}">
+            <div class="stories-image-content" style="background-image: url('/assets/icons/Rectangle_242.png');background-size: cover;">
+              <div class="image-caption">
+                <div class="image-caption-large">                  
+                  <p class="title" innerHTML="{{featuredItems[2].title}}"></p>
+                  <div class="link-button">EXPLORE MORE</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-5"  *ngIf="featuredItems[3]">
+            <img src="{{featuredItems[3].image[0]}}">
+            <div class="stories-image-content" style="background-image: url('/assets/icons/Rectangle_113.png');background-size: cover;">
+              <div class="image-caption">
+                <div class="image-caption-small">                 
+                  <p class="title" innerHTML="{{featuredItems[3].title}}"></p>
+                  <div class="link-button">EXPLORE MORE</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5" *ngIf="featuredItems[4]">
+            <img src="{{featuredItems[4].image[0]}}">
+            <div class="stories-image-content" style="background-image: url('/assets/icons/Rectangle_140.png');background-size: cover;">
+              <div class="image-caption">
+                <div class="image-caption-small">                  
+                  <p class="title" innerHTML="{{featuredItems[4].title}}"></p>
+                  <div class="link-button">EXPLORE MORE</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-7" *ngIf="featuredItems[5]">
+            <img src="{{featuredItems[5].image[0]}}">
+            <div class="stories-image-content" style="background-image: url('/assets/icons/Rectangle_243.png');background-size: cover;">
+              <div class="image-caption">
+                <div class="image-caption-large">                  
+                  <p class="title" innerHTML="{{featuredItems[5].title}}"></p>
+                  <div class="link-button">EXPLORE MORE</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
