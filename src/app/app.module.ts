@@ -8,6 +8,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
+import { InnerModule } from './modules/inner.module';
 import { HomeComponent } from './home/home.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { ShopDetailsComponent } from './shop-details/shop-details.component';
@@ -23,8 +24,9 @@ import { ShopDetailsComponent } from './shop-details/shop-details.component';
   imports: [
     BrowserModule,
     NgbModule,
-    CoreModule,
+    CoreModule,    
     SharedModule,
+    InnerModule,
     AppRoutingModule,
     SlickModule.forRoot(),
     AngularFontAwesomeModule
