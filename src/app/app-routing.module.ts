@@ -1,3 +1,5 @@
+import { CategoriesComponent } from './categories/categories.component';
+import { ShopDetailsComponent } from './shop-details/shop-details.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
@@ -12,6 +14,10 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'categories',
+    component: CategoriesComponent
+  },
+  {
     path: 'shopping',
     component: ShoppingComponent
   },
@@ -22,6 +28,10 @@ const routes: Routes = [
   {
     path: 'entertainment',
     component: EntertainmentComponent
+  },
+  {
+    path: 'shop-details',
+    component: ShopDetailsComponent
   },
 ];
 
