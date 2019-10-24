@@ -1,3 +1,4 @@
+import { ShopDetailsComponent } from './shop-details/shop-details.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'categories',
     component: CategoriesComponent
+  },
+  {
+    path: 'shop-details',
+    component: ShopDetailsComponent
   }
 ];
 
