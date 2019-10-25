@@ -1,0 +1,39 @@
+<div class="page-banner" *ngIf="shopDetail[0]">
+    <img *ngIf="pageBanner[0]" src="{{ (pageBannerLoaded ? pageBanner[0].cover : '') }}" class="banner-image" />
+    <div class="banner-box-shadow">
+      <div class="banner-title">
+        {{ shopDetail[0].name }}
+      </div>
+    </div>
+  </div>
+  <div class="shop-deatil-wrapper" *ngIf="shopDetail[0]">
+    <div class="container padLR15">
+      <div class="row">
+        <div class="col-6">
+          <div class="content-box">
+            <h4>{{ shopDetail[0].name }}</h4>
+            <ul class="attractives">
+              <li><i class="fa fa-map-marker"></i> {{ shopDetail[0].location }}</li>
+              <li><i class="fa fa-phone" aria-hidden="true"></i> 1234567890</li>
+              <li>
+                <i class="fa fa-clock-o" aria-hidden="true"></i> 10:00 AM - 10:00
+                PM
+              </li>
+            </ul>
+            <p>
+                    {{ shopDetail[0].description }}
+            </p>
+            <div class="shop-image-slider">
+              <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
+                <div ngxSlickItem *ngFor="let image of shopDetail[0].images" class="slide record">
+                  <img src="{{ image }}" class="category-image">
+                </div>
+              </ngx-slick>
+            </div>
+          </div>
+        </div>
+        <div class="col-6"></div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
