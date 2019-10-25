@@ -288,3 +288,40 @@ a {
   padding-left: 15px!important;
   padding-right: 15px!important;
 }
+
+
+
+
+// KRISHNANATH CUSTOM STYLES 
+
+.button-common-style{
+  border: 1px solid #fff !important;
+  color: #fff !important;
+  text-transform: uppercase !important; 
+  height: 44px !important;
+  width: 188px !important;
+  font-size: 14px !important;
+
+}
+
+@media screen and (max-width: 700px)
+{
+  .button-common-style{
+width: 212px !important;
+height: 38px !important;
+border: 1px solid #fff !important;
+-webkit-margin-after: auto !important;
+margin-block-end: auto !important;
+text-align: center !important;
+padding: 10px !important;
+font-family: Akkurat !important;
+font-size: 12px !important;
+font-weight: 300 !important;
+text-transform: uppercase !important;
+cursor: pointer !important;
+color: #fff !important;
+  }
+
+}
+
+// END KRISHNANATH 

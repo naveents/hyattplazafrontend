@@ -19,15 +19,17 @@
     <div class="link-icon-section">
       <span class="link-icon"><img src="../../../../assets/icons/lnr-phone-handset.png"></span>
       <span class="link-icon"><img src="../../../../assets/icons/header-separator.png"></span>
-      <span class="link-icon"><img src="../../../../assets/icons/hindi.png"></span>
-      <a (click)="changeLang('en')" > English </a> | <a (click)="changeLang('ar')" > Arabic </a>
+      <!-- <span class="link-icon"><img src="../../../../assets/icons/hindi.png"></span> -->
+      <a class="link-text" (click)="changeLang('en')" > English </a> | <a (click)="changeLang('ar')" > <img src="../../../../assets/icons/hindi.png"> </a>
     </div>
   </div>
   <div class="shop-menu">
     <div class="container">
       <div class="row">
         <div class="col-2">
-          <div class="menu-logo">LOGO
+          <div class="menu-logo">
+              <img class="logo-img" src="assets/hyattplaza-images/new-images/logo-plaza.png" style="width: 100%;">
+
           </div>
         </div>
 
@@ -41,7 +43,7 @@
         <div class="menu-primary">
            <ul>
              <li class="item" *ngFor="let menu of topMenu.data;">
-               <a href="{{menu.menuKey}}">{{ menu.menuName }}</a>
+               <a class="nav-hed" href="{{menu.menuKey}}">{{ menu.menuName }}</a>
                  <div class="sub" *ngIf="menu.children.categories || menu.children.offers">
                     <div class="colums" *ngIf="menu.children.categories">
                       <ul>
@@ -122,4 +124,24 @@
 
 
   </div>
+
+</div>
+
+<div class="mobile-menu">
+
+  <div class="mobile-menu-header">
+   
+    <div class="mb-cntr">
+     
+      <div class="mb-logo">
+            <img class="mb-logo-img" src="assets/hyattplaza-images/new-images/logo-plaza.png" style="width: 100%;">
+          </div>
+       
+      
+      </div>
+      
+     
+  </div>
+   
+
 </div>

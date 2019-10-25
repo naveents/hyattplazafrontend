@@ -130,6 +130,15 @@ export class HomeComponent implements OnInit {
     //  nextArrow: '<i class="fal fa-chevron-right"></i>',
     // prevArrow: '<a class="carousel-control-prev" role="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span><span class="sr-only">Prev</span></a>',
   };
+  slideConfigmobile = {
+    dots: false,
+    arrows: true,
+    speed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    //  nextArrow: '<i class="fal fa-chevron-right"></i>',
+    // prevArrow: '<a class="carousel-control-prev" role="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span><span class="sr-only">Prev</span></a>',
+  };
 
 
   constructor(config: NgbCarouselConfig, private homeService: HomeService) {

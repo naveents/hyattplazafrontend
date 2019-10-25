@@ -66,7 +66,7 @@
             position: absolute;
             bottom:0;
             width:100%;
-            height: 80px;
+            height: 60px;
             .row {
                 margin-right:0;
                 margin-left:0;
@@ -295,3 +295,59 @@
         }
     }
 }
+
+
+
+// KRISHNANATH CUSTOM STYLES
+.timing-records
+{
+    height: 60px !important;
+}
+.timing-title{
+    font-size: 14px !important;
+}
+.timing-schedule{
+    font-size: 12px !important;
+}
+
+@media screen and (max-width: 700px){
+.event-title, .event-date{
+    font-size: 12px !important;
+}
+    .mob-hide{
+        display: none;
+    }
+
+    .home-banners{
+        height: 700px !important;
+        .banner-image{
+            height: 700px;
+        object-fit: cover !important;}
+        .carousel-caption{
+            top:55% !important;
+        }
+    }
+    .timing-records{
+        display: none;
+    }
+.home-mb-section{
+    display: grid !important;
+    grid-template-rows: repeat(1);
+}
+.home-mb-section-sub{
+    max-width: 100% !important;
+    height: 333px !important;
+}
+.image-caption-small, .image-caption-elarge, .image-caption-large{
+    padding-left: 10% !important;
+    padding-top: 27% !important;
+}
+
+}
+
+@media screen and (min-width: 700px){
+    .desk-hide{
+        display: none !important;
+    }
+}
+// END KRISHNANTH CUSTUM STYLES

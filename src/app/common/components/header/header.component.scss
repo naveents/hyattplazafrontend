@@ -62,8 +62,8 @@
             padding-left:0px;
         }
         .menu-logo {
-            width: 149px;
-            height: 146px;
+            // width: 149px;
+            // height: 146px;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
             border: 3px solid #ffffff;
             background-color: #6f1d46;
@@ -181,3 +181,100 @@ ul
        .menu-primary .item .sub .colums img{display: block;width: 100%}
        .menu-primary img{max-width: 100%}
        .menu-primary figcaption{padding:0 40px}
+
+
+
+
+
+
+    //    KRISHNANATH STYLING
+
+    .menu-logo {
+        width: 107px;
+        height: 107px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        border: 3px solid #ffffff;
+//background-image: url('../../../../assets/hyattplaza-images/new-images/logo-plaza.png');
+       // background-color: #6f1d46;
+        position: absolute;
+        left: 100px;
+        top: -35px;
+        margin:auto;
+        color:#ffffff;
+        padding-top:55px;
+        z-index: 11;
+    }
+     .logo-img {
+       margin-top: -55px !important;
+     }
+
+    //  .menu-search{
+    //    margin-top: -44px !important;
+    // //    position: absolute;
+
+    //  }
+    .shop-header .shop-menu .col-2 , .shop-header  .shop-menu .col-8 {
+   
+        height: 47px !important;
+    }
+
+
+     .nav-hed{
+        color: #fff !important;
+        text-decoration: none;
+        text-transform: uppercase !important;
+        font-size: 13px;
+    }
+    .link-text {
+        font-size: 12px !important;
+    }
+
+    @media screen and (max-width: 700px)
+{
+    .shop-header{
+        display: none;
+    }
+    .mobile-menu-header{
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        background-color: #6f1c46;
+        width: 100%;
+        height: 55px;
+        
+        
+    }
+     
+
+// MOBILE NAV
+ 
+// END MOBILE NAV
+
+ 
+    .mb-cntr{
+        display: grid;
+        justify-content: center;
+       
+    }
+    .mb-logo{
+        margin-top: 25px;
+        z-index: 99;
+        height: 77px;
+        width: 77px;
+        border: 1px solid #fff;
+    }
+    .mb-logo-img{
+        z-index: 99;
+         
+    }
+     
+
+
+}     
+@media screen and (min-width: 700px)
+{
+
+    .mobile-menu{
+        display: none;
+    }
+ 
+}     
+    // END KRISHNA"S STYLING

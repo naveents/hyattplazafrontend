@@ -9,7 +9,7 @@
         <p class="banner-tag">{{banner.title}}</p>
         <p class="banner-title">{{banner.title}}</p>
         <p class="banner-description">{{banner.desc}}</p>
-        <div class="link-button">Learn More</div>
+        <div class="link-button button-common-style">Learn More</div>
       </div>
     </ng-template>
   </div>
@@ -27,58 +27,58 @@
 </div>
 
 <div class="home-images container">
-  <div class="row">
-    <div class="col-7">
+  <div class="row home-mb-section ">
+    <div class="col-7 home-mb-section-sub">
       <img src="{{ homeCategories.data[0].image }}">
       <div class="home-image-content" style="background-image: url('/assets/icons/home-gradient-1.png');background-size: cover;">
         <div class="image-caption image-caption-large">
           <p class="tag">{{ homeCategories.data[0].name }}</p>
           <p class="title" innerHTML="{{ homeCategories.data[0].name }}"></p>
-          <div class="link-button">EXPLORE MORE</div>
+          <div class="link-button button-common-style">EXPLORE MORE</div>
         </div>
       </div>
     </div>
-    <div class="col-5">
+    <div class="col-5 home-mb-section-sub">
       <img src="{{ homeCategories.data[1].image }}">
       <div class="home-image-content" style="background-image: url('/assets/icons/home-gradient-2.png');background-size: cover;">
         <div class="image-caption image-caption-small">
           <p class="tag">{{ homeCategories.data[1].name }}</p>
           <p class="title" innerHTML="{{ homeCategories.data[1].name }}"></p>
-          <div class="link-button">EXPLORE MORE</div>
+          <div class="link-button button-common-style">EXPLORE MORE</div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-5">
+  <div class="row home-mb-section">
+    <div class="col-5 home-mb-section-sub ">
       <img src="{{ homeCategories.data[2].image }}">
       <div class="home-image-content" style="background-image: url('/assets/icons/home-gradient-2.png');background-size: cover;">
         <div class="image-caption image-caption-small">
           <p class="tag">{{ homeCategories.data[2].name }}</p>
           <p class="title" innerHTML="{{ homeCategories.data[2].name }}"></p>
-          <div class="link-button">EXPLORE MORE</div>
+          <div class="link-button button-common-style">EXPLORE MORE</div>
         </div>
       </div>
     </div>
-    <div class="col-7">
+    <div class="col-7 home-mb-section-sub">
       <img src="{{ homeCategories.data[3].image }}">
       <div class="home-image-content" style="background-image: url('/assets/icons/home-gradient-1.png');background-size: cover;">
         <div class="image-caption image-caption-large">
           <p class="tag">{{ homeCategories.data[3].name }}</p>
           <p class="title" innerHTML="{{ homeCategories.data[3].name }}"></p>
-          <div class="link-button">EXPLORE MORE</div>
+          <div class="link-button button-common-style">EXPLORE MORE</div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-12">
+  <div class="row home-mb-section ">
+    <div class="col-12 home-mb-section-sub ">
       <img src="{{ homeCategories.data[4].image }}">
       <div class="home-image-content" style="background-image: url('/assets/icons/home-gradient-3.png');background-size: cover;">
         <div class="image-caption image-caption-elarge">
           <p class="tag">{{ homeCategories.data[4].name }}</p>
           <p class="title" innerHTML="{{ homeCategories.data[4].name }}"></p>
-          <div class="link-button">EXPLORE MORE</div>
+          <div class="link-button button-common-style" >EXPLORE MORE</div>
         </div>
       </div>
     </div>
@@ -102,7 +102,7 @@
       </div>
     </div>
   </div> -->
-  <div class="events-gallery">
+  <div class="events-gallery mob-hide">
     <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
       <div ngxSlickItem *ngFor="let event of events" class="slide record">
         <img [src]="event.image" class="event-image" alt="{{event.title}}" width="100%">
@@ -117,9 +117,30 @@
       </div>
     </ngx-slick>
   </div>
+
+  <!-- MOBILE EVENTS GALLERY KRISHNANATH STYLE -->
+
+  <div class="events-gallery desk-hide">
+      <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfigmobile" (afterChange)="afterChange($event)">
+        <div ngxSlickItem *ngFor="let event of events" class="slide record">
+          <img [src]="event.image" class="event-image" alt="{{event.title}}" width="100%">
+          <div class="event-details">
+            <div class="event-title">
+              {{event.title}}
+            </div>
+            <div class="event-date">
+              {{event.date}}
+            </div>
+          </div>
+        </div>
+      </ngx-slick>
+    </div>
+
+  <!-- END MOBLIE SLIDER KRISHNA -->
+
 </div>
 
-<div class="gallery">
+<div class="gallery mob-hide">
   <div class="gallery-title">
     GALLERY
   </div>
@@ -129,3 +150,6 @@
     </div>
   </div>
 </div>
+
+
+ 

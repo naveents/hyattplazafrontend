@@ -136,3 +136,15 @@
 .container {
     width:80% !important;
 }
+
+
+@media screen and (max-width: 700px)
+{
+    .mb-footer-grid {
+        display: grid;
+        grid-template-rows: repeat(1);
+    }
+    .shop-footer {
+height: 100%;
+    }
+}
