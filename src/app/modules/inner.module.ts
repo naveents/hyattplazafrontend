@@ -6,22 +6,27 @@ import { EntertainmentComponent } from './entertainment/entertainment.component'
 import { SlickModule } from 'ngx-slick';
 import { GenericPageService } from '../core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { ShoppingDetailComponent } from './shopping/detail/shopping-detail.component';
 
 @NgModule({
   declarations: [
     ShoppingComponent,
     DiningComponent,
-    EntertainmentComponent
+    EntertainmentComponent,
+    ShoppingDetailComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
+    RouterModule,
     SlickModule.forRoot()
   ],
   exports: [
     ShoppingComponent,
     DiningComponent,
-    EntertainmentComponent
+    EntertainmentComponent,
+    ShoppingDetailComponent
   ],
   providers: [
     GenericPageService

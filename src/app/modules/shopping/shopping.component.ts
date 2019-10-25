@@ -1,5 +1,6 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { CommonService, GenericPageService } from '../../core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-shopping',
@@ -27,7 +28,8 @@ export class ShoppingComponent implements OnInit {
 
   constructor(
      private commonService: CommonService,
-     private genericService: GenericPageService
+     private genericService: GenericPageService,
+     private router: Router
      ) { }
 
   ngOnInit() {
