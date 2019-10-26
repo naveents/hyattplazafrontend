@@ -166,7 +166,7 @@
             text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
             color: #ffffff;
             font-family: Marcellus;
-            font-size: 27px;
+            font-size: 17px !important;
             font-weight: 400;
         }
     }
@@ -299,7 +299,35 @@
         text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
         color: #ffffff;
         font-family: Marcellus;
-        font-size: 27px;
+        font-size: 17px !important;
         font-weight: 400;
     }
+}
+
+
+@media screen and (max-width: 700px)
+{
+
+    .banner-search, .category-selector {
+        display: none !important;
+    }
+    .category-selector{
+margin-top: 3% !important;
+margin-bottom: 3% !important;
+    }
+
+  .home-mb-section{
+    display: grid !important;
+    grid-template-rows: repeat(1) !important;
+}
+.home-mb-section-sub{
+    max-width: 100% !important;
+    height: 333px !important;
+}
+.image-caption-small, .image-caption-elarge, .image-caption-large{
+    padding-left: 10% !important;
+    padding-top: 27% !important;
+}
+
+
 }

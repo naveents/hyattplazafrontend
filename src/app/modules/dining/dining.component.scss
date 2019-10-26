@@ -166,7 +166,7 @@
             text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
             color: #ffffff;
             font-family: Marcellus;
-            font-size: 27px;
+            font-size: 17px;
             font-weight: 400;
         }
     }
@@ -227,12 +227,12 @@
             line-height: 1;
         }
         .link-button {
-            width: 260px;
-            height: 50px;
+            // width: 260px;
+            // height: 50px;
             border: 2px solid #ffffff;
             margin-block-end: auto;
             text-align: center;
-            padding:10px;
+            // padding:10px;
             color: #ffffff;
             font-family: Akkurat;
             font-size: 18px;
@@ -299,7 +299,64 @@
         text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
         color: #ffffff;
         font-family: Marcellus;
-        font-size: 27px;
+        font-size: 17px !important;
         font-weight: 400;
     }
 }
+
+
+
+// KRISHNANATH CUSTUM STYLEING FOR RESPONSIVE
+@media screen and (max-width: 700px){
+    .custom-title{
+        font-size: 32px !important;
+    }
+        .mob-hide{
+            display: none;
+        }
+    
+        .home-banners{
+            height: 700px !important;
+            .banner-image{
+                height: 700px;
+            object-fit: cover !important;}
+            .carousel-caption{
+                top:55% !important;
+            }
+        }
+        .timing-records{
+            display: none;
+        }
+    .home-mb-section{
+        display: grid !important;
+        grid-template-rows: repeat(1);
+    }
+    .home-mb-section-sub{
+        max-width: 100% !important;
+        height: 333px !important;
+    }
+    .image-caption-small, .image-caption-elarge, .image-caption-large{
+        padding-left: 10% !important;
+        padding-top: 27% !important;
+    }
+
+    .mobile-margin{
+        margin-left: 3% !important;
+        margin-right: 3% !important;
+    }
+    .banner-title{
+        margin-top: 22px;
+    }
+    .banner-search{
+display: none !important;
+    }
+    
+    }
+    
+    @media screen and (min-width: 700px){
+        .desk-hide{
+            display: none !important;
+        }
+    }
+
+// END CUSTUM KRISHNA STYLE

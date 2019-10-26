@@ -23,6 +23,14 @@ export class ShoppingComponent implements OnInit {
     slidesToShow: 4,
     slidesToScroll: 4
   };
+  slideConfigmob = {
+    dots: false,
+    arrows: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+
 
 
   constructor(

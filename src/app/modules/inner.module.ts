@@ -8,6 +8,7 @@ import { GenericPageService } from '../core';
 import { FormsModule } from '@angular/forms';
 import { EventsComponent } from './events/events.component';
 import { OffersComponent } from './offers/offers.component';
+import { GuestServicesComponent } from './guest-services/guest-services.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { OffersComponent } from './offers/offers.component';
     DiningComponent,
     EntertainmentComponent,
     EventsComponent,
-    OffersComponent
+    OffersComponent,
+    GuestServicesComponent
   ],
   imports: [
     CommonModule,

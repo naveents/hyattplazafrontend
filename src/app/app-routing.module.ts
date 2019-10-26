@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { ShoppingComponent } from './modules/shopping/shopping.component';
 import { DiningComponent } from './modules/dining/dining.component';
 import { EntertainmentComponent } from './modules/entertainment/entertainment.component';
-
+ 
 const routes: Routes = [
   {
     path: '',
@@ -32,7 +32,7 @@ const routes: Routes = [
   {
     path: 'shop-details',
     component: ShopDetailsComponent
-  },
+  }
  
 ];
 

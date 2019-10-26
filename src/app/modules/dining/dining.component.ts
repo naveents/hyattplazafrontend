@@ -21,7 +21,16 @@ export class DiningComponent implements OnInit {
     slidesToShow: 4,
     slidesToScroll: 4
   };
+// MOBILE SLIDER
+slideConfigmob = {
+  dots: false,
+  arrows: true,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1
+};
 
+// END SLIDER
 
   constructor(
      private commonService: CommonService,

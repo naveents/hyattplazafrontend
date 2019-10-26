@@ -198,10 +198,10 @@ and (max-width : 768px) {
     font-size:18px !important;
   }
   .stories-image-content .image-caption .link-button {
-    width: 220px !important;
-    height: 30px !important;
-    padding:5px !important;
-    font-size:12px !important;
+    // width: 220px !important;
+    // height: 30px !important;
+    // padding:5px !important;
+    // font-size:12px !important;
   }
   .shop-header .shop-menu .menu-logo {
     left:30px !important;
@@ -307,6 +307,16 @@ p {
   font-family: Akkurat !important;
 }
 
+.custom-title{
+  font-size: 42px !important;
+  color: #ffffff !important;
+  font-family: Marcellus !important;
+  
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+  // line-height: 1;
+}
+
 .link-button {
   // width: 260px;
   // height: 50px;
@@ -326,6 +336,29 @@ p {
 
 @media screen and (max-width: 700px)
 {
+  .mob-hide{
+    display: none !important;
+  }
+
+
+  .home-mb-section{
+    display: grid !important;
+    grid-template-rows: repeat(1) !important;
+}
+.home-mb-section-sub{
+    max-width: 100% !important;
+    height: 333px !important;
+}
+.image-caption-small, .image-caption-elarge, .image-caption-large{
+    padding-left: 10% !important;
+    padding-top: 25% !important;
+}
+
+
+  .custom-title{
+    font-size: 32px !important;
+  }
+
   .button-common-style{
 width: 212px !important;
 height: 38px !important;
@@ -342,6 +375,12 @@ cursor: pointer !important;
 color: #fff !important;
   }
 
+}
+
+@media screen and (min-width: 700px){
+  .desk-hide{
+      display: none !important;
+  }
 }
 
 // END KRISHNANATH 
