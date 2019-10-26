@@ -1,4 +1,4 @@
-<div class="page-banner">
+<!-- <div class="page-banner">
   <img src="/assets/images/cat-01.png" class="banner-image" />
   <div class="banner-box-shadow">
     <div class="banner-title">
@@ -39,4 +39,171 @@
     </div>
   </div>
   <div class="clearfix"></div>
+</div> -->
+
+
+
+
+<div class="page-banner">
+  <!-- <img src="/assets/images/cat-01.png" class="banner-image"> -->
+  <img src="assets/hyattplaza-images/shopping/lcwaki.jpg" class="banner-image" >  
+
+  <div class="banner-box-shadow">
+    <div class="banner-title">
+        SHOPPING
+    </div>
+  </div>
+   
+</div>
+
+
+<div class="s-b-s">
+
+<div class="item brd">
+ <div class="shp-mar">
+ <h3 class="ev-hed" style="text-align:center;"><b>{{events[0].events_heading}} </b> </h3>
+ <div class="in-li-mr" style="text-align:left;">
+    <p class="inli lc"><span class="lnr lnr-map-marker"> {{events[0].event_location}} &nbsp; &nbsp; |</span></p>
+
+  <p class="inli lc"><span class="lnr lnr-phone-handset">&nbsp;8888888 &nbsp; &nbsp; |</span></p> 
+<p class="inli lc"><span class="lnr lnr-clock"> {{events[0].event_time}}</span></p>
+
+</div>
+<p>{{events[0].events_details}}</p>
+<div class="icon-sh" style="text-align:left;">
+<h6><b>Share: &nbsp;</b>  
+  <!-- <img class="icon" src="assets/hyattplaza-images/social-media-icons/facebook.png">
+  <img class="icon"  src="assets/hyattplaza-images/social-media-icons/whatsapp.png">
+  <img class="icon"  src="assets/hyattplaza-images/social-media-icons/twitter.png">
+  <img class="icon"  src="assets/hyattplaza-images/social-media-icons/instagram.png">
+  -->
+<!-- SHare -->
+
+<a href="https://www.addtoany.com/add_to/facebook?linkurl=http%3A%2F%2Fwildherbstechnologies.com%2Fdemos%2Fhyattplaza-beta-version%2Fevents&amp;linkname=HyattPlaza%20events" target="_blank"> <img class="icon" src="assets/hyattplaza-images/social-media-icons/facebook.png"></a>
+<a href="https://www.addtoany.com/add_to/whatsapp?linkurl=http%3A%2F%2Fwildherbstechnologies.com%2Fdemos%2Fhyattplaza-beta-version%2Fevents&amp;linkname=HyattPlaza%20events" target="_blank">
+
+<img class="icon"  src="assets/hyattplaza-images/social-media-icons/whatsapp.png"></a>
+<a href="https://www.addtoany.com/add_to/twitter?linkurl=http%3A%2F%2Fwildherbstechnologies.com%2Fdemos%2Fhyattplaza-beta-version%2Fevents&amp;linkname=HyattPlaza%20events" target="_blank">
+
+<img class="icon"  src="assets/hyattplaza-images/social-media-icons/twitter.png">
+</a>
+<a href="https://www.instagram.com/hyattplaza/" target="_blank">
+<img class="icon"  src="assets/hyattplaza-images/social-media-icons/instagram.png">
+</a>
+<!-- END SHARE -->
+
+
+  <!-- <i class="fab fa-whatsapp-square"></i>
+  <i class="fab fa-facebook"></i>
+  <i class="fab fa-twitter"></i>
+  <i class="fab fa-instagram"></i> -->
+</h6>
+</div>
+</div>
+
+
+ <!-- <div class="bt-cen" style="text-align:center;">
+  <button class="btn-reg">REGISTER NOW</button>
+
+</div> -->
+
+
+
+<div class="btm">
+<h5 class="tit">Images</h5>
+ <div class="categories-slider">
+    <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
+      <div ngxSlickItem *ngFor="let category of rel_shop" class="slide record">
+        <img [src]="category.image" class="category-image">
+
+        <div class="category-details">
+         
+        </div>
+        <div class="category-title">
+            {{category.title}}
+          </div>
+      </div>
+    </ngx-slick>
+  </div>
+</div>
+
+</div>
+
+
+
+<div class="item2 ">
+   
+
+
+<div class="img1">
+    <div style="text-align:center;">
+  <img class="ev-img " src="{{events_images[0].event_img}}" style="width:100%;" >
+  
+     
+    <div class="text-block" style="text-align:center;">
+   
+      <button routerLink="/vip-card" class="ct-bt">Buy Online</button>
+           
+      </div>
+     
+  </div>
+</div>
+
+<br>
+
+<div class="img2"> 
+  <img class="ev-img " src="{{events_images[0].event_map}}" style="width:100%;" >
+</div>
+
+</div>
+</div>
+
+
+
+
+<hr />
+
+
+
+<div class="grid-div2">
+<div class="item1">
+  
+  <div class="mar-lft"> 
+      <h5 style="text-align:left;">Related Shops</h5>
+      <div class="categories-slider3">
+         <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig3">
+           <div ngxSlickItem *ngFor="let shop of rel_shop" class="slide record3">
+             <img [src]="shop.image" class="category-image3">
+     
+             <!-- <div class="category-details">
+              
+             </div>
+             <div class="category-title">
+                 {{category.title}}
+               </div> -->
+           </div>
+         </ngx-slick>
+       </div>
+      </div>
+</div>
+
+<div class="item1">
+<div class="mar-lft">
+  <h5 style="text-align:left;">Related Offers</h5> 
+  <div class="categories-slider4">
+     <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig4">
+       <div ngxSlickItem *ngFor="let offer of offers" class="slide record4">
+         <img [src]="offer.image" class="category-image4">
+ 
+         <!-- <div class="category-details">
+          
+         </div>
+         <div class="category-title">
+             {{category.title}}
+           </div> -->
+       </div>
+     </ngx-slick>
+   </div>
+  </div>
+</div>
 </div>
