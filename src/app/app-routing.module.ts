@@ -7,7 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { ShoppingComponent } from './modules/shopping/shopping.component';
 import { DiningComponent } from './modules/dining/dining.component';
 import { EntertainmentComponent } from './modules/entertainment/entertainment.component';
-import { EventsComponent } from './modules/events/events.component';
+// import { EventsComponent } from './modules/events/events.component';
+// import { OffersComponent } from './modules/offers/offers.component';
 
 const routes: Routes = [
   {
@@ -34,10 +35,13 @@ const routes: Routes = [
     path: 'shop-details',
     component: ShopDetailsComponent
   },
-  {
-    path: 'events',
-    component: EventsComponent
-  }
+//   {
+//     path: 'events',
+//     component: EventsComponent
+//   },
+//   {path: 'offers',
+// component: OffersComponent
+// }
 ];
 
 @NgModule({

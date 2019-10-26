@@ -7,13 +7,15 @@ import { SlickModule } from 'ngx-slick';
 import { GenericPageService } from '../core';
 import { FormsModule } from '@angular/forms';
 import { EventsComponent } from './events/events.component';
+import { OffersComponent } from './offers/offers.component';
 
 @NgModule({
   declarations: [
     ShoppingComponent,
     DiningComponent,
     EntertainmentComponent,
-    EventsComponent
+    EventsComponent,
+    OffersComponent
   ],
   imports: [
     CommonModule,
