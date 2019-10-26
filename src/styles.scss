@@ -304,6 +304,23 @@ a {
 
 }
 
+.link-button {
+  // width: 260px;
+  // height: 50px;
+  border: 2px solid #ffffff ; 
+  margin-block-end: auto;
+  text-align: center;
+  padding:10px;
+  color: #ffffff;
+  background: transparent !important;
+  font-family: Akkurat !important;
+  // font-size: 16px !important;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+
 @media screen and (max-width: 700px)
 {
   .button-common-style{
