@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
+import { CommonService, GenericPageService } from '../../core';
 
 @Component({
   selector: 'app-events',
@@ -7,34 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventsComponent implements OnInit {
 
-  constructor() { }
+  pageBanner: Array<string> = [];
+  pageBannerLoaded: boolean = false;
+  featuredItems: Array<string> =[];
 
-
-  stories = [
-    {
-      tag: 'LOREM IPSUM',
-      title: 'LOREM IPSUM<br>DOLOR SIT',
-      image: 'assets/hyattplaza-images/events/1.png'
-    },
-    {
-      tag: 'LOREM IPSUM',
-      title: 'LOREM IPSUM<br>DOLOR SIT',
-      image: 'assets/hyattplaza-images/events/2.png'
-    },
-    {
-      tag: 'LOREM IPSUM',
-      title: 'LOREM IPSUM<br>DOLOR SIT',
-      image: 'assets/hyattplaza-images/events/3.png'
-    },
-    {
-      tag: 'LOREM IPSUM',
-      title: 'LOREM IPSUM<br>DOLOR SIT',
-      image: 'assets/hyattplaza-images/events/4.png'
-    }
-  ]
- 
+  constructor(
+     private commonService: CommonService,
+     private genericService: GenericPageService
+     ) { }
 
   ngOnInit() {
+ this.commonService.getPageBanner('events')
+    .subscribe(banner => {
+      this.pageBanner = banner.data;
+      this.pageBannerLoaded = true;
+    });
+
+    this.loadFeaturedItems();
   }
 
+  loadFeaturedItems()
+  {
+    this.genericService.getFeaturedEvents( 1, 5, localStorage.getItem('lang'))
+      .subscribe( featuredItem => {
+          this.featuredItems = featuredItem.data;
+      });
+  }  
 }

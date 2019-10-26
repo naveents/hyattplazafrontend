@@ -25,4 +25,9 @@ export class GenericPageService {
      return this.apiService.get('/Brands/loadAllEntertainmentWithDetails?language=' + lang)
         .pipe(map(data => data));
   }
+
+  getFeaturedEvents(page: number, limit: number, lang: string = 'en'): Observable<any> {
+    return this.apiService.get('/Category/loadAllEventList?language=' + lang + '&limitFrom=' + page + '&limitTo=' + limit)
+       .pipe(map(data => data));
+  }
 }
