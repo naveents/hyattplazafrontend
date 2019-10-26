@@ -38,7 +38,6 @@ const routes: Routes = [
     path: 'events',
     component: EventsComponent
   }
-
 ];
 
 @NgModule({
