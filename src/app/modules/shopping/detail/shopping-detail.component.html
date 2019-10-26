@@ -14,10 +14,9 @@
             <h4>{{ shopDetail[0].name }}</h4>
             <ul class="attractives">
               <li><i class="fa fa-map-marker"></i> {{ shopDetail[0].location }}</li>
-              <li><i class="fa fa-phone" aria-hidden="true"></i> 1234567890</li>
+              <li><i class="fa fa-phone" aria-hidden="true"></i> {{ shopDetail[0].phone }}</li>
               <li>
-                <i class="fa fa-clock-o" aria-hidden="true"></i> 10:00 AM - 10:00
-                PM
+                <i class="fa fa-clock-o" aria-hidden="true"></i> {{ shopDetail[0].time }}
               </li>
             </ul>
             <p>
@@ -25,8 +24,8 @@
             </p>
             <div class="shop-image-slider">
               <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
-                <div ngxSlickItem *ngFor="let image of shopDetail[0].images" class="slide record">
-                  <img src="{{ image }}" class="category-image">
+                <div ngxSlickItem *ngFor="let image of shopDetail[0].Images" class="slide record">
+                  <img src="{{ image.image_name }}" class="category-image">
                 </div>
               </ngx-slick>
             </div>

@@ -14,6 +14,14 @@ export class ShoppingDetailComponent implements OnInit {
   shopId: number;
   shopDetail: Array<string> = [];
 
+  slideConfig = {
+    dots: false,
+    arrows: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  };
+
   constructor(
      private commonService: CommonService,
      private shopService: HyattShopService,

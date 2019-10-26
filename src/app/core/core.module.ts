@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ApiService, HomeService, CommonService, GenericPageService } from './services';
+import {
+   ApiService,
+   HomeService,
+   CommonService,
+   GenericPageService,
+   HyattShopService } from './services';
 import { HttpClientModule } from '@angular/common/http';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpDefaultInterceptor } from './interceptors/http.default.interceptor';
@@ -15,7 +20,8 @@ import { HttpDefaultInterceptor } from './interceptors/http.default.interceptor'
     ApiService,
     HomeService,
     CommonService,
-    GenericPageService      
+    GenericPageService,
+    HyattShopService   
   ],
   declarations: []
 })
