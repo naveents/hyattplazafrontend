@@ -12,6 +12,7 @@ import { InnerModule } from './modules/inner.module';
 import { HomeComponent } from './home/home.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { ShopDetailsComponent } from './shop-details/shop-details.component';
+import { VipcardComponent } from './vipcard/vipcard.component';
 
 
 @NgModule({
@@ -19,12 +20,13 @@ import { ShopDetailsComponent } from './shop-details/shop-details.component';
     AppComponent,
     HomeComponent,
     CategoriesComponent,
-    ShopDetailsComponent
+    ShopDetailsComponent,
+    VipcardComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    CoreModule,    
+    CoreModule,
     SharedModule,
     InnerModule,
     AppRoutingModule,

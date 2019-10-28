@@ -162,8 +162,9 @@ ul
 }
 
        .menu-primary{position: relative}
-       .menu-primary .item{display: inline-block; padding: 15px 20px}
-       .menu-primary .item .sub{position: absolute; left: 0;right: 0; top: 95%;height: 0; transition:All .5s ease;
+       .menu-primary ul{margin-bottom: 0;}
+       .menu-primary .item{display: inline-block; padding: 13px 20px}
+       .menu-primary .item .sub{position: absolute;z-index: 999; left: 0;right: 0; top: 95%;height: 0; transition:All .5s ease;
 -webkit-transition:All .5s ease;
 -moz-transition:All .5s ease;
 -o-transition:All .5s ease;

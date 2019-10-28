@@ -1,3 +1,4 @@
+import { VipcardComponent } from './vipcard/vipcard.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'events',
     component: EventsComponent
+  },
+  {
+    path: 'vipcard',
+    component: VipcardComponent
   }
 ];
 

@@ -81,12 +81,12 @@ export class HomeComponent implements OnInit {
       '/assets/images/15.png',
     ],
     [
-    '/assets/images/12.png',
-    '/assets/images/16.png',
+      '/assets/images/12.png',
+      '/assets/images/16.png',
     ],
     [
-    '/assets/images/13.png',
-    '/assets/images/17.png'
+      '/assets/images/13.png',
+      '/assets/images/17.png'
     ]
   ];
   showNavigationIndicators = false;
@@ -94,17 +94,17 @@ export class HomeComponent implements OnInit {
   topBanners: Array<string> = [];
   topBannerLoaded: boolean = false;
 
-  homeCategories: Array<string> =[];
+  homeCategories: Array<string> = [];
   homeCategoryLoaded: boolean = false
 
   shopOpenHours = [
     {
-        'shopName': 'Geant Hypermarket',
-        'openHours': '12:30 PM - 5:30 PM'
+      'shopName': 'Geant Hypermarket',
+      'openHours': '12:30 PM - 5:30 PM'
     },
     {
-        'shopName': 'Retail Outlets',
-        'openHours': '02:30 PM - 8:30 PM'
+      'shopName': 'Retail Outlets',
+      'openHours': '02:30 PM - 8:30 PM'
     },
     {
       'shopName': 'Food Court',
@@ -117,7 +117,7 @@ export class HomeComponent implements OnInit {
     {
       'shopName': 'Cafes',
       'openHours': '09:00 AM - 8:30 PM'
-    },    
+    },
   ];
 
 
@@ -157,11 +157,11 @@ export class HomeComponent implements OnInit {
         this.topBannerLoaded = true;
       });
 
-      this.homeService.getHomeCategories(localStorage.getItem('lang'))
+    this.homeService.getHomeCategories(localStorage.getItem('lang'))
       .subscribe(categories => {
         this.homeCategories = categories;
         this.homeCategoryLoaded = true;
-      }); 
+      });
   }
 
   onSlide(slideData) {

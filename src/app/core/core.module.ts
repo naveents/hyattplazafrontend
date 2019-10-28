@@ -1,3 +1,4 @@
+import { PageService } from './services/page.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
@@ -21,7 +22,8 @@ import { HttpDefaultInterceptor } from './interceptors/http.default.interceptor'
     HomeService,
     CommonService,
     GenericPageService,
-    HyattShopService   
+    HyattShopService,
+    PageService
   ],
   declarations: []
 })
