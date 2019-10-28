@@ -20,4 +20,17 @@ export class HomeService {
     return this.apiService.get('/Category/loadAllCategoris?language=' + lang)
     .pipe(map(data => data)); 
   }
+
+  getNewsAndEvents( lang:string = 'en', page: number, limit: number, pageKey: string ='home' ): Observable<any>
+  {
+    return this.apiService.get('/News/loadNews?pageKey=' + pageKey + '&language=' + lang + '&limitFrom=' + page + '&limitTo=' + limit)
+       .pipe(map(data => data));
+  }
+
+  getGalleryImages( lang:string = 'en',  pageKey: string ='home' ): Observable<any>
+  {
+    return this.apiService.get('/Gallery/loadGallery?pageKey=' + pageKey + '&language=' + lang )
+       .pipe(map(data => data));
+  }
+
 }

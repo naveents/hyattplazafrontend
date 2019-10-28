@@ -26,7 +26,7 @@
   </div>
 </div>
 
-<div class="home-images container">
+<div class="home-images container" *ngIf="homeCategories.data">
   <div class="row home-mb-section ">
     <div class="col-7 home-mb-section-sub">
       <img src="{{ homeCategories.data[0].image }}">
@@ -102,16 +102,16 @@
       </div>
     </div>
   </div> -->
-  <div class="events-gallery mob-hide">
+  <div class="events-gallery mob-hide" *ngIf="newsDataLoaded">
     <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
-      <div ngxSlickItem *ngFor="let event of events" class="slide record">
-        <img [src]="event.image" class="event-image" alt="{{event.title}}" width="100%">
+      <div ngxSlickItem *ngFor="let news of newsData" class="slide record">
+        <img [src]="news.news_image" class="event-image" alt="{{news.title}}" width="100%">
         <div class="event-details">
           <div class="event-title">
-            {{event.title}}
+            {{news.title}}
           </div>
           <div class="event-date">
-            {{event.date}}
+            {{news.create_date}}
           </div>
         </div>
       </div>
@@ -120,16 +120,16 @@
 
   <!-- MOBILE EVENTS GALLERY KRISHNANATH STYLE -->
 
-  <div class="events-gallery desk-hide">
+  <div class="events-gallery desk-hide" *ngIf="newsDataLoaded">
       <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfigmobile" (afterChange)="afterChange($event)">
-        <div ngxSlickItem *ngFor="let event of events" class="slide record">
-          <img [src]="event.image" class="event-image" alt="{{event.title}}" width="100%">
+        <div ngxSlickItem *ngFor="let news of newsData" class="slide record">
+          <img [src]="news.news_image" class="event-image" alt="{{news.title}}" width="100%">
           <div class="event-details">
             <div class="event-title">
-              {{event.title}}
+              {{news.title}}
             </div>
             <div class="event-date">
-              {{event.date}}
+              {{news.create_date}}
             </div>
           </div>
         </div>
@@ -140,7 +140,7 @@
 
 </div>
 
-<div class="gallery mob-hide">
+<div class="gallery mob-hide" *ngIf="galleryDataLoaded">
   <div class="gallery-title">
     GALLERY
   </div>

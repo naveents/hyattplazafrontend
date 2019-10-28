@@ -12,90 +12,21 @@ import { Subscription } from 'rxjs';
 export class HomeComponent implements OnInit {
 
   currentSlideNum = 0;
-  images = [
-    {
-      tag: 'LOREM IPSUM',
-      title: 'LOREM IPSUM<br>DOLOR SIT',
-      image: '/assets/images/02.png'
-    },
-    {
-      tag: 'LOREM IPSUM',
-      title: 'LOREM IPSUM<br>DOLOR SIT',
-      image: '/assets/images/03.png'
-    },
-    {
-      tag: 'LOREM IPSUM',
-      title: 'LOREM IPSUM<br>DOLOR SIT',
-      image: '/assets/images/04.png'
-    },
-    {
-      tag: 'LOREM IPSUM',
-      title: 'LOREM IPSUM<br>DOLOR SIT',
-      image: '/assets/images/05.png'
-    },
-    {
-      tag: 'LOREM IPSUM',
-      title: 'LOREM IPSUM<br>DOLOR SIT',
-      image: '/assets/images/06.png'
-    }
-  ];
-  events = [
-    {
-      title: 'LOREM IPSUM',
-      date: '22/Jan',
-      image: '/assets/images/07.png'
-    },
-    {
-      title: 'LOREM IPSUM',
-      date: '23/Jan',
-      image: '/assets/images/08.png'
-    },
-    {
-      title: 'LOREM IPSUM',
-      date: '24/Jan',
-      image: '/assets/images/09.png'
-    },
-    {
-      title: 'LOREM IPSUM',
-      date: '22/Jan',
-      image: '/assets/images/07.png'
-    },
-    {
-      title: 'LOREM IPSUM',
-      date: '23/Jan',
-      image: '/assets/images/08.png'
-    },
-    {
-      title: 'LOREM IPSUM',
-      date: '24/Jan',
-      image: '/assets/images/09.png'
-    }
-  ];
-  gallery = [
-    [
-      '/assets/images/10.png',
-      '/assets/images/14.png'
-    ],
-    [
-      '/assets/images/11.png',
-      '/assets/images/15.png',
-    ],
-    [
-    '/assets/images/12.png',
-    '/assets/images/16.png',
-    ],
-    [
-    '/assets/images/13.png',
-    '/assets/images/17.png'
-    ]
-  ];
+  gallery : any;
+
   showNavigationIndicators = false;
 
   topBanners: Array<string> = [];
   topBannerLoaded: boolean = false;
 
   homeCategories: Array<string> =[];
-  homeCategoryLoaded: boolean = false
+  homeCategoryLoaded: boolean = false;
+
+  newsData: Array<string> = [];
+  newsDataLoaded: boolean = false;
+
+  galleryData: Array<string> =[];
+  galleryDataLoaded: boolean = false;
 
   shopOpenHours = [
     {
@@ -151,17 +82,79 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loadBanners();
+    this.loadCategories();
+    this.loadNews();
+    this.loadGalleryData();
+  }
+
+  loadBanners()
+  {
     this.homeService.getHomeBanners(localStorage.getItem('lang'))
       .subscribe(banners => {
         this.topBanners = banners;
         this.topBannerLoaded = true;
       });
+  }
 
-      this.homeService.getHomeCategories(localStorage.getItem('lang'))
-      .subscribe(categories => {
-        this.homeCategories = categories;
-        this.homeCategoryLoaded = true;
-      }); 
+  loadCategories()
+  {
+    this.homeService.getHomeCategories(localStorage.getItem('lang'))
+    .subscribe(categories => {
+      this.homeCategories = categories;
+      this.homeCategoryLoaded = true;
+    }); 
+  }
+
+  loadNews(page: number = 1, limit: number = 6)
+  {
+    this.homeService.getNewsAndEvents(localStorage.getItem('lang'), page, limit, 'home' )
+    .subscribe(news => {
+      this.newsData = news.data;
+      this.newsDataLoaded = true;
+    }); 
+  }
+
+  loadGalleryData()
+  {
+    this.homeService.getGalleryImages(localStorage.getItem('lang'), 'home')
+    .subscribe(gallery => {
+      this.galleryData = gallery;      
+      this.prepareGallery();
+    }); 
+  }
+
+  prepareGallery()
+  {    
+    const gallerySet = this.galleryData['data'];
+    const typeOne = gallerySet.filter(function(gallery) {
+      return gallery['type'] == "type_1";
+    });
+
+    const typeTwo = gallerySet.filter(function(gallery) {
+      return gallery['type'] == "type_2";
+    });
+
+    this.galleryDataLoaded = true;
+    this.gallery = [
+      [
+         typeOne[0]['gallery_image'],
+         typeTwo[0]['gallery_image'],
+      ],
+      [
+        typeTwo[1]['gallery_image'],
+        typeOne[1]['gallery_image'],
+      ],
+      [
+        typeOne[2]['gallery_image'],
+        typeTwo[2]['gallery_image'],
+     ],
+     [
+       typeTwo[3]['gallery_image'],
+       typeOne[3]['gallery_image'],
+     ],
+    ];
+
   }
 
   onSlide(slideData) {
