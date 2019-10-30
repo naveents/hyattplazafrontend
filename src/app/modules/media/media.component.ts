@@ -6,13 +6,32 @@ import { CommonService, GenericPageService } from '../../core';
   templateUrl: './media.component.html',
   styleUrls: ['./media.component.scss']
 })
-export class MediaComponent implements OnInit { 
+export class MediaComponent implements OnInit {
+
+  pageBanner: Array<string> = [];
+  pageBannerLoaded: boolean = false;
 
   constructor(
      private commonService: CommonService,
      private genericService: GenericPageService
      ) { }
 
-  ngOnInit() { 
+  ngOnInit() {
+
+    this.commonService.getPageBanner('media')
+        .subscribe(banner => {
+          this.pageBanner = banner.data;
+          this.pageBannerLoaded = true;
+        }
+    );
+
+    this.loadGalleryImages();
+
+  }
+
+  loadGalleryImages()
+  {
+    //localStorage.getItem('lang')
+
   }
 }
