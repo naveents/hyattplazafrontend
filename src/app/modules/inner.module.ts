@@ -16,6 +16,7 @@ import { EventDetailComponent } from './events/event-detail/event-detail.compone
 import { MeadiaDetailComponent } from './meadia/meadia-detail/meadia-detail.component';
 import { MediaComponent } from './media/media.component';
 import { MeadiaComponent } from './meadia/meadia.component';
+import { MediaImagesComponent } from './media/media-images/media-images.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MeadiaComponent } from './meadia/meadia.component';
     EntertainmentDetailComponent,
     EventDetailComponent,
     MeadiaComponent,
-    MeadiaDetailComponent
+    MeadiaDetailComponent,
+    MediaImagesComponent
   ],
   imports: [
     CommonModule,
@@ -43,7 +45,8 @@ import { MeadiaComponent } from './meadia/meadia.component';
     EntertainmentComponent,
     ShoppingDetailComponent,
     EventsComponent,
-    MediaComponent
+    MediaComponent,
+    MediaImagesComponent
   ],
   providers: [
     GenericPageService

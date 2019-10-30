@@ -34,4 +34,11 @@ export class GenericPageService {
     return this.apiService.get('/Brands/loadAllBrands?language=' + lang + '&limitFrom=' + page + '&limitTo=' + limit + '&categoryKey=' + categoryKey )
        .pipe(map(data => data));
   }
+
+  getAlbumImages(albumId: number)
+  {
+    return this.apiService.get('/Gallery/loadGalleryByAlbum?albumID=' + albumId )
+    .pipe(map(data => data));
+  }
+
 }

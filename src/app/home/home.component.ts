@@ -120,7 +120,7 @@ export class HomeComponent implements OnInit {
 
   loadGalleryData()
   {
-    this.homeService.getGalleryImages(localStorage.getItem('lang'), 'home')
+    this.homeService.getGallery(localStorage.getItem('lang'), 'home')
     .subscribe(gallery => {
       this.galleryData = gallery;      
       this.prepareGallery();
