@@ -8,12 +8,14 @@ import { GenericPageService } from '../core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ShoppingDetailComponent } from './shopping/detail/shopping-detail.component';
+
 import { EventsComponent } from './events/events.component';
 import { GuestservicesComponent } from './guestservices/guestservices.component';
 import { EntertainmentDetailComponent } from './entertainment/entertainment-detail/entertainment-detail.component';
 import { EventDetailComponent } from './events/event-detail/event-detail.component';
-import { MeadiaComponent } from './meadia/meadia.component';
 import { MeadiaDetailComponent } from './meadia/meadia-detail/meadia-detail.component';
+import { MediaComponent } from './media/media.component';
+import { MeadiaComponent } from './meadia/meadia.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { MeadiaDetailComponent } from './meadia/meadia-detail/meadia-detail.comp
     EntertainmentComponent,
     ShoppingDetailComponent,
     EventsComponent,
+    MediaComponent,
     GuestservicesComponent,
     EntertainmentDetailComponent,
     EventDetailComponent,
@@ -39,7 +42,8 @@ import { MeadiaDetailComponent } from './meadia/meadia-detail/meadia-detail.comp
     DiningComponent,
     EntertainmentComponent,
     ShoppingDetailComponent,
-    EventsComponent
+    EventsComponent,
+    MediaComponent
   ],
   providers: [
     GenericPageService
