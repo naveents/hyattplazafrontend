@@ -17,6 +17,7 @@ import { EntertainmentDetailComponent } from './modules/entertainment/entertainm
 import { EventDetailComponent } from './modules/events/event-detail/event-detail.component';
 import { GuestservicesComponent } from './modules/guestservices/guestservices.component';
 import { MeadiaComponent } from './modules/meadia/meadia.component';
+import { MeadiaDetailComponent } from './modules/meadia/meadia-detail/meadia-detail.component';
 
 const routes: Routes = [
   {
@@ -80,8 +81,12 @@ const routes: Routes = [
     component: GuestservicesComponent
   },
   {
-    path: 'meadia',
+    path: 'media',
     component: MeadiaComponent
+  },
+  {
+    path: 'media-detail',
+    component: MeadiaDetailComponent
   }
 ];
 

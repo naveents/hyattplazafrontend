@@ -96,5 +96,9 @@ export class MeadiaComponent implements OnInit {
 
   ngOnInit() {
   }
+  showTab = 1;
+  tabToggle(index){
+    this.showTab =index;
+  }
 
 }

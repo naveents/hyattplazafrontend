@@ -11,10 +11,10 @@
   </div>
   
   <div id="myDIV" style="text-align:center;">
-    <button class="btn-cs active" id="photo_gallery">
+    <button class="btn-cs active" (click)="tabToggle(1)" id="photo_gallery">
       PHOTO GALLERY
     </button>
-    <button class="btn-cs" id="new_section">
+    <button class="btn-cs" (click)="tabToggle(2)" id="new_section">
       NEWS
     </button>
   </div>
@@ -50,7 +50,7 @@
   </div> -->
   
   <!-- MDB GALLERY -->
-  <div class="grid-col" id="img">
+  <div class="grid-col" *ngIf="showTab == 1" id="img">
   <div *ngFor="let gallery of photo_gallery" class="item">
       <img
         class="mens_fasion_img"
@@ -72,7 +72,8 @@
   </div>
   <!-- ENDMDB GALLERY -->
   
-  <div class="news" id="news">
+  <div class="news" *ngIf="showTab == 2" id="news">
+  
       <!-- <div class="blog-des">
           <div class="blog-des-img1 ">
             <img  class="fx-h"  src="{{blogs[0].img}}"  style="width:100%;">
