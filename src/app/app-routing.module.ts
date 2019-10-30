@@ -8,6 +8,7 @@ import { DiningComponent } from './modules/dining/dining.component';
 import { EntertainmentComponent } from './modules/entertainment/entertainment.component';
 import { ShoppingDetailComponent } from './modules/shopping/detail/shopping-detail.component';
 import { EventsComponent } from './modules/events/events.component';
+import { MediaComponent } from './modules/media/media.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'events',
     component: EventsComponent
+  },
+  {
+    path: 'media',
+    component: MediaComponent
   }
 ];
 
