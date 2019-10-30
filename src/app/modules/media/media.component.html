@@ -10,10 +10,10 @@
   </div>
   
   <div id="myDIV" style="text-align:center;">
-    <button class="btn-cs active" id="photo_gallery">
+    <button [ngClass]="galleryBlock ? 'btn-cs active' : ''"  class="btn-cs" id="photo_gallery" (click)="toggleBlock('gallery-block')">
       PHOTO GALLERY
     </button>
-    <button class="btn-cs" id="new_section">
+    <button [ngClass]="newsBlock ? 'btn-cs active' : ''"   class="btn-cs" id="new_section" (click)="toggleBlock('news-block')">
       NEWS
     </button>
   </div>
@@ -49,7 +49,7 @@
   </div> -->
   
   <!-- MDB GALLERY -->
-  <div class="grid-col" id="img" *ngIf="galleryDataLoaded">
+  <div class="grid-col" id="img" *ngIf="galleryDataLoaded && galleryBlock">
   <div *ngFor="let gallery of galleryData.data" class="item">
 	 <a class="custom-router-link" [routerLink] = "['media-images', gallery.id]">
       <img
@@ -65,58 +65,14 @@
   </div>
   <!-- ENDMDB GALLERY -->
   
-  <div class="news" id="news">
-      <!-- <div class="blog-des">
-          <div class="blog-des-img1 ">
-            <img  class="fx-h"  src="{{blogs[0].img}}"  style="width:100%;">
-            <p><b>{{blogs[0].time}}</b> </p>
-            <hr/>
-            <p class="des">{{blogs[0].des}} <a> [Read More]</a></p>
-        
-          </div>
-          <div class="blog-des-img2 ">
-              <img  class="fx-h"  src="{{blogs[1].img}}"  style="width:100%;" >
-              <p><b>{{blogs[1].time}}</b> </p>
-              <hr/>
-              <p class="des">{{blogs[1].des}}  <a>[Read More]</a></p>
-          </div>
-          <div class="blog-des-img3 ">
-              <img   class="fx-h" src="{{blogs[2].img}}"  style="width:100%;" >
-              <p><b>{{blogs[2].time}}</b> </p>
-              <hr/>
-              <p class="des">{{blogs[2].des}}  <a>[Read More]</a></p>
-          </div>
-          <div class="blog-des-img4 ">
-              <img class="fx-h" src="{{blogs[3].img}}" style="width:100%;" >
-              <p><b>{{blogs[3].time}}</b> </p>
-              <hr/>
-              <p class="des">{{blogs[3].des}}  <a>[Read More]</a></p>
-          </div>
-          <div class="blog-des-img5 ">
-              <img  class="fx-h"  src="{{blogs[4].img}}" style="width:100%;">
-              <p><b>{{blogs[4].time}}</b> </p>
-              <hr/>
-              <p class="des">{{blogs[4].des}}  <a>[Read More]</a></p>
-          </div>
-          <div class="blog-des-img6 ">
-              <img  class="fx-h"  src="{{blogs[5].img}}" style="width:100%;"  >
-              <p><b>{{blogs[5].time}}</b> </p>
-              <hr/>
-              <p class="des">{{blogs[5].des}}  <a>[Read More]</a></p>
-        
-          </div>
-        
-        </div>
-         -->
+  <div class="news" id="news" *ngIf="newsBlock && newsDataLoaded">
   <div class="blog-des">
-    <div class="blog-des-img1" *ngFor="let blog of blogs">
-      <img class="fx-h" src="{{blog.img}}" style="width:100%" routerLink="/media/media_details">
-      <p><b>{{blog.time}}</b> </p>
+    <div class="blog-des-img1" *ngFor="let news of newsData.data">
+      <img class="fx-h" src="{{news.news_image}}" style="width:100%" >
+      <p><b>{{news.create_date}}</b> </p>
       <hr class="hr-wid"/>
-      <p class="des">{{blog.des}}  <a>[Read More]</a></p>
+      <p class="des">{{news.title}}  <a>[Read More]</a></p>
   
     </div>
   </div>
-  
-  
   </div>

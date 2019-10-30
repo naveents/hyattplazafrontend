@@ -12,6 +12,10 @@ export class MediaComponent implements OnInit {
   pageBannerLoaded: boolean = false;
   galleryData: Array<string> = [];
   galleryDataLoaded: boolean = false;
+  newsBlock: boolean = false;
+  galleryBlock: boolean = true;
+  newsData: Array<string> = [];
+  newsDataLoaded: boolean = false;
 
   constructor(
      private commonService: CommonService,
@@ -29,7 +33,17 @@ export class MediaComponent implements OnInit {
     );
 
     this.loadGalleryAlbums();
+    this.loadNews();
 
+  }
+
+  loadNews(page: number = 1, limit: number = 6 )
+  {
+    this.homeService.getNewsAndEvents(localStorage.getItem('lang'), page, limit, 'home' )
+    .subscribe(news => {
+      this.newsData = news.data;
+      this.newsDataLoaded = true;
+    });
   }
 
   loadGalleryAlbums()
@@ -41,4 +55,18 @@ export class MediaComponent implements OnInit {
     });
 
   }
+
+  toggleBlock( section: string)
+  {
+      if(section == 'gallery-block'){
+        this.newsBlock = false;
+        this.galleryBlock = true;
+      }
+      else {        
+        this.galleryBlock = false;
+        this.newsBlock = true;
+        
+      }
+  }
+
 }
