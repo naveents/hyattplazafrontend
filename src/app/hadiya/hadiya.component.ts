@@ -10,6 +10,7 @@ export class HadiyaComponent implements OnInit {
 
   banner = '';
   pageTitle = '';
+  stores: Array<string> = [];
   constructor(private pageService: PageService) { }
 
   ngOnInit() {
@@ -21,10 +22,10 @@ export class HadiyaComponent implements OnInit {
         this.pageTitle = response.data.title;
       });
 
-    this.pageService.getOffers(localStorage.getItem('lang'))
-      .subscribe(response => {
+    this.pageService.getHadiyaStores(localStorage.getItem('lang'))
+      .subscribe(responsehadiya => {
         // console.log(response);
-        // this.offers = response.data;
+        this.stores = responsehadiya.data;
       });
   }
 

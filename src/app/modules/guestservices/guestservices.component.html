@@ -16,80 +16,10 @@
 <div class="container">
   
   <div class="row ">
-    <div class="col-xs-12 col-sm-2 col-md-3 col-lg-3 p-2">
+    <div class="col-xs-12 col-sm-2 col-md-3 col-lg-3 p-2" *ngFor="let service of services">
       <div class="service-box text-center">
-        <img src="http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/hyattplaza-images/Guestservices/stroller.svg">
-        <p>Service Name</p>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-2 col-md-3 col-lg-3 p-2">
-      <div class="service-box text-center">
-        <img src="http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/hyattplaza-images/Guestservices/stroller.svg">
-        <p>Service Name</p>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-2 col-md-3 col-lg-3 p-2">
-      <div class="service-box text-center">
-        <img src="http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/hyattplaza-images/Guestservices/stroller.svg">
-        <p>Service Name</p>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-2 col-md-3 col-lg-3 p-2">
-      <div class="service-box text-center">
-        <img src="http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/hyattplaza-images/Guestservices/stroller.svg">
-        <p>Service Name</p>
-      </div>
-    </div>
-  </div>
-  <div class="row ">
-    <div class="col-xs-12 col-sm-2 col-md-3 col-lg-3 p-2">
-      <div class="service-box text-center">
-        <img src="http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/hyattplaza-images/Guestservices/stroller.svg">
-        <p>Service Name</p>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-2 col-md-3 col-lg-3 p-2">
-      <div class="service-box text-center">
-        <img src="http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/hyattplaza-images/Guestservices/stroller.svg">
-        <p>Service Name</p>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-2 col-md-3 col-lg-3 p-2">
-      <div class="service-box text-center">
-        <img src="http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/hyattplaza-images/Guestservices/stroller.svg">
-        <p>Service Name</p>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-2 col-md-3 col-lg-3 p-2">
-      <div class="service-box text-center">
-        <img src="http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/hyattplaza-images/Guestservices/stroller.svg">
-        <p>Service Name</p>
-      </div>
-    </div>
-  </div>
-  <div class="row ">
-    <div class="col-xs-12 col-sm-2 col-md-3 col-lg-3 p-2">
-      <div class="service-box text-center">
-        <img src="http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/hyattplaza-images/Guestservices/stroller.svg">
-        <p>Service Name</p>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-2 col-md-3 col-lg-3 p-2">
-      <div class="service-box text-center">
-        <img src="http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/hyattplaza-images/Guestservices/stroller.svg">
-        <p>Service Name</p>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-2 col-md-3 col-lg-3 p-2">
-      <div class="service-box text-center">
-        <img src="http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/hyattplaza-images/Guestservices/stroller.svg">
-        <p>Service Name</p>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-2 col-md-3 col-lg-3 p-2">
-      <div class="service-box text-center">
-        <img src="http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/hyattplaza-images/Guestservices/stroller.svg">
-        <p>Service Name</p>
+        <img [src]="service.serviceIcon">
+        <p>{{service.serviceName}}</p>
       </div>
     </div>
   </div>
@@ -111,8 +41,9 @@
           </div>
           <div class="col-md-6">
             <div class="card-body">
-              <h5 class="card-title">NAME  |  MONTH</h5>
-              <p class="card-text">No dolores aliquyam dolor amet ea dolor gubergren invidunt diam sed, sea no consetetur takimata sadipscing dolore. No dolores aliquyam dolor amet ea dolor gubergren invidunt diam sed, sea no consetetur takimata sadipscing dolore.</p>
+              <!-- <p class="lead small text-center">{{awards[0].title}}</p> -->
+              <h5 class="card-title">{{awards[0].wonMonth}}  |  {{awards[0].employ}}</h5>
+              <p class="card-text">{{awards[0].description}}</p>
               
             </div>
           </div>

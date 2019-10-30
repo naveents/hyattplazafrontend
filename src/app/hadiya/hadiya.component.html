@@ -6,105 +6,48 @@
     </div>
   </div>
 </div>
-<div class="container mb-5">
-  <div class="row">
-    <div class="col-md-5">
-      <img src="images/image1.jpg" class="img-fluid" alt="Responsive image" />
-    </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-6">
-      <p>
-        Pellentesque eleifend commodo nibh eu tempus. Praesent molestie, augue
-        vitae pulvinar efficitur, augue ipsum maximus turpis, in fringilla elit
-        justo non leo. Nam tempor, justo ac semper rhoncus, leo metus bibendum
-        sem, eget porttitor velit enim tempus neque. Praesent sed condimentum
-        augue. Etiam nec lectus egestas, eleifend risus at, tempus ipsum.
-        Quisque sit amet mollis odio, eget condimentum odio. Ut quis lorem nibh.
-      </p>
-      <button class="vip-button">
-        BUY ONLINE
-      </button>
-      <div class="ali">(Cash on Delivery)</div>
-    </div>
-  </div>
-</div>
-<hr />
-<div class="container">
-  <p class="lead subtitle m-0">List of participating stores</p>
-  <div class="row stores-column">
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 p-1">
-      <div class="card">
-        <div class="image-div">
-          <img src="images/vip-card-image.jpg" class="card-img-top" alt="..." />
-          <span class="name-shade">Names Here</span>
-        </div>
+<div class="content-wrapper">
+  <div class="container mb-5 padRL30">
+    <div class="row">
+      <div class="col-md-5">
+        <img
+          src="/assets/gifcard.png"
+          class="img-fluid"
+          alt="Responsive image"
+        />
       </div>
-    </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 p-1">
-      <div class="card">
-        <div class="image-div">
-          <img src="images/vip-card-image.jpg" class="card-img-top" alt="..." />
-          <span class="name-shade">Names Here</span>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 p-1">
-      <div class="card">
-        <div class="image-div">
-          <img src="images/vip-card-image.jpg" class="card-img-top" alt="..." />
-          <span class="name-shade">Names Here</span>
-        </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-6">
+        <p>
+          Pellentesque eleifend commodo nibh eu tempus. Praesent molestie, augue
+          vitae pulvinar efficitur, augue ipsum maximus turpis, in fringilla
+          elit justo non leo. Nam tempor, justo ac semper rhoncus, leo metus
+          bibendum sem, eget porttitor velit enim tempus neque. Praesent sed
+          condimentum augue. Etiam nec lectus egestas, eleifend risus at, tempus
+          ipsum. Quisque sit amet mollis odio, eget condimentum odio. Ut quis
+          lorem nibh.
+        </p>
+        <button class="vip-button">
+          BUY ONLINE
+        </button>
+        <div class="ali">(Cash on Delivery)</div>
       </div>
     </div>
   </div>
-  <div class="row stores-column">
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 p-1">
-      <div class="card">
-        <div class="image-div">
-          <img src="images/vip-card-image.jpg" class="card-img-top" alt="..." />
-          <span class="name-shade">Names Here</span>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 p-1">
-      <div class="card">
-        <div class="image-div">
-          <img src="images/vip-card-image.jpg" class="card-img-top" alt="..." />
-          <span class="name-shade">Names Here</span>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 p-1">
-      <div class="card">
-        <div class="image-div">
-          <img src="images/vip-card-image.jpg" class="card-img-top" alt="..." />
-          <span class="name-shade">Names Here</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row stores-column">
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 p-1">
-      <div class="card">
-        <div class="image-div">
-          <img src="images/vip-card-image.jpg" class="card-img-top" alt="..." />
-          <span class="name-shade">Names Here</span>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 p-1">
-      <div class="card">
-        <div class="image-div">
-          <img src="images/vip-card-image.jpg" class="card-img-top" alt="..." />
-          <span class="name-shade">Names Here</span>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 p-1">
-      <div class="card">
-        <div class="image-div">
-          <img src="images/vip-card-image.jpg" class="card-img-top" alt="..." />
-          <span class="name-shade">Names Here</span>
+  <hr />
+  <div class="container padRL30">
+    <p class="lead subtitle m-0">List of participating stores</p>
+    <div class="row stores-column">
+      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 p-1" *ngFor="let store of stores">
+        <div class="card">
+          <div class="image-div">
+            <img
+              [src]="store.store_image"
+              class="card-img-top"
+              alt="..."
+            />
+            <span class="name-shade">{{store.store_title}}</span>
+          </div>
         </div>
       </div>
     </div>
