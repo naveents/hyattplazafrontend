@@ -1,5 +1,5 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-import { CommonService, GenericPageService } from '../../core';
+import { CommonService, GenericPageService, HomeService } from '../../core';
 
 @Component({
   selector: 'app-media',
@@ -10,10 +10,13 @@ export class MediaComponent implements OnInit {
 
   pageBanner: Array<string> = [];
   pageBannerLoaded: boolean = false;
+  galleryData: Array<string> = [];
+  galleryDataLoaded: boolean = false;
 
   constructor(
      private commonService: CommonService,
-     private genericService: GenericPageService
+     private genericService: GenericPageService,
+     private homeService: HomeService
      ) { }
 
   ngOnInit() {
@@ -25,13 +28,17 @@ export class MediaComponent implements OnInit {
         }
     );
 
-    this.loadGalleryImages();
+    this.loadGalleryAlbums();
 
   }
 
-  loadGalleryImages()
+  loadGalleryAlbums()
   {
-    //localStorage.getItem('lang')
+    this.homeService.getGallery(localStorage.getItem('lang'), 'gallery')
+    .subscribe(gallery => {
+      this.galleryData = gallery;     
+      this.galleryDataLoaded = true;
+    });
 
   }
 }

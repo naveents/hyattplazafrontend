@@ -49,25 +49,19 @@
   </div> -->
   
   <!-- MDB GALLERY -->
-  <div class="grid-col" id="img">
-  <div *ngFor="let gallery of photo_gallery" class="item">
+  <div class="grid-col" id="img" *ngIf="galleryDataLoaded">
+  <div *ngFor="let gallery of galleryData.data" class="item">
+	 <a class="custom-router-link" [routerLink] = "['media-images', gallery.id]">
       <img
         class="mens_fasion_img"
-        src="{{gallery.img}}"
+        src="{{gallery.gallery_image}}"
         style="width:100%;"
-        routerLink="/media/snow_wonderland"
-      />
-    
-       <div class="text-block">
-          
-    <p style="text-align:center;">{{gallery.des}}</p>  
-     
-    
+	  />   
+	  </a> 
+       <div class="text-block">          
+    		<p style="text-align:center;">{{gallery.title}}</p>
       </div>
-       
-     
-    </div> 
-  
+    </div>   
   </div>
   <!-- ENDMDB GALLERY -->
   
