@@ -1,3 +1,6 @@
+import { LeasingComponent } from './leasing/leasing.component';
+import { HadiyaComponent } from './hadiya/hadiya.component';
+import { OffersComponent } from './offers/offers.component';
 import { VipcardComponent } from './vipcard/vipcard.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { NgModule } from '@angular/core';
@@ -42,6 +45,18 @@ const routes: Routes = [
   {
     path: 'vipcard',
     component: VipcardComponent
+  },
+  {
+    path: 'offers',
+    component: OffersComponent
+  },
+  {
+    path: 'gift-voucher',
+    component: HadiyaComponent
+  },
+  {
+    path: 'leasing',
+    component: LeasingComponent
   }
 ];
 

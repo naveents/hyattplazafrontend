@@ -115,7 +115,7 @@ export class HomeComponent implements OnInit {
     .subscribe(news => {
       this.newsData = news.data;
       this.newsDataLoaded = true;
-    }); 
+    });
   }
 
   loadGalleryData()

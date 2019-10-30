@@ -13,6 +13,9 @@ import { HomeComponent } from './home/home.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { ShopDetailsComponent } from './shop-details/shop-details.component';
 import { VipcardComponent } from './vipcard/vipcard.component';
+import { OffersComponent } from './offers/offers.component';
+import { HadiyaComponent } from './hadiya/hadiya.component';
+import { LeasingComponent } from './leasing/leasing.component';
 
 
 @NgModule({
@@ -21,7 +24,10 @@ import { VipcardComponent } from './vipcard/vipcard.component';
     HomeComponent,
     CategoriesComponent,
     ShopDetailsComponent,
-    VipcardComponent
+    VipcardComponent,
+    OffersComponent,
+    HadiyaComponent,
+    LeasingComponent
   ],
   imports: [
     BrowserModule,

@@ -15,4 +15,16 @@ export class PageService {
       return this.apiService.get('/Category/loadVipParticipants?language=' + lang)
         .pipe(map(data => data));
   }
+
+  getOffers(lang: string = 'en'): Observable<any> {
+    return this.apiService.get('/Offers/loadOffers?language=' + lang)
+      .pipe(map(data => data));
+  }
+
+  getPageBanner(page: string = 'aboutus', lang: string = 'en'): Observable<any> {
+    return this.apiService.get('/PageBanner/loadPageBanner?language=' + lang + '&pageKey=' + page)
+      .pipe(map(data => data));
+  }
+
+
 }
