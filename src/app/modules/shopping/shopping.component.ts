@@ -16,6 +16,7 @@ export class ShoppingComponent implements OnInit {
   categoryBlock: boolean = true;
   brandBlock: boolean = false;
   featuredItems: Array<string> = [];
+  brandLogs: Array<string> = [];
 
   slideConfig = {
     dots: false,
@@ -23,6 +24,14 @@ export class ShoppingComponent implements OnInit {
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 4
+  };
+
+  slideConfigmob = {
+    dots: false,
+    arrows: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1
   };
 
 
@@ -41,6 +50,7 @@ export class ShoppingComponent implements OnInit {
 
     this.loadCategories();
     this.loadFeaturedItems();
+    this.loadBrands();
   }
 
   loadCategories()
@@ -59,6 +69,15 @@ export class ShoppingComponent implements OnInit {
       });
   }
 
+  loadBrands()
+  {
+    this.genericService.getBrands('shopping', localStorage.getItem('lang'))
+      .subscribe( brandLogoItems => {
+        console.log(brandLogoItems.data);
+          this.brandLogs = brandLogoItems.data;
+      });
+  }
+
   toggleBlock( section: string)
   {
       if(section == 'category-block'){
@@ -68,6 +87,7 @@ export class ShoppingComponent implements OnInit {
       else {        
         this.categoryBlock = false;
         this.brandBlock = true;
+        
       }
   }
 

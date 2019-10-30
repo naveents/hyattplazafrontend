@@ -198,9 +198,9 @@ and (max-width : 768px) {
     font-size:18px !important;
   }
   .stories-image-content .image-caption .link-button {
-    width: 220px !important;
-    height: 30px !important;
-    padding:5px !important;
+    // width: 220px !important;
+    // height: 30px !important;
+    // padding:5px !important;
     font-size:12px !important;
   }
   .shop-header .shop-menu .menu-logo {
@@ -289,10 +289,148 @@ a {
   padding-right: 15px!important;
 }
 
+.padLR45{
+  padding-left: 45px!important;
+  padding-right: 45px!important;
+}
+
+ 
 
 
 
-// KRISHNANATH CUSTOM STYLES 
+
+/* CUSTOM CLASSES */
+
+.cont {
+	padding: 12px;
+}
+
+.name-shade {
+	font-size: 1rem;
+	position: absolute;
+	height: 2rem;
+	left: 0;
+	bottom: 0;
+	color: white;
+	background: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	text-align: center;
+}
+
+.image-div {
+	position: inherit;
+}
+
+.vip-card-title {
+	font-family: Marcellus!important;
+	text-size: 3rem;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.vip-button {
+	font-family: Akkurat !important;
+	text-transform: uppercase;
+	width: 188px;
+	height: 44px;
+	border: 1px solid #000;
+	background: #fff;
+}
+.vip-button:hover {
+	background: #000;
+	color: #fff;
+}
+
+.vip-button-inv {
+	font-family: Akkurat !important;
+	text-transform: uppercase;
+	width: 188px;
+	height: 44px;
+	border: 1px solid #000;
+	color: #fff;
+	background: #000;
+}
+.subtitle{
+	font-family: Akkurat!important;
+	font-weight: 400;
+	font-size:1.3rem;
+}
+
+#history {
+	min-height: 30rem;
+	background-color: #f2f2f2;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.stores-column{
+	padding-left:0.5rem;
+	padding-right:0.5rem;
+}
+.form-input-c {
+    border-color: black;
+    border-radius: 0;
+    margin-bottom: .25rem;
+}
+.custom-tab{
+    width: 50%;
+    text-align: center;
+}
+.post-line-v:after{
+	content: '';
+	width: 1px;
+	height: 100%;
+	position: absolute;
+	background-color:#999;
+	top: 0;
+	left: 100%;
+}
+.page-banner {
+    display: block;
+    position: relative;
+    .banner-image {
+      width: 100%;
+    }
+    .banner-box-shadow {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("/assets/icons/Rectangle_137-page.png");
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      .banner-title {
+        text-align: center;
+        color: #ffffff;
+        font-family: Marcellus;
+        font-size: 60px;
+        font-weight: 400;
+        text-transform: uppercase;
+        justify-content: center;
+        max-width: 50%;
+      }
+    }
+  }
+
+
+  // KRISHNANATH CUSTOMSTYLES
+
+ 
+
+.link-button a{
+  color: #fff !important;
+}
+
+// COMMON SLIDER TITLE
+
+.slider-title-size{
+font-size: 18px !important;
+}
+
 
 .button-common-style{
   border: 1px solid #fff !important;
@@ -302,6 +440,19 @@ a {
   width: 188px !important;
   font-size: 14px !important;
 
+}
+p {
+  font-family: Akkurat !important;
+}
+
+.custom-title{
+  font-size: 42px !important;
+  color: #ffffff !important;
+  font-family: Marcellus !important;
+  
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+  // line-height: 1;
 }
 
 .link-button {
@@ -321,8 +472,38 @@ a {
 }
 
 
-@media screen and (max-width: 700px)
+@media screen and (max-width: 777px)
 {
+  .mob-hide{
+    display: none !important;
+  }
+
+
+  .home-mb-section{
+    display: grid !important;
+    grid-template-rows: repeat(1) !important;
+}
+.home-mb-section-sub{
+    max-width: 100% !important;
+    height: 333px !important;
+}
+.image-caption-small, .image-caption-elarge, .image-caption-large{
+    padding-left: 10% !important;
+    padding-top: 25% !important;
+}
+
+
+  .custom-title{
+    font-size: 32px !important;
+  }
+  .custom-tag {
+    font-size: 15px !important;
+    color: #ffffff;
+    font-family: Marcellus;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
   .button-common-style{
 width: 212px !important;
 height: 38px !important;
@@ -341,4 +522,28 @@ color: #fff !important;
 
 }
 
-// END KRISHNANATH 
+@media screen and (min-width: 777px){
+
+  .page-banner {
+    height: 450px !important;
+    .banner-image{
+      height: 450px !important;
+      object-fit: cover !important;
+    }
+}
+
+  .desk-hide{
+      display: none !important;
+  }
+  .custom-title{
+    font-size: 33px !important;
+  }
+  .custom-tag {
+    font-size: 17px !important;
+    color: #ffffff !important; 
+    font-family: Marcellus !important;
+    font-weight: 400 !important;
+    text-transform: uppercase !important;
+  }
+}
+  // END KRISHNA"S STYLING

@@ -162,15 +162,16 @@ ul
 }
 
        .menu-primary{position: relative}
-       .menu-primary .item{display: inline-block; padding: 15px 20px}
-       .menu-primary .item .sub{position: absolute; left: 0;right: 0; top: 95%;height: 0; transition:All .5s ease;
+       .menu-primary ul{margin-bottom: 0;padding: 0;}
+       .menu-primary .item{display: inline-block; padding: 13px 20px}
+       .menu-primary .item .sub{position: absolute;z-index: 999; left: 0;right: 0; top: 95%;height: 0; transition:All .5s ease;
 -webkit-transition:All .5s ease;
 -moz-transition:All .5s ease;
 -o-transition:All .5s ease;
            overflow: hidden;background: #ffffff;box-shadow: 0 0 5px #ccc;
            padding: 10px;opacity: 0
 }
-       .menu-primary .item:hover .sub{position: absolute; left: 0;right: 0; top: 95%;height: 200px;opacity: 1}
+       .menu-primary .item:hover .sub{position: absolute; left: 0;right: 0; top: 95%;height: 350px;opacity: 1}
        .menu-primary a{color: #000000;text-decoration: none}
        .menu-primary a:hover{text-decoration: none}
        .menu-primary a:focus{text-decoration: none}
@@ -180,7 +181,7 @@ ul
        .menu-primary .item .sub .colums ul li a{display: block;padding: 4px 5px}
        .menu-primary .item .sub .colums img{display: block;width: 100%}
        .menu-primary img{max-width: 100%}
-       .menu-primary figcaption{padding:0 40px}
+    //    .menu-primary figcaption{padding:0 40px}
 
 
 
@@ -276,5 +277,29 @@ ul
         display: none;
     }
  
-}     
+}    
+
+
+.sub {
+    z-index: 99 !important;
+    margin-top: 1px !important;
+   .figcaption-title{
+       font-size: 20px !important;
+       text-align: left !important;
+   }
+   .figcaption-date{
+       font-size: 12px !important;
+       text-align: left !important;
+   }
+   figcaption {
+
+    //    margin-left: -35px !important;
+       text-align: left !important;
+   }
+}
+.sub-top {
+padding-top: 22px !important;
+padding-right: 2%;
+    
+}
     // END KRISHNA"S STYLING

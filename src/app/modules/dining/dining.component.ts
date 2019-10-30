@@ -1,5 +1,6 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { CommonService, GenericPageService } from '../../core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dining',
@@ -21,11 +22,19 @@ export class DiningComponent implements OnInit {
     slidesToShow: 4,
     slidesToScroll: 4
   };
+  slideConfigmob = {
+    dots: false,
+    arrows: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
 
 
   constructor(
      private commonService: CommonService,
-     private genericService: GenericPageService
+     private genericService: GenericPageService,
+     private router: Router
      ) { }
 
   ngOnInit() {

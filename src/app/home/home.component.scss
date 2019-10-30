@@ -45,8 +45,8 @@
             margin-bottom:10px;
         }
         .link-button {
-            width: 260px;
-            height: 50px;
+            // width: 260px;
+            // height: 50px;
             border: 1px solid #ffffff;
             margin-block-end: auto;
             text-align: center;
@@ -139,8 +139,8 @@
             line-height: 1;
         }
         .link-button {
-            width: 260px;
-            height: 50px;
+            // width: 260px;
+            // height: 50px;
             border: 2px solid #ffffff;
             margin-block-end: auto;
             text-align: center;
@@ -205,7 +205,7 @@
             .event-title {
                 color: #000000;
                 font-family: Akkurat;
-                font-size: 22px;
+                // font-size: 22px;
                 font-weight: 400;
                 letter-spacing: 1.35px;
                 float:left;
@@ -214,7 +214,7 @@
             .event-date {
                 color: #000000;
                 font-family: Akkurat;
-                font-size: 22px;
+                // font-size: 22px;
                 font-weight: 400;
                 letter-spacing: 1.35px;
                 float:right;
@@ -279,7 +279,7 @@
         .event-title {
             color: #000000;
             font-family: Akkurat;
-            font-size: 22px;
+            // font-size: 22px;
             font-weight: 400;
             letter-spacing: 1.35px;
             float:left;
@@ -288,7 +288,7 @@
         .event-date {
             color: #000000;
             font-family: Akkurat;
-            font-size: 22px;
+            // font-size: 22px;
             font-weight: 400;
             letter-spacing: 1.35px;
             float:right;
@@ -309,8 +309,15 @@
 .timing-schedule{
     font-size: 12px !important;
 }
+.event-title{
+    text-align: left !important;
+}
+.event-details {
+height: 77px !important;
+overflow-y: hidden; 
+}
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 777px){
 .event-title, .event-date{
     font-size: 12px !important;
 }
@@ -345,9 +352,13 @@
 
 }
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: 777px){
     .desk-hide{
         display: none !important;
     }
+}
+
+.width {
+    // width: 500px !important;
 }
 // END KRISHNANTH CUSTUM STYLES

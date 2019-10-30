@@ -1,26 +1,43 @@
 <div class="shop-header container">
   <div class="header-links row">
     <div class="link">
-      <span class="link-icon"><img src="../../../../assets/icons/location.png"></span>
+      <span class="link-icon"
+        ><img src="../../../../assets/icons/location.png"
+      /></span>
       <span class="link-text">STORE LOCATION</span>
     </div>
     <div class="link">
-      <span class="link-icon"><img src="../../../../assets/icons/clock.png"></span>
-      <span class="link-text">LOREM IPSUM</span>
+      <span class="link-icon"
+        >
+        <!-- <img src="../../../../assets/icons/clock.png"/> -->
+        <img src="http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/icons/earth.svg"/>
+      </span>
+      <span class="link-text">LOCATION</span>
     </div>
     <div class="link">
-      <span class="link-icon"><img src="../../../../assets/icons/pointer.png"></span>
-      <span class="link-text">LOREM IPSU</span>
+      <span class="link-icon"
+        ><img src="../../../../assets/icons/pointer.png"
+      /></span>
+      <span class="link-text">LEASING</span>
     </div>
     <div class="link">
-      <span class="link-icon"><img src="../../../../assets/icons/gift.png"></span>
+      <span class="link-icon"
+        ><img src="../../../../assets/icons/gift.png"
+      /></span>
       <span class="link-text">GIFT</span>
     </div>
     <div class="link-icon-section">
-      <span class="link-icon"><img src="../../../../assets/icons/lnr-phone-handset.png"></span>
-      <span class="link-icon"><img src="../../../../assets/icons/header-separator.png"></span>
+      <span class="link-icon"
+        ><img src="../../../../assets/icons/lnr-phone-handset.png"
+      /></span>
+      <span class="link-icon"
+        ><img src="../../../../assets/icons/header-separator.png"
+      /></span>
       <!-- <span class="link-icon"><img src="../../../../assets/icons/hindi.png"></span> -->
-      <a class="link-text" (click)="changeLang('en')" > English </a> | <a (click)="changeLang('ar')" > <img src="../../../../assets/icons/hindi.png"> </a>
+      <a class="link-text" (click)="changeLang('en')"> English </a> |
+      <a (click)="changeLang('ar')">
+        <img src="../../../../assets/icons/hindi.png" />
+      </a>
     </div>
   </div>
   <div class="shop-menu">
@@ -28,8 +45,11 @@
       <div class="row">
         <div class="col-2">
           <div class="menu-logo">
-              <img class="logo-img" src="assets/hyattplaza-images/new-images/logo-plaza.png" style="width: 100%;">
-
+            <img
+              class="logo-img"
+              src="assets/hyattplaza-images/new-images/logo-plaza.png"
+              style="width: 100%;"
+            />
           </div>
         </div>
 
@@ -39,109 +59,109 @@
               <a href=""> {{ menu.serviceName }} </a>
             </div>         
           </div> -->
- <header>
-        <div class="menu-primary">
-           <ul>
-             <li class="item" *ngFor="let menu of topMenu.data;">
-               <a class="nav-hed" href="{{menu.menuKey}}">{{ menu.menuName }}</a>
-                 <div class="sub" *ngIf="menu.children.categories || menu.children.offers">
-                    <div class="colums" *ngIf="menu.children.categories">
-                      <ul>
-                        <li  *ngFor="let subMenu of menu.children.categories;">
-                          <a>{{ subMenu.name }}</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="colums" *ngIf="menu.children.offers">
-                      <ul>
-                        <li  *ngFor="let offer of menu.children.offers;">
-                          <a>{{ offer.title }}</a>
-                        </li>
-                      </ul>
-                    </div>
-                 </div>
-              </li>
-             <!--
-             <li class="item"><a href="#">About</a>
-               <div class="sub">
-                 <div class="colums">
-                      <ul>
-                        <li><a href="#">Items</a></li>
-                        <li><a href="#">Items</a></li>
-                        <li><a href="#">Items</a></li>
-                        <li><a href="#">Items</a></li>
-                        <li><a href="#">Items</a></li>
-                        <li><a href="#">Items</a></li>
-                     </ul>
-                   </div>
-                   <div class="colums">
-                      <ul>
-                        <li><a href="#">Items</a></li>
-                        <li><a href="#">Items</a></li>
-                        <li><a href="#">Items</a></li>
-                        <li><a href="#">Items</a></li>
-                        <li><a href="#">Items</a></li>
-                        <li><a href="#">Items</a></li>
-                     </ul>
-                   </div>
-                   <div class="colums">
-                      <figure><img src="demo.jpg" width="275" height="133" alt="image"> </figure>
-                       <figcaption><a href="#">Item Name</a> </figcaption>
-                   </div>
-                    <div class="colums">
-                      <figure><img src="demo.jpg" width="275" height="133" alt="image"> </figure>
-                       <figcaption><a href="#">Item Name</a> </figcaption>
-                   </div>
-               </div>
-               
-               </li>
-             <li class="item"><a href="#">Product</a></li>
-             <li class="item"><a href="#">Product</a></li>
-             <li class="item"><a href="#">Product</a></li>
-             <li class="item"><a href="#">Product</a></li>
-              -->
-        </ul>
-        </div>
-</header>
 
-          <div class="menus" *ngIf="topMenuLoaded">
-            <!-- <div class="menu" *ngFor="let menu of topMenu.data;">
-              <a href=""> {{ menu.serviceName }} </a>
-            </div>          -->
+          <div class="menu-primary">
+            <ul>
+              <li class="item" *ngFor="let menu of topMenu.data">
+                <a class="nav-hed" href="{{ menu.menuKey }}">{{
+                  menu.menuName
+                }}</a>
+                <div
+                  class="sub"
+                  *ngIf="
+                    menu.children.categories ||
+                    menu.children.offers ||
+                    menu.children.events ||
+                    menu.children.brands
+                  "
+                >
+                <div class="sub-top">
+                  <div class="colums" style="text-align:left"  *ngIf="menu.children.categories">
+                    <ul>
+                      <li *ngFor="let subMenu of menu.children.categories">
+                        <a>{{ subMenu.name }}</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="colums" style="text-align:left"  *ngIf="menu.children.brands">
+                    <ul>
+                      <li *ngFor="let brand of menu.children.brands">
+                        <a>{{ brand.name }}</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="colums" style="text-align:left"  style="border:0cm; padding-left: 11px;" *ngIf="menu.children.offers">
+                    <ul>
+                      <li *ngFor="let offer of menu.children.offers">
+                        <figure>
+                          <img
+                            [src]="offer.offer_image"
+                            width="275"
+                            height="133"
+                            alt="image"
+                          />
+                        </figure>
+                        <figcaption class="figcaption-date">
+                          <a href="#"
+                            >{{ offer.start_date }} - {{ offer.end_date }}</a
+                          >
+                        </figcaption>
+                        <figcaption class="figcaption-title">
+                          <a href="#">{{ offer.title }}</a>
+                        </figcaption>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="colums last-colum" style="border:0cm;  padding-left: 11px;" *ngIf="menu.children.events">
+                    <ul>
+                      <li *ngFor="let event of menu.children.events">
+                        <figure>
+                          <img
+                            [src]="event.event_image"
+                            width="275"
+                            height="133"
+                            alt="image"
+                          />
+                        </figure>
+                        <figcaption class="figcaption-date">
+                          <a href="#"
+                            >{{ event.start_date }} - {{ event.end_date }}</a
+                          >
+                        </figcaption>
+                        <figcaption class="figcaption-title">
+                          <a href="#">{{ event.title }}</a>
+                        </figcaption>
+                      </li>
+                    </ul>
+                  </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
 
-
         <div class="col-2 search-bar">
           <div class="menu menu-search">
-            <input type="text" class="search-box" value="Search">
-            <img src="/assets/icons/menu-search.png" class="menu-search-icon">
+            <input type="text" class="search-box" value="Search" />
+            <img src="/assets/icons/menu-search.png" class="menu-search-icon" />
           </div>
         </div>
       </div>
     </div>
-
-
-
   </div>
-
 </div>
 
 <div class="mobile-menu">
-
   <div class="mobile-menu-header">
-   
     <div class="mb-cntr">
-     
       <div class="mb-logo">
-            <img class="mb-logo-img" src="assets/hyattplaza-images/new-images/logo-plaza.png" style="width: 100%;">
-          </div>
-       
-      
+        <img
+          class="mb-logo-img"
+          src="assets/hyattplaza-images/new-images/logo-plaza.png"
+          style="width: 100%;"
+        />
       </div>
-      
-     
+    </div>
   </div>
-   
-
 </div>

@@ -1,3 +1,7 @@
+import { LeasingComponent } from './leasing/leasing.component';
+import { HadiyaComponent } from './hadiya/hadiya.component';
+import { OffersComponent } from './offers/offers.component';
+import { VipcardComponent } from './vipcard/vipcard.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -9,6 +13,10 @@ import { EntertainmentComponent } from './modules/entertainment/entertainment.co
 import { ShoppingDetailComponent } from './modules/shopping/detail/shopping-detail.component';
 import { EventsComponent } from './modules/events/events.component';
 import { MediaComponent } from './modules/media/media.component';
+import { EntertainmentDetailComponent } from './modules/entertainment/entertainment-detail/entertainment-detail.component';
+import { EventDetailComponent } from './modules/events/event-detail/event-detail.component';
+import { GuestservicesComponent } from './modules/guestservices/guestservices.component';
+import { MeadiaComponent } from './modules/meadia/meadia.component';
 
 const routes: Routes = [
   {
@@ -42,6 +50,38 @@ const routes: Routes = [
   {
     path: 'media',
     component: MediaComponent
+  },
+  {
+    path: 'vipcard',
+    component: VipcardComponent
+  },
+  {
+    path: 'offers',
+    component: OffersComponent
+  },
+  {
+    path: 'gift-voucher',
+    component: HadiyaComponent
+  },
+  {
+    path: 'leasing',
+    component: LeasingComponent
+  },
+  {
+    path: 'entertainment-detail',
+    component: EntertainmentDetailComponent
+  },
+  {
+    path: 'event-detail',
+    component: EventDetailComponent
+  },
+  {
+    path: 'guest-services',
+    component: GuestservicesComponent
+  },
+  {
+    path: 'meadia',
+    component: MeadiaComponent
   }
 ];
 

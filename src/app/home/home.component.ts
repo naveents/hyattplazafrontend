@@ -12,12 +12,15 @@ import { Subscription } from 'rxjs';
 export class HomeComponent implements OnInit {
 
   currentSlideNum = 0;
+
   gallery : any;
+
 
   showNavigationIndicators = false;
 
   topBanners: Array<string> = [];
   topBannerLoaded: boolean = false;
+
 
   homeCategories: Array<string> =[];
   homeCategoryLoaded: boolean = false;
@@ -30,12 +33,12 @@ export class HomeComponent implements OnInit {
 
   shopOpenHours = [
     {
-        'shopName': 'Geant Hypermarket',
-        'openHours': '12:30 PM - 5:30 PM'
+      'shopName': 'Geant Hypermarket',
+      'openHours': '12:30 PM - 5:30 PM'
     },
     {
-        'shopName': 'Retail Outlets',
-        'openHours': '02:30 PM - 8:30 PM'
+      'shopName': 'Retail Outlets',
+      'openHours': '02:30 PM - 8:30 PM'
     },
     {
       'shopName': 'Food Court',
@@ -48,7 +51,7 @@ export class HomeComponent implements OnInit {
     {
       'shopName': 'Cafes',
       'openHours': '09:00 AM - 8:30 PM'
-    },    
+    },
   ];
 
 
@@ -112,7 +115,7 @@ export class HomeComponent implements OnInit {
     .subscribe(news => {
       this.newsData = news.data;
       this.newsDataLoaded = true;
-    }); 
+    });
   }
 
   loadGalleryData()
@@ -154,6 +157,12 @@ export class HomeComponent implements OnInit {
        typeOne[3]['gallery_image'],
      ],
     ];
+
+    this.homeService.getHomeCategories(localStorage.getItem('lang'))
+      .subscribe(categories => {
+        this.homeCategories = categories;
+        this.homeCategoryLoaded = true;
+      });
 
   }
 

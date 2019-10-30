@@ -1,5 +1,5 @@
 <div class="page-banner" *ngIf="shopDetail[0]">
-    <img *ngIf="pageBanner[0]" src="{{ (pageBannerLoaded ? pageBanner[0].cover : '') }}" class="banner-image" />
+    <img *ngIf="pageBanner" src="{{ (pageBannerLoaded ? pageBanner.cover : '') }}" class="banner-image" />
     <div class="banner-box-shadow">
       <div class="banner-title">
         {{ shopDetail[0].name }}
@@ -31,7 +31,11 @@
             </div>
           </div>
         </div>
-        <div class="col-6"></div>
+        <div class="col-6">
+          <img style="width:100%; padding-bottom: 22px" [src]="shopDetail[0].vip_card" />
+          <br>
+          <img style="width:100%;" [src]="shopDetail[0].map" />
+        </div>
       </div>
     </div>
     <div class="clearfix"></div>

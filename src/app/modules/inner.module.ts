@@ -10,6 +10,10 @@ import { RouterModule } from '@angular/router';
 import { ShoppingDetailComponent } from './shopping/detail/shopping-detail.component';
 import { EventsComponent } from './events/events.component';
 import { MediaComponent } from './media/media.component';
+import { GuestservicesComponent } from './guestservices/guestservices.component';
+import { EntertainmentDetailComponent } from './entertainment/entertainment-detail/entertainment-detail.component';
+import { EventDetailComponent } from './events/event-detail/event-detail.component';
+import { MeadiaComponent } from './meadia/meadia.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { MediaComponent } from './media/media.component';
     EntertainmentComponent,
     ShoppingDetailComponent,
     EventsComponent,
-    MediaComponent
+    MediaComponent,
+    GuestservicesComponent,
+    EntertainmentDetailComponent,
+    EventDetailComponent,
+    MeadiaComponent
   ],
   imports: [
     CommonModule,
