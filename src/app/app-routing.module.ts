@@ -12,6 +12,10 @@ import { DiningComponent } from './modules/dining/dining.component';
 import { EntertainmentComponent } from './modules/entertainment/entertainment.component';
 import { ShoppingDetailComponent } from './modules/shopping/detail/shopping-detail.component';
 import { EventsComponent } from './modules/events/events.component';
+import { EntertainmentDetailComponent } from './modules/entertainment/entertainment-detail/entertainment-detail.component';
+import { EventDetailComponent } from './modules/events/event-detail/event-detail.component';
+import { GuestservicesComponent } from './modules/guestservices/guestservices.component';
+import { MeadiaComponent } from './modules/meadia/meadia.component';
 
 const routes: Routes = [
   {
@@ -57,6 +61,22 @@ const routes: Routes = [
   {
     path: 'leasing',
     component: LeasingComponent
+  },
+  {
+    path: 'entertainment-detail',
+    component: EntertainmentDetailComponent
+  },
+  {
+    path: 'event-detail',
+    component: EventDetailComponent
+  },
+  {
+    path: 'guest-services',
+    component: GuestservicesComponent
+  },
+  {
+    path: 'meadia',
+    component: MeadiaComponent
   }
 ];
 

@@ -45,9 +45,9 @@ export class ShoppingDetailComponent implements OnInit {
 
   loadShopDetail()
   {
-        this.shopService.getShopDetail( this.shopId, localStorage.getItem('lang'))
-            .subscribe( shop => {
-                this.shopDetail = shop.data;
-            });
+    this.shopService.getShopDetail( this.shopId, localStorage.getItem('lang'))
+        .subscribe( shop => {
+            this.shopDetail = shop.data;
+        });
   }
 }

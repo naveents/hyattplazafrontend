@@ -30,4 +30,8 @@ export class GenericPageService {
     return this.apiService.get('/Category/loadAllEventList?language=' + lang + '&limitFrom=' + page + '&limitTo=' + limit)
        .pipe(map(data => data));
   }
+  getBrands(categoryKey: 'shopping' , lang: string = 'en', page: number = 0 , limit: number = 0  ): Observable<any> {
+    return this.apiService.get('/Brands/loadAllBrands?language=' + lang + '&limitFrom=' + page + '&limitTo=' + limit + '&categoryKey=' + categoryKey )
+       .pipe(map(data => data));
+  }
 }

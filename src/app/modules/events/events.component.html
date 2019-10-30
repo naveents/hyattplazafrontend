@@ -1,9 +1,9 @@
  
 <div class="page-banner">
-  <img src="{{ (pageBannerLoaded ? pageBanner[0].cover : '') }}" class="banner-image">
+  <img src="{{ (pageBannerLoaded ? pageBanner.cover : '') }}" class="banner-image">
   <div class="banner-box-shadow">
     <div class="banner-title">
-      {{ (pageBannerLoaded ? pageBanner[0].title: '') }}
+      {{ (pageBannerLoaded ? pageBanner.title: '') }}
     </div>
   </div>
 </div>
@@ -11,8 +11,8 @@
 
 <div class="stories-images container" *ngIf="featuredItems" >
 
-        <div class="row">
-            <div class="col-5" *ngIf="featuredItems[0]">
+        <div class="row home-mb-section">
+            <div class="col-5 home-mb-section-sub" *ngIf="featuredItems[0]">
               <img src="{{featuredItems[0].event_image}}">
               <div class="stories-image-content" style="background-image: url('assets/icons/Rectangle_242.png');background-size: cover;">
                 <div class="image-caption">
@@ -27,7 +27,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-7" *ngIf="featuredItems[1]">
+            <div class="col-7 home-mb-section-sub" *ngIf="featuredItems[1]">
               <img src="{{featuredItems[1].event_image}}" style="height:100%;">
               <div class="stories-image-content" style="background-image: url('assets/icons/Rectangle_113.png');background-size: cover;">
                 <div class="image-caption">
@@ -43,8 +43,8 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-7" *ngIf="featuredItems[2]">
+          <div class="row home-mb-section">
+            <div class="col-7 home-mb-section-sub" *ngIf="featuredItems[2]">
               <img src="{{featuredItems[2].event_image}}">
               <div class="stories-image-content" style="background-image: url('assets/icons/Rectangle_140.png');background-size: cover;">
                 <div class="image-caption">
@@ -59,7 +59,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-5" *ngIf="featuredItems[3]">
+            <div class="col-5 home-mb-section-sub" *ngIf="featuredItems[3]">
               <img src="{{featuredItems[3].image}}">
               <div class="stories-image-content" style="background-image: url('assets/icons/Rectangle_243.png');background-size: cover;">
                 <div class="image-caption">

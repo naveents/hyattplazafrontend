@@ -8,15 +8,17 @@
     </div>
     <div class="link">
       <span class="link-icon"
-        ><img src="../../../../assets/icons/clock.png"
-      /></span>
-      <span class="link-text">LOREM IPSUM</span>
+        >
+        <!-- <img src="../../../../assets/icons/clock.png"/> -->
+        <img src="http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/icons/earth.svg"/>
+      </span>
+      <span class="link-text">LOCATION</span>
     </div>
     <div class="link">
       <span class="link-icon"
         ><img src="../../../../assets/icons/pointer.png"
       /></span>
-      <span class="link-text">LOREM IPSU</span>
+      <span class="link-text">LEASING</span>
     </div>
     <div class="link">
       <span class="link-icon"
@@ -73,21 +75,22 @@
                     menu.children.brands
                   "
                 >
-                  <div class="colums" *ngIf="menu.children.categories">
+                <div class="sub-top">
+                  <div class="colums" style="text-align:left"  *ngIf="menu.children.categories">
                     <ul>
                       <li *ngFor="let subMenu of menu.children.categories">
                         <a>{{ subMenu.name }}</a>
                       </li>
                     </ul>
                   </div>
-                  <div class="colums" *ngIf="menu.children.brands">
+                  <div class="colums" style="text-align:left"  *ngIf="menu.children.brands">
                     <ul>
                       <li *ngFor="let brand of menu.children.brands">
                         <a>{{ brand.name }}</a>
                       </li>
                     </ul>
                   </div>
-                  <div class="colums" *ngIf="menu.children.offers">
+                  <div class="colums" style="text-align:left"  style="border:0cm; padding-left: 11px;" *ngIf="menu.children.offers">
                     <ul>
                       <li *ngFor="let offer of menu.children.offers">
                         <figure>
@@ -98,18 +101,18 @@
                             alt="image"
                           />
                         </figure>
-                        <figcaption>
+                        <figcaption class="figcaption-date">
                           <a href="#"
                             >{{ offer.start_date }} - {{ offer.end_date }}</a
                           >
                         </figcaption>
-                        <figcaption>
+                        <figcaption class="figcaption-title">
                           <a href="#">{{ offer.title }}</a>
                         </figcaption>
                       </li>
                     </ul>
                   </div>
-                  <div class="colums" *ngIf="menu.children.events">
+                  <div class="colums last-colum" style="border:0cm;  padding-left: 11px;" *ngIf="menu.children.events">
                     <ul>
                       <li *ngFor="let event of menu.children.events">
                         <figure>
@@ -120,16 +123,17 @@
                             alt="image"
                           />
                         </figure>
-                        <figcaption>
+                        <figcaption class="figcaption-date">
                           <a href="#"
                             >{{ event.start_date }} - {{ event.end_date }}</a
                           >
                         </figcaption>
-                        <figcaption>
+                        <figcaption class="figcaption-title">
                           <a href="#">{{ event.title }}</a>
                         </figcaption>
                       </li>
                     </ul>
+                  </div>
                   </div>
                 </div>
               </li>

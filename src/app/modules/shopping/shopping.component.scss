@@ -227,8 +227,8 @@
             line-height: 1;
         }
         .link-button {
-            width: 260px;
-            height: 50px;
+            // width: 260px;
+            // height: 50px;
             border: 2px solid #ffffff;
             margin-block-end: auto;
             text-align: center;
@@ -307,4 +307,18 @@
 {
     color: #ffffff;
     text-decoration: none;
+}
+.margL20{
+    margin-left: 20px;
+}
+.border-box{
+    width: 18%;
+    margin: 1%;
+    float: left;
+    padding: 15px;
+    text-align: center;
+    border: 1px #ccc solid;
+}
+.border-box img{
+    max-width: 100%;
 }

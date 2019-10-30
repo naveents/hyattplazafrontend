@@ -166,7 +166,7 @@
             text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
             color: #ffffff;
             font-family: Marcellus;
-            font-size: 27px;
+            // font-size: 27px;
             font-weight: 400;
         }
     }
@@ -227,12 +227,12 @@
             line-height: 1;
         }
         .link-button {
-            width: 260px;
-            height: 50px;
+            // width: 260px;
+            // height: 50px;
             border: 2px solid #ffffff;
             margin-block-end: auto;
             text-align: center;
-            padding:10px;
+            // padding:10px;
             color: #ffffff;
             font-family: Akkurat;
             font-size: 18px;
@@ -299,7 +299,18 @@
         text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
         color: #ffffff;
         font-family: Marcellus;
-        font-size: 27px;
+        // font-size: 27px;
         font-weight: 400;
+    }
+}
+
+
+
+
+@media screen and (max-width: 777px)
+{
+    .image-caption-small, .image-caption-elarge, .image-caption-large{
+        padding-left: 10% !important;
+        padding-top: 25% !important;
     }
 }
