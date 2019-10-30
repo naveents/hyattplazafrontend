@@ -471,6 +471,10 @@ p {
   cursor: pointer;
 }
 
+p{
+  font-family: Akkurat !important;
+  // font-family:  Marcellus !important;
+}
 
 @media screen and (max-width: 777px)
 {
@@ -531,6 +535,7 @@ color: #fff !important;
       object-fit: cover !important;
     }
 }
+ 
 
   .desk-hide{
       display: none !important;

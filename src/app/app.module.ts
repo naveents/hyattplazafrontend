@@ -11,6 +11,7 @@ import { CoreModule } from './core/core.module';
 import { InnerModule } from './modules/inner.module';
 import { HomeComponent } from './home/home.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { ShopDetailsComponent } from './shop-details/shop-details.component';
 import { VipcardComponent } from './vipcard/vipcard.component';
 import { OffersComponent } from './offers/offers.component';
 import { HadiyaComponent } from './hadiya/hadiya.component';
@@ -22,6 +23,7 @@ import { LeasingComponent } from './leasing/leasing.component';
     AppComponent,
     HomeComponent,
     CategoriesComponent,
+    ShopDetailsComponent,
     VipcardComponent,
     OffersComponent,
     HadiyaComponent,

@@ -13,6 +13,7 @@ import { GuestservicesComponent } from './guestservices/guestservices.component'
 import { EntertainmentDetailComponent } from './entertainment/entertainment-detail/entertainment-detail.component';
 import { EventDetailComponent } from './events/event-detail/event-detail.component';
 import { MeadiaComponent } from './meadia/meadia.component';
+import { MeadiaDetailComponent } from './meadia/meadia-detail/meadia-detail.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MeadiaComponent } from './meadia/meadia.component';
     GuestservicesComponent,
     EntertainmentDetailComponent,
     EventDetailComponent,
-    MeadiaComponent
+    MeadiaComponent,
+    MeadiaDetailComponent
   ],
   imports: [
     CommonModule,
