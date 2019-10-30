@@ -18,6 +18,7 @@ import { EventDetailComponent } from './modules/events/event-detail/event-detail
 import { GuestservicesComponent } from './modules/guestservices/guestservices.component';
 import { MeadiaComponent } from './modules/meadia/meadia.component';
 import { MeadiaDetailComponent } from './modules/meadia/meadia-detail/meadia-detail.component';
+import { MediaImagesComponent } from './modules/media/media-images/media-images.component';
 
 const routes: Routes = [
   {
@@ -87,6 +88,10 @@ const routes: Routes = [
   {
     path: 'media-detail',
     component: MeadiaDetailComponent
+  },
+  {
+    path: 'media/media-images/:id',
+    component: MediaImagesComponent
   }
 ];
 

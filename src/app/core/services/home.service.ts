@@ -27,7 +27,7 @@ export class HomeService {
        .pipe(map(data => data));
   }
 
-  getGalleryImages( lang:string = 'en',  pageKey: string ='home' ): Observable<any>
+  getGallery( lang:string = 'en',  pageKey: string ='home' ): Observable<any>
   {
     return this.apiService.get('/Gallery/loadGallery?pageKey=' + pageKey + '&language=' + lang )
        .pipe(map(data => data));
