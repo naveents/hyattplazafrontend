@@ -1,5 +1,5 @@
 <div class="page-banner">
-    <img [src]="banner" class="banner-image" />
+    <img src="http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/hyattplaza-images/Leasing/leas-ban.png" class="banner-image" />
     <div class="banner-box-shadow">
       <div class="banner-title">
         {{ pageTitle }}
@@ -21,15 +21,7 @@
       <div class="offset-md-1 col-md-10">
         <div class="col-md-12">
        
-          <!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="custom-tab nav-item">
-              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">LEASING
-              <br/>(Click here to apply for a space)</a>
-            </li>
-            <li class="custom-tab nav-item">
-              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">	ADVERTISING <br> (Click here for the details)</a>
-            </li>
-          </ul> -->
+    
           <div class="tab-content">
             <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
               <div class="col">
@@ -50,17 +42,21 @@
   
   
           <ngb-tabset [justify]="currentJustify">
-            <ngb-tab title="LEASING">
+            <ngb-tab class="tab-class">
+                    <ng-template ngbTabTitle><h4 class="title">LEASING</h4>
+                    </ng-template>
               <ng-template ngbTabContent>
                
-                <div class="content__wrapper" style="padding-left:7%;">
+                <div class="content__wrapper" style="padding-left:7%; text-align: center;">
   
                     <!-- ANOTHERTEST -->
+                    <div style="text-align: center; padding-top: 22px;">
                     <select id="ddlViewBy">
               <option value="1" selected="selected">Store</option>
               <option value="2" id="kisok">Kiosk</option>
               <option value="3">Promotional space</option>
-            </select>
+                  </select>
+                </div>
     
                     <!-- STORE -->
                     <div class="cont-us" id="cont-us">
@@ -749,14 +745,15 @@
               </ng-template>
             </ngb-tab>
             <ngb-tab>
-              <ng-template ngbTabTitle><b>ADVERTISING
-                </b> </ng-template>
+              <ng-template ngbTabTitle><h4 class="title">ADVERTISING</h4>
+                 </ng-template>
               <ng-template ngbTabContent class="tabcontent"> 
                 
                 <div class="content__wrapper" style="padding-left:7%;">
                     <!-- Form -->
                     <div class="cont-us">
                         <div class="form-sep2">
+                            <br>
                             <h6 class="dwn">
                                 Download hyattplaza advertisementkit to<br /> know more about the available advertisement location
                             </h6>

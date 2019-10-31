@@ -29,7 +29,7 @@ export class EventsComponent implements OnInit {
 
   loadFeaturedItems()
   {
-    this.genericService.getFeaturedEvents( 1, 5, localStorage.getItem('lang'))
+    this.genericService.getFeaturedEvents( 0, 5, localStorage.getItem('lang'))
       .subscribe( featuredItem => {
           this.featuredItems = featuredItem.data;
       });

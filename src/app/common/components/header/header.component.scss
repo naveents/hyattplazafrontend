@@ -28,7 +28,8 @@
             }
         }
         .link-icon-section {
-            margin-left:40px;
+            // margin-left:40px;
+            margin-left: 15px;
             display: inline-block;
             .link-icon {
                 width: 11px;
@@ -304,5 +305,9 @@ ul
 .sub-top {
 padding: 25px 20px;
     
+}
+.urls {
+    color: #000000;
+    text-decoration: none !important;
 }
     // END KRISHNA"S STYLING

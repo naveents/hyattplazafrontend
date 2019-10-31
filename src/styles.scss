@@ -442,9 +442,7 @@ font-size: 18px !important;
   font-size: 14px !important;
 
 }
-p {
-  font-family: Akkurat !important;
-}
+ 
 
 .custom-title{
   font-size: 42px !important;
@@ -472,10 +470,7 @@ p {
   cursor: pointer;
 }
 
-p{
-  font-family: Akkurat !important;
-  // font-family:  Marcellus !important;
-}
+ 
 
 @media screen and (max-width: 777px)
 {
@@ -500,11 +495,12 @@ p{
 
   .custom-title{
     font-size: 32px !important;
+    font-family: Marcellus !important;
   }
   .custom-tag {
     font-size: 15px !important;
     color: #ffffff;
-    font-family: Marcellus;
+    font-family: Marcellus !important;
     font-weight: 400;
     text-transform: uppercase;
   }
@@ -543,6 +539,7 @@ color: #fff !important;
   }
   .custom-title{
     font-size: 33px !important;
+    font-family: Marcellus !important;
   }
   .custom-tag {
     font-size: 17px !important;
@@ -552,8 +549,20 @@ color: #fff !important;
     text-transform: uppercase !important;
   }
 }
+.common-img-height{
+  height: 300px;
+  object-fit: cover;
+}
   // END KRISHNA"S STYLING
 .padRL30{
   padding-left: 30px!important;
   padding-right: 30px !important;
+}
+
+
+.font-marcellus {
+  font-family: Marcellus!important;
+}
+.font-Akkurat {
+  font-family: Akkurat !important;
 }

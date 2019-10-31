@@ -18,6 +18,14 @@ import { EventDetailComponent } from './modules/events/event-detail/event-detail
 import { GuestservicesComponent } from './modules/guestservices/guestservices.component';
 import { MediaImagesComponent } from './modules/media/media-images/media-images.component';
 import { NewsDetailComponent } from './modules/media/news-detail/news-detail.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
+import { CareerComponent } from './career/career.component';
+import { TermsComponent } from './modules/terms/terms.component';
+import { PrivacyComponent } from './modules/privacy/privacy.component';
+import { BlogComponent } from './modules/blog/blog.component';
+import { BlogDetailComponent } from './modules/blog/blog-detail/blog-detail.component';
+
 
 const routes: Routes = [
   {
@@ -88,6 +96,34 @@ const routes: Routes = [
   {
     path: 'news-detail',
     component: NewsDetailComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
+  },
+  {
+    path: 'about-us',
+    component: AboutComponent
+  },
+  {
+    path: 'careers',
+    component: CareerComponent
+  },
+  {
+    path:'terms',
+    component: TermsComponent,
+  },
+  {
+    path: 'privacy',
+    component: PrivacyComponent
+  },
+  {
+    path: 'blog',
+    component: BlogComponent
+  },
+  {
+    path: 'blog-detail',
+    component: BlogDetailComponent
   }
 ];
 

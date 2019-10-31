@@ -1,73 +1,73 @@
-.page-banner {
+// .page-banner {
     
-    display: block;
-    position: relative;
-    .banner-image {
-        width:100%;
-    }
-    .banner-box-shadow {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('/assets/icons/Rectangle_137-page.png');
-        background-size: cover;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+//     display: block;
+//     position: relative;
+//     .banner-image {
+//         width:100%;
+//     }
+//     .banner-box-shadow {
+//         position: absolute;
+//         left: 0;
+//         top: 0;
+//         width: 100%;
+//         height: 100%;
+//         background-image: url('/assets/icons/Rectangle_137-page.png');
+//         background-size: cover;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
 
-        .banner-title {
-            text-align: center;
-            color: #ffffff;
-            font-family: Marcellus;
-            font-size: 60px;
-            font-weight: 400;
-            text-transform: uppercase;
-            justify-content: center;
-            max-width: 50%;
-        }
-    }
-    .banner-search {
-        position: absolute;
-        bottom:0;
-        height:120px;
-        background-image: url('/assets/icons/Rectangle_141.png');
-        background-size: cover;
-        width:100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+//         .banner-title {
+//             text-align: center;
+//             color: #ffffff;
+//             font-family: Marcellus;
+//             font-size: 60px;
+//             font-weight: 400;
+//             text-transform: uppercase;
+//             justify-content: center;
+//             max-width: 50%;
+//         }
+//     }
+//     .banner-search {
+//         position: absolute;
+//         bottom:0;
+//         height:120px;
+//         background-image: url('/assets/icons/Rectangle_141.png');
+//         background-size: cover;
+//         width:100%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
 
-        .search-select {
-            width: 200px;
-            height: 40px;
-            color:#ffffff;
-            border: 1px solid #ffffff;
-            background-color: rgba(255, 255, 255, 0.1);
-            margin-right:20px;
-        }
-        .search-text {
-            width: 245px;
-            height: 40px;
-            color: #ffffff;
-            border: 1px solid #ffffff;
-            background-color: rgba(255, 255, 255, 0.1);
-            margin-right:20px;
-        }
-        .search-button {
-            height: 40px;
-            border: 1px solid #ffffff;
-            background-color: #ffffff;
-            margin:auto;
-            width:60px;
-            float:right;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-}
+//         .search-select {
+//             width: 200px;
+//             height: 40px;
+//             color:#ffffff;
+//             border: 1px solid #ffffff;
+//             background-color: rgba(255, 255, 255, 0.1);
+//             margin-right:20px;
+//         }
+//         .search-text {
+//             width: 245px;
+//             height: 40px;
+//             color: #ffffff;
+//             border: 1px solid #ffffff;
+//             background-color: rgba(255, 255, 255, 0.1);
+//             margin-right:20px;
+//         }
+//         .search-button {
+//             height: 40px;
+//             border: 1px solid #ffffff;
+//             background-color: #ffffff;
+//             margin:auto;
+//             width:60px;
+//             float:right;
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//         }
+//     }
+// }
 .category-selector {
     display: block;
     position: relative;
@@ -172,7 +172,7 @@
     }
 }
 .stories-images {
-    margin:20px 0 0 0;
+    // margin:20px 0 0 0;
     width:100%;
     text-align: center;
 

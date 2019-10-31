@@ -16,6 +16,11 @@ import { EventDetailComponent } from './events/event-detail/event-detail.compone
 import { MediaComponent } from './media/media.component';
 import { MediaImagesComponent } from './media/media-images/media-images.component';
 import { NewsDetailComponent } from './media/news-detail/news-detail.component';
+import { TermsComponent } from './terms/terms.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { BlogComponent } from './blog/blog.component';
+import { BlogDetailComponent } from './blog/blog-detail/blog-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +34,11 @@ import { NewsDetailComponent } from './media/news-detail/news-detail.component';
     EntertainmentDetailComponent,
     EventDetailComponent,
     MediaImagesComponent,
-    NewsDetailComponent
+    NewsDetailComponent,
+    TermsComponent,
+    PrivacyComponent,
+    BlogComponent,
+    BlogDetailComponent
   ],
   imports: [
     CommonModule,

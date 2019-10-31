@@ -299,9 +299,9 @@ button.tnt-btn2{
 
 // WrapperBorder
 .content__wrapper{
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
+    border-bottom: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    border-left: 1px solid #aaa;
 }
 
  
@@ -394,3 +394,24 @@ span {
      padding-left: 5% !important;
      padding-right: 5% !important;
  }
+
+ .nav-tabs .nav-link.active {
+	border-color: #aaa !important;
+	background: #f2f2f2 !important;
+ }
+ .title {
+	 font-family: Marcellus !important;
+	 font-size: 20px;
+	 color: #000 !important;
+	 
+ }
+ .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+	background-color: #f2f2f2 !important;
+}
+.content__wrapper {
+   background: #f2f2f2 !important;
+   background-color: #fff;
+	}
+	.tab-class:active {
+background: #f2f2f2 !important;
+	}

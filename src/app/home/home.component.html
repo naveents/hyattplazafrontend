@@ -6,8 +6,8 @@
       <img [src]="banner.image" class="banner-image" [alt]="banner.title_en">
       <div class="home-banner-shadow"></div>
       <div class="carousel-caption">
-        <p class="banner-tag">{{banner.type}}</p>
-        <p class="banner-title">{{banner.title}}</p>
+        <p class="banner-tag font-marcellus ">{{banner.type}}</p>
+        <p class="banner-title font-marcellus ">{{banner.title}}</p>
         <p class="banner-description">{{banner.desc}}</p>
         <div class="link-button button-common-style">Learn More</div>
       </div>
@@ -32,7 +32,7 @@
       <img src="{{ homeCategories.data[0].image }}">
       <div class="home-image-content" style="background-image: url('/assets/icons/home-gradient-1.png');background-size: cover;">
         <div class="image-caption image-caption-large">
-          <p class="tag">{{ homeCategories.data[0].name }}</p>
+          <p class="tag">{{ homeCategories.data[0].link }}</p>
           <p class="title" innerHTML="{{ homeCategories.data[0].name }}"></p>
           <div class="link-button button-common-style"><a routerLink="/shopping">EXPLORE MORE</a></div>
         </div>
@@ -42,7 +42,7 @@
       <img src="{{ homeCategories.data[1].image }}">
       <div class="home-image-content" style="background-image: url('/assets/icons/home-gradient-2.png');background-size: cover;">
         <div class="image-caption image-caption-small">
-          <p class="tag">{{ homeCategories.data[1].name }}</p>
+          <p class="tag">{{ homeCategories.data[1].link }}</p>
           <p class="title" innerHTML="{{ homeCategories.data[1].name }}"></p>
           <div class="link-button button-common-style"><a routerLink="/dining">EXPLORE MORE</a></div>
         </div>
@@ -54,7 +54,7 @@
       <img src="{{ homeCategories.data[2].image }}">
       <div class="home-image-content" style="background-image: url('/assets/icons/home-gradient-2.png');background-size: cover;">
         <div class="image-caption image-caption-small">
-          <p class="tag">{{ homeCategories.data[2].name }}</p>
+          <p class="tag">{{ homeCategories.data[2].link }}</p>
           <p class="title" innerHTML="{{ homeCategories.data[2].name }}"></p>
           <div class="link-button button-common-style"><a routerLink="/events">EXPLORE MORE</a></div>
         </div>
@@ -64,7 +64,7 @@
       <img src="{{ homeCategories.data[3].image }}">
       <div class="home-image-content" style="background-image: url('/assets/icons/home-gradient-1.png');background-size: cover;">
         <div class="image-caption image-caption-large">
-          <p class="tag">{{ homeCategories.data[3].name }}</p>
+          <p class="tag">{{ homeCategories.data[3].link }}</p>
           <p class="title" innerHTML="{{ homeCategories.data[3].name }}"></p>
           <div class="link-button button-common-style"><a routerLink="/offers">EXPLORE MORE</a></div>
         </div>
@@ -76,7 +76,7 @@
       <img src="{{ homeCategories.data[4].image }}">
       <div class="home-image-content" style="background-image: url('/assets/icons/home-gradient-3.png');background-size: cover;">
         <div class="image-caption image-caption-elarge">
-          <p class="tag">{{ homeCategories.data[4].name }}</p>
+          <p class="tag">{{ homeCategories.data[4].link }}</p>
           <p class="title" innerHTML="{{ homeCategories.data[4].name }}"></p>
           <div class="link-button button-common-style" ><a routerLink="/entertainment">EXPLORE MORE</a></div>
         </div>
@@ -105,7 +105,7 @@
   <div class="events-gallery mob-hide" *ngIf="newsDataLoaded">
     <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
       <div class="width" ngxSlickItem *ngFor="let news of newsData" class="slide record">
-        <img [src]="news.news_image" class="event-image" alt="{{news.title}}" width="100%">
+        <img [src]="news.news_image" class="event-image common-img-height" alt="{{news.title}}" width="100%">
         <div class="event-details">
           <div class="event-title">
             {{news.title}}

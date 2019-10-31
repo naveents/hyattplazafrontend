@@ -16,7 +16,11 @@ import { VipcardComponent } from './vipcard/vipcard.component';
 import { OffersComponent } from './offers/offers.component';
 import { HadiyaComponent } from './hadiya/hadiya.component';
 import { LeasingComponent } from './leasing/leasing.component';
-
+import { ContactComponent } from './contact/contact.component';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { AboutComponent } from './about/about.component';
+import { CareerComponent } from './career/career.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,10 @@ import { LeasingComponent } from './leasing/leasing.component';
     VipcardComponent,
     OffersComponent,
     HadiyaComponent,
-    LeasingComponent
+    LeasingComponent,
+    ContactComponent,
+    AboutComponent,
+    CareerComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +44,9 @@ import { LeasingComponent } from './leasing/leasing.component';
     InnerModule,
     AppRoutingModule,
     SlickModule.forRoot(),
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    RouterModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
