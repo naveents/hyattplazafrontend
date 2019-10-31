@@ -18,17 +18,17 @@ export class HomeComponent implements OnInit {
 
   showNavigationIndicators = false;
 
-  topBanners: Array<string> = [];
+  topBanners: any = [];
   topBannerLoaded: boolean = false;
 
 
-  homeCategories: Array<string> =[];
+  homeCategories: any =[];
   homeCategoryLoaded: boolean = false;
 
-  newsData: Array<string> = [];
+  newsData: any = [];
   newsDataLoaded: boolean = false;
 
-  galleryData: Array<string> =[];
+  galleryData: any =[];
   galleryDataLoaded: boolean = false;
 
   shopOpenHours = [

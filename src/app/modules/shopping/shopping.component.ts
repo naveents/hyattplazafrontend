@@ -9,14 +9,14 @@ import { Router } from '@angular/router';
 })
 export class ShoppingComponent implements OnInit {
 
-  pageBanner: Array<string> = [];
-  dropDownCategories: Array<string> = [];
+  pageBanner: any = [];
+  dropDownCategories: any = [];
   pageBannerLoaded: boolean = false;
   selectedCategory = '';
   categoryBlock: boolean = true;
   brandBlock: boolean = false;
-  featuredItems: Array<string> = [];
-  brandLogs: Array<string> = [];
+  featuredItems: any = [];
+  brandLogs: any = [];
 
   slideConfig = {
     dots: false,

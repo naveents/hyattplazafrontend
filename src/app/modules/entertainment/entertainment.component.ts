@@ -8,9 +8,9 @@ import { CommonService, GenericPageService } from '../../core';
 })
 export class EntertainmentComponent implements OnInit {
 
-  pageBanner: Array<string> = [];
+  pageBanner: any = [];
   pageBannerLoaded: boolean = false;
-  featuredItems: Array<string> =[];
+  featuredItems: any =[];
 
   constructor(
      private commonService: CommonService,

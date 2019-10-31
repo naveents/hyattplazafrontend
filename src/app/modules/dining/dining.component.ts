@@ -9,11 +9,11 @@ import { Router } from '@angular/router';
 })
 export class DiningComponent implements OnInit {
 
-  pageBanner: Array<string> = [];
-  dropDownCategories: Array<string> = [];
+  pageBanner: any = [];
+  dropDownCategories: any = [];
   pageBannerLoaded: boolean = false;
   selectedCategory = '';
-  featuredItems: Array<string> =[];
+  featuredItems: any =[];
 
   slideConfig = {
     dots: false,

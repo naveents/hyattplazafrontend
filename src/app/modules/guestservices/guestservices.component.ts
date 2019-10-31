@@ -9,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class GuestservicesComponent implements OnInit {
 
   constructor(private pageService: PageService) { }
-  services: Array<string> = [];
-  awards: Array<string> = [];
+  services: any = [];
+  awards: any = [];
   ngOnInit() {
     this.pageService.getGuestServices(localStorage.getItem('lang'))
       .subscribe(response => {

@@ -8,9 +8,52 @@ import { CommonService, GenericPageService, HomeService } from '../../core';
 })
 export class MediaComponent implements OnInit {
 
-  pageBanner: Array<string> = [];
+  blogs = [
+    {
+      img:'assets/hyattplaza-images/9.png',
+      time: '3 Jan 1998',
+      des: 'Enjoy 20% off discount on all purchases. Gubergren sed vero ea duo labore no labore stet et eos, Diam duo et sit sit dolores.'
+    },
+    {
+      img:'assets/hyattplaza-images/3.png',
+
+      time: '3 May 1998',
+      des: 'Enjoy 20% off discount on all purchases. Gubergren sed vero ea duo labore no labore stet et eos, Diam duo et sit sit dolores.'
+    },
+    {
+      img:'assets/hyattplaza-images/10.png',
+
+      time: '22 Jan 2019',
+      des: 'Enjoy 20% off discount on all purchases. Gubergren sed vero ea duo labore no labore stet et eos, Diam duo et sit sit dolores.'
+    },
+    {
+      img:'assets/hyattplaza-images/9.png',
+
+      time: '22 Jan 2019',
+      des: 'Enjoy 20% off discount on all purchases. Gubergren sed vero ea duo labore no labore stet et eos, Diam duo et sit sit dolores.'
+    },
+    {
+      img:'assets/hyattplaza-images/shopping/cat3.png',
+
+      time: '22 Jan 2019',
+      des: 'Enjoy 20% off discount on all purchases. Gubergren sed vero ea duo labore no labore stet et eos, Diam duo et sit sit dolores.'
+    },
+    {
+      img:'assets/hyattplaza-images/10.png',
+
+      time: '22 Jan 2019',
+      des: 'Enjoy 20% off discount on all purchases. Gubergren sed vero ea duo labore no labore stet et eos, Diam duo et sit sit dolores.'
+    },
+    
+  ]
+  
+
+
+
+
+  pageBanner: any = [];
   pageBannerLoaded: boolean = false;
-  galleryData: Array<string> = [];
+  galleryData: any = [];
   galleryDataLoaded: boolean = false;
 
   constructor(
@@ -31,6 +74,10 @@ export class MediaComponent implements OnInit {
     this.loadGalleryAlbums();
 
   }
+  showTab = 1;
+  tabToggle(index){
+    this.showTab =index;
+  }
 
   loadGalleryAlbums()
   {
@@ -41,4 +88,7 @@ export class MediaComponent implements OnInit {
     });
 
   }
+
+   
+
 }

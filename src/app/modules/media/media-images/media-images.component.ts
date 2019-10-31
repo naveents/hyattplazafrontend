@@ -9,9 +9,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MediaImagesComponent implements OnInit {
 
-  pageBanner: Array<string> = [];
+  pageBanner: any = [];
   pageBannerLoaded: boolean = false;
-  albumImages: Array<string> = [];
+  albumImages: any = [];
   albumImagesLoaded: boolean = false;
   albumId: number;
 

@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-meadia-detail',
-  templateUrl: './meadia-detail.component.html',
-  styleUrls: ['./meadia-detail.component.scss']
+  selector: 'app-news-detail',
+  templateUrl: './news-detail.component.html',
+  styleUrls: ['./news-detail.component.scss']
 })
-export class MeadiaDetailComponent implements OnInit {
-
+export class NewsDetailComponent implements OnInit {
   blogs = [
     {
       img:'assets/hyattplaza-images/news/s1.png',
@@ -72,7 +71,6 @@ slideConfig = {
   slidesToShow: 1,
   slidesToScroll: 1,
 };
-
 
 
 

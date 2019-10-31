@@ -18,7 +18,7 @@
       <span class="link-icon"
         ><img src="../../../../assets/icons/pointer.png"
       /></span>
-      <span class="link-text">LEASING</span>
+      <span class="link-text"><a routerLink="/leasing"> LEASING</a></span>
     </div>
     <div class="link">
       <span class="link-icon"
@@ -62,7 +62,7 @@
 
           <div class="menu-primary">
             <ul>
-              <li class="item" *ngFor="let menu of topMenu.data">
+              <li class="item" *ngFor="let menu of topMenu">
                 <a class="nav-hed" href="{{ menu.menuKey }}">{{
                   menu.menuName
                 }}</a>

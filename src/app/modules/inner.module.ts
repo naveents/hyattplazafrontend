@@ -13,10 +13,9 @@ import { EventsComponent } from './events/events.component';
 import { GuestservicesComponent } from './guestservices/guestservices.component';
 import { EntertainmentDetailComponent } from './entertainment/entertainment-detail/entertainment-detail.component';
 import { EventDetailComponent } from './events/event-detail/event-detail.component';
-import { MeadiaDetailComponent } from './meadia/meadia-detail/meadia-detail.component';
 import { MediaComponent } from './media/media.component';
-import { MeadiaComponent } from './meadia/meadia.component';
 import { MediaImagesComponent } from './media/media-images/media-images.component';
+import { NewsDetailComponent } from './media/news-detail/news-detail.component';
 
 @NgModule({
   declarations: [
@@ -29,9 +28,8 @@ import { MediaImagesComponent } from './media/media-images/media-images.componen
     GuestservicesComponent,
     EntertainmentDetailComponent,
     EventDetailComponent,
-    MeadiaComponent,
-    MeadiaDetailComponent,
-    MediaImagesComponent
+    MediaImagesComponent,
+    NewsDetailComponent
   ],
   imports: [
     CommonModule,

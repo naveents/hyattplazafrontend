@@ -9,7 +9,7 @@ import { CommonService } from 'src/app/core';
 export class HeaderComponent implements OnInit {
 
   collapsed = true;
-  topMenu: Array<string> = [];
+  topMenu: any [] = [];
   topMenuLoaded: boolean = false;
   language: string = 'en';
   currentLanguages = [
@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit {
 
     this.commonService.getMainMenu(localStorage.getItem('lang'))
     .subscribe(menu => {
-      this.topMenu = menu;
+      this.topMenu = menu.data;
       this.topMenuLoaded = true;
     });
 
