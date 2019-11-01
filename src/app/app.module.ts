@@ -21,6 +21,8 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AboutComponent } from './about/about.component';
 import { CareerComponent } from './career/career.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { CareerComponent } from './career/career.component';
     SlickModule.forRoot(),
     AngularFontAwesomeModule,
     RouterModule,
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -36,5 +36,12 @@ export class PageService {
       .pipe(map(data => data));
   }
 
+  postLeasingForm(formData: any)
+  {
+    return this.apiService.post (
+      '/Category/LeasingMail', formData
+    );
+  }
+
 
 }
