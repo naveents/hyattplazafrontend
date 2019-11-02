@@ -15,7 +15,11 @@
               <div class="image-caption">
                 <div class="image-caption-elarge">                  
                   <p class="custom-title" innerHTML="{{featuredItems[0].title}}"></p>
-                  <div class="link-button button-common-style">EXPLORE MORE</div>
+                  <div class="link-button button-common-style">
+                      <a class="custom-router-link" [routerLink] = "['/entertainment/detail', featuredItems[0].id]">
+                        EXPLORE MORE
+                      </a>
+                    </div>  
                 </div>
               </div>
             </div>
@@ -26,7 +30,11 @@
               <div class="image-caption">
                 <div class="image-caption-elarge">                
                   <p class="custom-title" innerHTML="{{featuredItems[1].title}}"></p>
-                  <div class="link-button button-common-style">EXPLORE MORE</div>
+                  <div class="link-button button-common-style">
+                      <a class="custom-router-link" [routerLink] = "['/entertainment/detail', featuredItems[1].id]">
+                        EXPLORE MORE
+                      </a>
+                    </div>  
                 </div>
               </div>
             </div>
@@ -39,7 +47,11 @@
               <div class="image-caption">
                 <div class="image-caption-large">                  
                   <p class="custom-title" innerHTML="{{featuredItems[2].title}}"></p>
-                  <div class="link-button button-common-style">EXPLORE MORE</div>
+                  <div class="link-button button-common-style">
+                      <a class="custom-router-link" [routerLink] = "['/entertainment/detail', featuredItems[2].id]">
+                        EXPLORE MORE
+                      </a>
+                    </div>  
                 </div>
               </div>
             </div>
@@ -50,7 +62,11 @@
               <div class="image-caption">
                 <div class="image-caption-small">                 
                   <p class="custom-title" innerHTML="{{featuredItems[3].title}}"></p>
-                  <div class="link-button button-common-style">EXPLORE MORE</div>
+                  <div class="link-button button-common-style">
+                    <a class="custom-router-link" [routerLink] = "['/entertainment/detail', featuredItems[3].id]">
+                      EXPLORE MORE
+                    </a>
+                  </div>                  
                 </div>
               </div>
             </div>
