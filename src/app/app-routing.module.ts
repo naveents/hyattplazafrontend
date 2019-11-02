@@ -94,7 +94,7 @@ const routes: Routes = [
     component: MediaImagesComponent
   },
   {
-    path: 'news-detail',
+    path: 'media/news-detail/:id',
     component: NewsDetailComponent
   },
   {
