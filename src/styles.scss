@@ -423,7 +423,8 @@ a {
  
 
 .link-button a{
-  color: #fff !important;
+  color: #fff ;
+  text-decoration: none !important;
 }
 
 // COMMON SLIDER TITLE
@@ -435,7 +436,7 @@ font-size: 18px !important;
 
 .button-common-style{
   border: 1px solid #fff !important;
-  color: #fff !important;
+  color: #fff ;
   text-transform: uppercase !important; 
   height: 44px !important;
   width: 188px !important;
@@ -452,6 +453,23 @@ font-size: 18px !important;
   font-weight: 400 !important;
   text-transform: uppercase !important;
   // line-height: 1;
+}
+
+
+.button-common-style:hover{ 
+
+  background: #fff !important;
+  color: #000 !important;
+  a{
+  color: #000 !important;
+  }
+
+}
+.button-common-style a:hover{ 
+
+  // background: #fff !important;
+  color: #000 !important;
+
 }
 
 .link-button {
@@ -518,7 +536,10 @@ font-size: 12px !important;
 font-weight: 300 !important;
 text-transform: uppercase !important;
 cursor: pointer !important;
-color: #fff !important;
+color: #fff;
+a{
+text-decoration: none !important;
+}
   }
 
 }
@@ -560,9 +581,28 @@ color: #fff !important;
 }
 
 
-.font-marcellus {
+
+
+.font-marcellus, .title {
   font-family: Marcellus!important;
 }
-.font-Akkurat {
+.font-Akkurat, .text {
   font-family: Akkurat !important;
 }
+.view_store{
+  padding: 8px 28px;
+  margin: 0 auto;
+  border: 1px #333 solid;
+  text-transform: uppercase;
+  margin: 10px 0;
+  display: inline-block;
+}
+.view_store:hover{
+  background: #333;
+  color: #fff!important;
+}
+.crd_btn{
+  width: 100%;
+  text-align: center;
+}
+ 

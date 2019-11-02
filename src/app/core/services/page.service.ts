@@ -36,5 +36,14 @@ export class PageService {
       .pipe(map(data => data));
   }
 
+  getNewsDetail(newsID: number = 0, lang: string = 'en'): Observable<any> {
+    return this.apiService.get('/News/loadNewsDetails?language=' + lang + '&newsID=' + newsID )
+      .pipe(map(data => data));
+  }
+
+  getRelatedNewsDetail(newsID: number = 0, lang: string = 'en'): Observable<any> {
+    return this.apiService.get('/News/loadRelatedNews?language=' + lang + '&newsID=' + newsID )
+      .pipe(map(data => data));
+  }
 
 }

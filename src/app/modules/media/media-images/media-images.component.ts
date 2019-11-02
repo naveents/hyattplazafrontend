@@ -1,6 +1,7 @@
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit, Injectable, ɵConsole } from '@angular/core';
 import { CommonService, GenericPageService, HomeService } from '../../../core';
 import { ActivatedRoute } from '@angular/router';
+import { Lightbox } from 'ngx-lightbox';
 
 @Component({
   selector: 'app-media-images',
@@ -19,7 +20,8 @@ export class MediaImagesComponent implements OnInit {
      private commonService: CommonService,
      private genericService: GenericPageService,
      private homeService: HomeService,
-     private activatedRoute: ActivatedRoute
+     private activatedRoute: ActivatedRoute,
+     private _lightbox: Lightbox
      ) { }
 
   ngOnInit() {
@@ -34,7 +36,7 @@ export class MediaImagesComponent implements OnInit {
     this.activatedRoute.params.subscribe(routeParams => {
         this.albumId = routeParams.id;
         this.loadAlbumImages();
-    });    
+    });
 
   }
 
@@ -42,9 +44,21 @@ export class MediaImagesComponent implements OnInit {
   {
     this.genericService.getAlbumImages(this.albumId)
     .subscribe( images => {
-      this.albumImages = images;     
+      this.albumImages = images;
       this.albumImagesLoaded = true;
     });
 
+  }
+
+  open(index: number): void {
+    // open lightbox
+    console.log(this.albumImages.data);
+    console.log(index);
+    this._lightbox.open(this.albumImages.data, index);
+  }
+
+  close(): void {
+    // close lightbox programmatically
+    this._lightbox.close();
   }
 }

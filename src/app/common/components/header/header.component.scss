@@ -286,7 +286,7 @@ ul
 
 .sub {
     z-index: 99 !important;
-    margin-top: 1px !important;
+    margin-top: -4px !important;
     // height: 350px !important;
    .figcaption-title{
        font-size: 20px !important;
@@ -311,3 +311,32 @@ padding: 25px 20px;
     text-decoration: none !important;
 }
     // END KRISHNA"S STYLING
+
+
+    // HEADER HOVER LINE
+.cool-link {
+    display: inline-block;
+    //color: #000;
+    text-decoration: none;
+}
+
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+   // background: #d8ac73;
+   background: #ffffff;
+    transition: width .3s;
+    //  padding-top:5px;
+     margin-top:4px;
+   
+}
+
+.cool-link:hover::after {
+    width: 100%;
+    //transition: width .3s;
+     
+    margin-top:4px;
+}
+// END LINE

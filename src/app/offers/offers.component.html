@@ -19,6 +19,7 @@
               [src]=offer.offer_image
               class="card-img-top img-height"
               alt="..."
+              (click)="open(offer.offer_image, offer.title, offer.subtitle, offer.description, offer.owner_id)"
             />
             <span class="name-shade">{{offer.title}}</span>
           </div>

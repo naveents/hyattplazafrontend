@@ -55,6 +55,8 @@ export class MediaComponent implements OnInit {
   pageBannerLoaded: boolean = false;
   galleryData: any = [];
   galleryDataLoaded: boolean = false;
+  newsData: any = [];
+  newsDataLoaded: boolean = false;
 
   constructor(
      private commonService: CommonService,
@@ -72,23 +74,32 @@ export class MediaComponent implements OnInit {
     );
 
     this.loadGalleryAlbums();
+    this.loadNews();
 
   }
   showTab = 1;
-  tabToggle(index){
-    this.showTab =index;
+  tabToggle(index) {
+    this.showTab = index;
   }
 
   loadGalleryAlbums()
   {
     this.homeService.getGallery(localStorage.getItem('lang'), 'gallery')
     .subscribe(gallery => {
-      this.galleryData = gallery;     
+      this.galleryData = gallery;
       this.galleryDataLoaded = true;
     });
 
   }
+  loadNews()
+  {
+    this.homeService.getNewsAndEvents(localStorage.getItem('lang'), 0, 15, 'news')
+    .subscribe(res => {
+      this.newsData = res.data;
+      console.log(this.newsData);
+      this.newsDataLoaded = true;
+    });
 
-   
+  }
 
 }
