@@ -10,34 +10,32 @@
   <!-- <div class="shop-deatil-wrapper" *ngIf="shopDetail[0]"> -->
       <div class="shop-deatil-wrapper">
  
-    <div class="container padLR15">
+    <div class="container padLR15" *ngIf="activeEntertainment[0]">
       <div class="row">
         <div class="col-6">
-          <div class="content-box">
-            <h4>Entertainmet Details Page</h4>
+          <div class="content-box">          
+            <h4>{{ activeEntertainment[0].title }}</h4>
             <ul class="attractives">
               
               <li><i class="fa fa-phone" aria-hidden="true"></i> 777 111 888</li>
               <li>
-                <i class="fa fa-clock-o" aria-hidden="true"></i> 10:00 AM - 05:00 PM
+                <i class="fa fa-clock-o" aria-hidden="true"></i> {{ activeEntertainment[0].start_time }} - {{ activeEntertainment[0].end_time }}
               </li>
             </ul>
-            <p>
-                   Arcs-en-ciel - lunules soleils du ou je tohu-bohus. Les exquise aux en j'ai je fini montant, les l'éther mais je.
-            </p>
+            <p>{{ activeEntertainment[0].description }}</p>
             <div class="shop-image-slider">
               <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
-                <div ngxSlickItem *ngFor="let category of categories" class="slide record">
-                  <img style="width:100%;" [src]="category.image" class="category-image">
+                <div ngxSlickItem *ngFor="let image of activeEntertainment[0].image" class="slide record">
+                  <img style="width:100%;" [src]="image.image_name" class="category-image">
                 </div>
               </ngx-slick>
             </div>
           </div>
         </div>
         <div class="col-6">
-          <img style="width:100%; padding-bottom: 22px" src="http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/events/797.png"/>
+          <img style="width:100%; padding-bottom: 22px" src="{{ activeEntertainment[0].vip_image }}"/>
           <br>
-          <img style="width:100%;" src="http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/events/MAP.png"/>
+          <img style="width:100%;" src="{{ activeEntertainment[0].map_image }}"/>
         </div>
       </div>
     </div>

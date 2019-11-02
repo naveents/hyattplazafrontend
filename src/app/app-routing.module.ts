@@ -77,7 +77,7 @@ const routes: Routes = [
     component: LeasingComponent
   },
   {
-    path: 'entertainment-detail',
+    path: 'entertainment/detail/:id',
     component: EntertainmentDetailComponent
   },
   {
