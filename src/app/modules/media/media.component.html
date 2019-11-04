@@ -17,36 +17,7 @@
       NEWS
     </button>
   </div>
-  
-  <!-- <div class="gallery" id="img">
-    <div class="item item1">
-      <img src={{photo_gallery[0].img}} width="100%;">
-    </div>
-    <div class="item item2">
-      <img src={{photo_gallery[1].img}} width="100%;">
-    </div>
-    <div class="item item3">
-      <img src={{photo_gallery[2].img}} width="100%;">
-    </div>
-    <div class="item item4">
-      <img src={{photo_gallery[0].img}} width="100%;">
-    </div>
-    <div class="item item5">
-      <img src={{photo_gallery[1].img}} width="100%;">
-    </div>
-    <div class="item item6">
-      <img src={{photo_gallery[2].img}} width="100%;">
-    </div>
-    <div class="item item7">
-      <img src={{photo_gallery[0].img}} width="100%;">
-    </div>
-    <div class="item item8">
-      <img src={{photo_gallery[1].img}} width="100%;">
-    </div>
-    <div class="item item9">
-      <img src={{photo_gallery[2].img}} width="100%;">
-    </div>
-  </div> -->
+ 
   
   <!-- MDB GALLERY -->
   <div *ngIf="showTab == 1">
@@ -54,13 +25,13 @@
   <div *ngFor="let gallery of galleryData.data" class="item">
 	 <a class="custom-router-link" [routerLink] = "['media-images', gallery.id]">
       <img
-        class="mens_fasion_img"
+        class="mens_fasion_img common-img-height"
         src="{{gallery.gallery_image}}"
         style="width:100%;"
 	  />   
 	  </a> 
        <div class="text-block">          
-    		<p style="text-align:center;">{{gallery.title}}</p>
+    		<p class="text" style="text-align:center;">{{gallery.title}}</p>
       </div>
     </div>   
   </div>
@@ -111,18 +82,20 @@
         
         </div>
          -->
-         <div class="blog-des" *ngIf="newsDataLoaded">
-          <div class="blog-des-img1" *ngFor="let news of newsData">
-            <a [routerLink]="['news-detail',news.id]">
-              <img class="fx-h" src="{{news.news_image}}" style="width:100%" />
-            </a>
-            <p><b>{{news.create_date}}</b> </p>
-            <hr class="hr-wid"/>
-            <p class="des"> {{news.short_desc }}</p>
-        
-          </div>
-        </div>
+  <div class="blog-des" *ngIf="newsDataLoaded">
+    <div class="blog-des-img1" *ngFor="let news of newsData">
+      <a [routerLink]="['news-detail',news.id]">
+        <img class=" common-img-height" src="{{news.news_image}}" style="width:100%" />
+      </a>
+      <p><b>{{news.create_date}}</b> </p>
+      <hr class="hr-wid"/>
+      <p class="des text"> {{news.short_desc }}</p>
+  
+    </div>
+  </div>
   
   
   </div>
 </div>
+<br>
+<br>

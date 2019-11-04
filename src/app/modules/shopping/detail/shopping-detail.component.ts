@@ -12,7 +12,7 @@ export class ShoppingDetailComponent implements OnInit {
   pageBanner: Array<string> = [];
   pageBannerLoaded: boolean = true;
   shopId: number;
-  shopDetail: Array<string> = [];
+  shopDetail:any = [];
 
   slideConfig = {
     dots: false,
@@ -20,6 +20,13 @@ export class ShoppingDetailComponent implements OnInit {
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 3
+  };
+  slideConfigmob = {
+    dots: false,
+    arrows: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1
   };
 
   constructor(

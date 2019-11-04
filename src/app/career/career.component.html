@@ -7,190 +7,53 @@
     </div>
   </div>
 
-  <div
-  data-spy="scroll"
-  class="apply-pos  scrollspy-example z-depth-1 mt-4"
-  data-offset="0"
->
-  <div
-    class="accordion md-accordion"
-    id="accordionEx"
-    aria-multiselectable="true"
-  >
-    <div class="card">
-
-      <!-- FIRST JB DES -->
-      <div col-md-offset-9>
-        <h3 id="title1"></h3>
-        <div id="1jb_h"> 
-        <p id="job_des1"></p>
-
-        <button
-          id="test"
-          class="btn  btn-md col-md-3 "
-          style="float:right;"
-          data-toggle="collapse"
-          data-parent="#accordionEx"
-          href="#collapseOne1"
-          aria-controls="collapseOne1"
-        >
-          READ MORE
-        </button>
-        </div>
-      </div>
-
-      <hr id="hrh" />
-      <div
-        id="collapseOne1"
-        class="collapse"
-        role="tabpanel"
-        aria-labelledby="headingOne1"
-        data-parent="#accordionEx"
-      >
-        <div class="card-body">
-          <p class="jb_det" id="job_details1"></p>
-          
-          <div style="text-align:center;">
-              <button class="apl-nw" (click)="basicModal.show()">APPLY NOW</button>
-
-          </div>
-         
-       
-          <hr />
-        </div>
-      </div>
-           <!--END FIRST JB DES -->
-
-     
-     
-           <!-- SECOND JB DES -->
-     
-      <div col-md-offset-9>
- <h3 id="title2"></h3>
- <div id="2jb_h"> 
-      <p class="jb_det" id="job_des2"></p> 
-      
-      <button
-      id="test2"
-      class="btn  btn-md col-md-3 "
-      style="float:right;"
-      data-toggle="collapse"
-      data-parent="#accordionEx"
-      href="#collapseTwo2"
-      aria-controls="collapseTwo2"
-    >
-      READ MORE
-    </button>
-   
-    </div>
-    
   
-    </div>
-    <hr id="hrh2"/>
-    <div
-        id="collapseTwo2"
-        class="collapse"
-        role="tabpanel"
-        aria-labelledby="headingOne1"
-        data-parent="#accordionEx"
-      >
-        <div class="card-body">
-          <p class="jb_det" id="job_details2" ></p>
-          <br>
-          <div style="text-align:center;">
-              <button class="apl-nw" (click)="basicModal.show()">APPLY NOW</button>
 
-          </div>
-          <hr />
-        </div>
-      </div>
-<!-- END SECOND JB DES -->
-<!-- ThirdJOBDES -->
-<div  col-md-offset-9>
-      <h3 id="title3"></h3>
-      <div id="3jb_h"> 
-      <p id="job_des3"></p>
-      <button
-      id="test3"
-      class="btn  btn-md col-md-3 "
-      style="float:right;"
-      data-toggle="collapse"
-      data-parent="#accordionEx"
-      href="#collapseThree3"
-      aria-controls="collapseThree3"
-    >
-      READ MORE
-    </button>
-  </div>
+<div class="career-job-section">
+
+  <div class="job-post"  >
+    <div  *ngFor="let career of hyattCareer">
+    <div class="job-title">
+        <h3 class="font-marcellus" style="text-align:left; text-transform: uppercase;">
+           {{career.title}}
+            </h3>
+    </div>
+<div class="short-job-des" *ngIf="showTab == 1">
+  <p class="font-Akkurat">
+    <!-- Elszenderül ahol és körül ti halál. Neki kellene hull ahol nagyon el nem, kíntól a s elvonta boldog de. Világ s táj menedéket halál a de hagyottan. Magára horgot ellene hallja kénye ellökött fáj. Csecsemő nem az lel bukjatok, halál hoz álom magától sírjátok kelljen, s ríjjátok igát gondom ellökött s élő ebek hol néma, bukjatok ugassátok mégis kiket hol hogy igát ebek, is ép megriadt de olyat nemcsak legutolsó kerék kivül. Hallgassátok a mégis nincsen ti. -->
+{{career.shortdes}}
+  </p>
+
+  <button style="float:right;" (click)="tabToggle(2)" class="button-common-style">
+    READ MORE
+  </button>
 </div>
-<hr id="hrh3"/>
-<div
-        id="collapseThree3"
-        class="collapse"
-        role="tabpanel"
-        
-        data-parent="#accordionEx"
-      >
-        <div class="card-body">
-          <p class="jb_det" id="job_details3" ></p>
 
-          <br>
-          <div style="text-align:center;">
-              <button class="apl-nw" (click)="basicModal.show()">APPLY NOW</button>
+<div class="job-full-detail" *ngIf="showTab == 2">
 
-          </div>
-          <hr />
-        </div>
-      </div>
-
-
-<!-- END3RDDES -->
-
-<!-- 4JB-DES -->
-<div  col-md-offset-9> 
-      <h3 id="title4"></h3>
-      <p id="job_des4"></p>
-      <h3 id="title4"></h3>
-      <div id="4jb_h"> 
-      <p id="job_des4"></p>
-      <button
-      id="test4"
-      class="btn  btn-md col-md-3 "
-      style="float:right;"
-      data-toggle="collapse"
-      data-parent="#accordionEx"
-      href="#collapseFour4"
-      aria-controls="collapseFour"
-    >
-      READ MORE
-    </button>
-
+    <p class="font-Akkurat">
+        <!-- Elszenderül ahol és körül ti halál. Neki kellene hull ahol nagyon el nem, kíntól a s elvonta boldog de. Világ s táj menedéket halál a de hagyottan. Magára horgot ellene hallja kénye ellökött fáj. Csecsemő nem az lel bukjatok, halál hoz álom magától sírjátok kelljen, s ríjjátok igát gondom ellökött s élő ebek hol néma, bukjatok ugassátok mégis kiket hol hogy igát ebek, is ép megriadt de olyat nemcsak legutolsó kerék kivül. Hallgassátok a mégis nincsen ti.
+        Disporting minstrels een wassailers break take a hope deem, wight day but me dote chill tis, festal deigned days in from, and of flee despair gathered love by yes. Friends charms was are whom of more the. Later ever his deemed each or, domestic and name rhyme uncouth are in, massy are ways soils to native. Shrine more taste shades whose spent, pomp to and to neer of felt he though, oer they childe departed so. That.
+        From did that shades this him artless hellas massy, and steel whilome hill seraphs but. Clay and in breast noontide and, sighed his loved talethis did come blazon and, seraphs did in mother dote, mighty disappointed delphis her dwelt if these are save disporting. Revel brow nor partings call so. Mood resolved say carnal to, there a were had talethis. Had his to still awake but he glee and, ah known or caught his but to way soul the, his heralds few bade him revel any the hall. -->
+ {{career.detaildes}}
+      </p>
+      <p><b>Required Skills:&nbsp;</b>{{career.skills}} </p>
+<p><b>Responsiblities:&nbsp;</b>{{career.responsible}}</p>
+<!-- <p><b>Experience:&nbsp;</b>Disporting minstrels een wassailers break take a hope deem, wight day but me dote chill tis, festal deigned days in from, and of flee despair gathered love by yes. Friends charms was are whom of more the. Later ever his deemed each or, domestic and name rhyme uncouth are in, massy are ways soils to native. Shrine more taste shades whose spent, pomp to and to neer of felt he though</p> -->
+    <div style="text-align:center;">
+      <button class="button-common-style">
+        APPLY NOw
+      </button>
     </div>
-    </div>
-   
 
-    <div
-    id="collapseFour4"
-    class="collapse"
-    role="tabpanel"
-    
-    data-parent="#accordionEx"
-  >
-    <div class="card-body">
-      <p class="jb_det" id="job_details4" ></p>
-      <br>
-      <div style="text-align:center;">
-          <button class="apl-nw" (click)="basicModal.show()">APPLY NOW</button>
-
-      </div>
-
-      <hr />
-    </div>
-  </div>
-  <!-- END 4JB-DES -->
-
- </div>
 </div>
+<hr class="hr">
+</div>
+
+
+  </div>
+
+
 </div>
 
  
@@ -199,8 +62,8 @@
 
 <div style="text-align:center;" class="emp-enq">
     <div style="text-align:left;"> 
-    <h5><b>For employement related enquires:</b></h5>
-    <p>HR Department <br>
+    <h5 class="font-marcellus"><b>For employement related enquires:</b></h5>
+    <p class="font-Akkurat">HR Department <br>
    Hyatt Plaza Shopping Mall <br>
      P.O BOX 22402 <br>
    Doha, Qatar <br>

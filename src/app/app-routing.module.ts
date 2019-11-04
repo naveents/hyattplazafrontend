@@ -85,10 +85,9 @@ const routes: Routes = [
     component: EventDetailComponent
   },
   {
-    path: 'guest-services',
+    path: 'guestservices',
     component: GuestservicesComponent
   },
- 
   {
     path: 'media/media-images/:id',
     component: MediaImagesComponent
@@ -110,7 +109,7 @@ const routes: Routes = [
     component: CareerComponent
   },
   {
-    path:'terms',
+    path: 'terms',
     component: TermsComponent,
   },
   {

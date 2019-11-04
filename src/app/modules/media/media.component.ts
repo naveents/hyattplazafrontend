@@ -78,20 +78,19 @@ export class MediaComponent implements OnInit {
 
   }
   showTab = 1;
-  tabToggle(index){
-    this.showTab =index;
+  tabToggle(index) {
+    this.showTab = index;
   }
 
   loadGalleryAlbums()
   {
     this.homeService.getGallery(localStorage.getItem('lang'), 'gallery')
     .subscribe(gallery => {
-      this.galleryData = gallery;     
+      this.galleryData = gallery;
       this.galleryDataLoaded = true;
     });
 
   }
-
   loadNews()
   {
     this.homeService.getNewsAndEvents(localStorage.getItem('lang'), 0, 15, 'news')
@@ -102,6 +101,5 @@ export class MediaComponent implements OnInit {
     });
 
   }
-   
 
 }

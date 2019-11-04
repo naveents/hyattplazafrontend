@@ -1,8 +1,12 @@
 .gmap_canvas{
-    width: 500px !important;
+    // width: 500px !important;
     max-height: 480px !important;
-     
+    float: center  !important;
     height: auto;
+}
+iframe{
+    width: 100%;
+    float: center  !important;
 }
 
 
@@ -237,4 +241,33 @@ and (min-width : 1920px) {
     margin-top: 95px !important;
 }
  
+}
+
+@media only screen 
+and (max-width : 777px) {
+    .cont-us{
+        display: grid !important;
+        grid-template-columns: repeat(1 , auto) !important;
+        // grid-template-rows: 5fr;
+    }
+    .gmap_canvas{
+        width: 100% !important;
+        max-height: 480px !important;
+         
+        height: auto;
+    }
+    .map{
+        // max-width: 255px !important;
+    }
+    iframe {
+    
+    }
+    .item1, .item3{
+        display: none;
+    }
+    .form-sep{
+        margin-left:11px  ;
+        margin-top: 10%;
+    }
+
 }

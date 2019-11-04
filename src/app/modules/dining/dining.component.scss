@@ -309,6 +309,11 @@
 
 @media screen and (max-width: 777px)
 {
+
+    .banner-search{
+        display: none !important;
+    }
+
     .image-caption-small, .image-caption-elarge, .image-caption-large{
         padding-left: 10% !important;
         padding-top: 25% !important;

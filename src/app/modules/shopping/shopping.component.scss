@@ -322,3 +322,29 @@
 .border-box img{
     max-width: 100%;
 }
+
+@media only screen 
+and (max-width : 777px) { 
+.banner-search, .category-image, .category-button-separator{
+    display: none !important;
+}
+.category-image-shadow {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.categories {
+    margin-top: 14%;
+
+}
+.btn {
+width:140px !important;
+height: 44px !important;
+}
+.category-button-black, .category-button-white{
+    padding: 0 !important;
+    margin-top: 7% !important;
+    margin-bottom: 3% !important;
+
+}
+}
+

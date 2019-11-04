@@ -4,7 +4,7 @@
       <span class="link-icon"
         ><img src="../../../../assets/icons/location.png"
       /></span>
-      <span class="link-text">STORE LOCATION</span>
+      <span class="link-text"><a class="urls" href="http://socialynerds.com/store-location/">STORE LOCATION</a></span>
     </div>
     <div class="link">
       <span class="link-icon"
@@ -21,19 +21,26 @@
       <span class="link-text"><a class="urls" href="/leasing"> LEASING</a></span>
     </div>
     <div class="link">
+      <span class="link-icon"><img src="http://wildherbstechnologies.com/demos/hyattplaza-beta-version/assets/icons/crown.svg"></span>
+      <span class="link-text"><a class="urls" href="vipcard">VIP CARD </a> </span>
+    </div>
+    <div class="link">
       <span class="link-icon"
         ><img src="../../../../assets/icons/gift.png"
       /></span>
       <span class="link-text"><a class="urls" href="/gift-voucher">GIFT</a></span>
     </div>
     <div class="link-icon-section">
+        <span class="link-text"><a class="urls" href="tel:44999666">44999666</a></span> &nbsp;   
       <span class="link-icon"
         ><a class="urls" href="/contact">
         <img src="../../../../assets/icons/lnr-phone-handset.png"
       /></a></span>
-      <span class="link-icon"
-        ><img src="../../../../assets/icons/header-separator.png"
-      /></span>
+      
+      <!-- <span class="link-icon"
+        > <img src="../../../../assets/icons/header-separator.png"
+      /></span> -->
+       
       <!-- <span class="link-icon"><img src="../../../../assets/icons/hindi.png"></span> -->
       <!-- <a class="link-text" (click)="changeLang('en')"> English </a> |
       <a (click)="changeLang('ar')">
@@ -64,7 +71,7 @@
 
           <div class="menu-primary">
             <ul>
-              <li class="item" *ngFor="let menu of topMenu">
+              <li class="item cool-link" *ngFor="let menu of topMenu">
                 <a class="nav-hed" href="{{ menu.menuKey }}">{{
                   menu.menuName
                 }}</a>

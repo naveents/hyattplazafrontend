@@ -8,15 +8,22 @@
           </div>           
 </div>
 
-
+<div class="pad-btm">
 
 <div class="grid-col" *ngIf="albumImagesLoaded">
-        <div *ngFor="let image of albumImages.data" class="item">
+        <div *ngFor="let image of albumImages.data; let i=index" class="item">
             <img
-              class="mens_fasion_img"
+              class="mens_fasion_img common-img-height"
               src="{{ image.gallery_image }}"
               style="width:100%;"
+              (click)="open(i)"
             />           
           </div> 
-        
+        <div class="clearfix"></div>
 </div>
+</div>
+
+<div class="clearfix"></div>
+<br>
+<br>
+<br>

@@ -46,6 +46,17 @@
 
 }
 
+.button-common-style:hover{ 
+
+    background: #fff !important;
+    color: #000 !important;
+    a{
+    color: #000 !important;
+    }
+  
+  }
+
+
     // StoriesIMAGE
     .stories-images {
         margin:1px 0 0 0;
@@ -232,3 +243,5 @@
              border: 1px solid #000000 !important;
              color: #000000 !important;
          }
+
+  

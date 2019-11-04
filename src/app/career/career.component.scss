@@ -1,104 +1,53 @@
+ 
 
-.con , h4, h3 {
-    text-transform: uppercase;
-    font-family: Marcellus-regular;
-    font-weight: 100;
+.career-job-section{
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 22px;
+    margin-bottom: 22px;
 
-}
-.jb_det{
-    font-size: 16px;
-    font-weight: 500;
+ 
 }
 
 p{
-    font-family: Akkurat-Light;
-   
+    font-family: Akkurat;
+
+}
+.job-full-detail {
+    // display: none;
 }
 
-
-.apply-pos{
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-bottom: 22px;
+// NEW JOB POST 
+.job-post {
+    height: 600PX;
+    overflow-y: scroll;
+    width: 100%;
+    // height: 33px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;
 }
- 
-.scrollspy-example{
-
-    height: 666px !important
+.short-job-des, .job-full-detail, .job-title, .hr {
+margin-top: 22px;
+margin-left: 22px;
+margin-right: 22px;
+margin-bottom: 22px;
 }
 
-
-.btn{
-   border: 1px solid black;
-float:  right !important;
-color: black;
-width: 188px;
+.emp-enq {
+    display: flex;
+    justify-content: center;
 }
- 
-.apl-nw{
-    width: 188px;
-    border: 1px solid black;
-    background: white;
+
+.button-common-style{
+    border:1px solid black !important;
     color: black;
-    height: 44px;
-}
-.apl-nw:hover{
-    background: black;
-    color: white;
-}
-
-
-// ALERTBOX
-
-.modal-body{
-    padding: 0 !important;
-    margin-top: 11px;
-    margin-left: 22px;
-    margin-right: 22px;
-    
-
-  }
-  .modal-content{
-      border: 1px solid;
-  }
-
-  .table th, .table td {
-    padding: 0.75rem;
-    vertical-align: top;
-    border-top: 0px solid #dee2e6;
+    background: #fff !important;
 
 }
-.btn-alert {
-    width: 188px;
-    height: 40px;
-    background: black;
-    color: white;
-     
-    margin-top: 8px;
-    margin-bottom: 14px;
+.button-common-style:hover{
+background: #000 !important;
+color: #fff !important;
 }
 
-.custom-file-input:lang(en)~.custom-file-label::after {
-    content: "Choose file";
-    background: white;
-    
-
-}
- 
-td {
-    width: 155px !important;
-    height: 33px !important;
-     
-}
-
-.al-in{
-    height: 40px;
-}
-
-// END ALERTBOX
-
-.emp-enq{
-    margin-top: 18px;
-    margin-left: 40%;
-    margin-bottom: 22px;
+.hr{
+    margin-top: 77px ;
 }

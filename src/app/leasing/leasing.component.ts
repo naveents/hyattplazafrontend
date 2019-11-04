@@ -19,7 +19,7 @@ export class LeasingComponent implements OnInit {
   constructor(
     private pageService: PageService,
     private cd: ChangeDetectorRef
-    ) { }
+  ) { }
 
   ngOnInit() {
 
@@ -34,10 +34,11 @@ export class LeasingComponent implements OnInit {
       name: new FormControl(null, Validators.required),
       mobileNumber: new FormControl(null, Validators.required),
       attachment: new FormControl(null)
-  });
+    });
 
     this.pageService.getPageBanner('leasing', localStorage.getItem('lang'))
       .subscribe(response => {
+        console.log(response);
         this.banner = response.data.cover;
         this.pageTitle = response.data.title;
       });
@@ -47,16 +48,13 @@ export class LeasingComponent implements OnInit {
 
     /*
     let reader = new FileReader();
-   
     if(event.target.files && event.target.files.length) {
       const [file] = event.target.files;
       reader.readAsDataURL(file);
-    
       reader.onload = () => {
         this.leasingForm.patchValue({
           attachment: reader.result
-        });        
-        
+        });
         this.cd.markForCheck();
       };
     }
@@ -67,9 +65,8 @@ export class LeasingComponent implements OnInit {
     }
   }
 
-  onSubmit()
-  {
-    if(this.leasingForm.valid) {
+  onSubmit() {
+    if (this.leasingForm.valid) {
       const formData = new FormData();
       formData.append('attachedProfile', this.leasingForm.get('attachment').value);
       formData.append('type', this.leasingForm.get('leasingType').value);
@@ -83,12 +80,10 @@ export class LeasingComponent implements OnInit {
       formData.append('mobileNumber', this.leasingForm.get('mobileNumber'));
       this.pageService.postLeasingForm(formData).subscribe(
         response => {
-          console.log (response);
+          console.log(response);
         }
       );
-    }
-    else 
-    {
+    } else {
       console.log('Invalid Form');
     }
 
