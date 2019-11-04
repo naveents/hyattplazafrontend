@@ -6,7 +6,9 @@ import {
    HomeService,
    CommonService,
    GenericPageService,
-   HyattShopService } from './services';
+   HyattShopService,
+   HyattEventService
+   } from './services';
 import { HttpClientModule } from '@angular/common/http';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpDefaultInterceptor } from './interceptors/http.default.interceptor';
@@ -23,7 +25,8 @@ import { HttpDefaultInterceptor } from './interceptors/http.default.interceptor'
     CommonService,
     GenericPageService,
     HyattShopService,
-    PageService
+    PageService,
+    HyattEventService
   ],
   declarations: []
 })

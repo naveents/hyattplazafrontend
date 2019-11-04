@@ -81,7 +81,7 @@ const routes: Routes = [
     component: EntertainmentDetailComponent
   },
   {
-    path: 'event-detail',
+    path: 'events/detail/:id',
     component: EventDetailComponent
   },
   {
