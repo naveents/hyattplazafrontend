@@ -8,65 +8,23 @@ import { CommonService, GenericPageService, HomeService } from '../../core';
 })
 export class MediaComponent implements OnInit {
 
-  blogs = [
-    {
-      img:'assets/hyattplaza-images/9.png',
-      time: '3 Jan 1998',
-      des: 'Enjoy 20% off discount on all purchases. Gubergren sed vero ea duo labore no labore stet et eos, Diam duo et sit sit dolores.'
-    },
-    {
-      img:'assets/hyattplaza-images/3.png',
-
-      time: '3 May 1998',
-      des: 'Enjoy 20% off discount on all purchases. Gubergren sed vero ea duo labore no labore stet et eos, Diam duo et sit sit dolores.'
-    },
-    {
-      img:'assets/hyattplaza-images/10.png',
-
-      time: '22 Jan 2019',
-      des: 'Enjoy 20% off discount on all purchases. Gubergren sed vero ea duo labore no labore stet et eos, Diam duo et sit sit dolores.'
-    },
-    {
-      img:'assets/hyattplaza-images/9.png',
-
-      time: '22 Jan 2019',
-      des: 'Enjoy 20% off discount on all purchases. Gubergren sed vero ea duo labore no labore stet et eos, Diam duo et sit sit dolores.'
-    },
-    {
-      img:'assets/hyattplaza-images/shopping/cat3.png',
-
-      time: '22 Jan 2019',
-      des: 'Enjoy 20% off discount on all purchases. Gubergren sed vero ea duo labore no labore stet et eos, Diam duo et sit sit dolores.'
-    },
-    {
-      img:'assets/hyattplaza-images/10.png',
-
-      time: '22 Jan 2019',
-      des: 'Enjoy 20% off discount on all purchases. Gubergren sed vero ea duo labore no labore stet et eos, Diam duo et sit sit dolores.'
-    },
-    
-  ]
-  
-
-
-
-
-  pageBanner: any = [];
-  pageBannerLoaded: boolean = false;
-  galleryData: any = [];
-  galleryDataLoaded: boolean = false;
-  newsData: any = [];
-  newsDataLoaded: boolean = false;
-
   constructor(
      private commonService: CommonService,
      private genericService: GenericPageService,
      private homeService: HomeService
      ) { }
 
+  pageBanner: any = [];
+  pageBannerLoaded = false;
+  galleryData: any = [];
+  galleryDataLoaded = false;
+  newsData: any = [];
+  newsDataLoaded = false;
+  showTab = 1;
+
   ngOnInit() {
 
-    this.commonService.getPageBanner('media')
+    this.commonService.getPageBanner('gallery')
         .subscribe(banner => {
           this.pageBanner = banner.data;
           this.pageBannerLoaded = true;
@@ -77,13 +35,11 @@ export class MediaComponent implements OnInit {
     this.loadNews();
 
   }
-  showTab = 1;
   tabToggle(index) {
     this.showTab = index;
   }
 
-  loadGalleryAlbums()
-  {
+  loadGalleryAlbums() {
     this.homeService.getGallery(localStorage.getItem('lang'), 'gallery')
     .subscribe(gallery => {
       this.galleryData = gallery;
@@ -91,8 +47,7 @@ export class MediaComponent implements OnInit {
     });
 
   }
-  loadNews()
-  {
+  loadNews() {
     this.homeService.getNewsAndEvents(localStorage.getItem('lang'), 0, 15, 'news')
     .subscribe(res => {
       this.newsData = res.data;

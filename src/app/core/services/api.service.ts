@@ -28,6 +28,7 @@ export class ApiService {
   }
 
   post(path: string, body: Object = {}): Observable<any> {
+    console.log( JSON.stringify(body) );
     return this.http.post(
       `${environment.api_url}${path}`,
       JSON.stringify(body)
@@ -39,4 +40,12 @@ export class ApiService {
       `${environment.api_url}${path}`
     ).pipe(catchError(this.formatErrors));
   }
+
+  formDataPost(path: string, body: any): Observable<any> {    
+       return this.http.post(
+      `${environment.api_url}${path}`,
+      body
+    ).pipe(catchError(this.formatErrors));
+  }
+
 }

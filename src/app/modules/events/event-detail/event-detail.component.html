@@ -1,27 +1,24 @@
-<div class="page-banner">
-    <!-- <img src="/assets/images/cat-01.png" class="banner-image"> -->
-  <img src="assets/hyattplaza-images/events/banner.png" class="banner-image original-size" >  
-  
-    <div class="banner-box-shadow">
-      <div class="banner-title">
-      EVENT DETAIL
-      </div>
+<div class="page-banner" *ngIf="eventDetail[0]">
+  <img *ngIf="pageBanner" src="{{ (pageBannerLoaded ? pageBanner.cover : '') }}" class="banner-image" />
+  <div class="banner-box-shadow">
+    <div class="banner-title">
+      {{ eventDetail[0].name }}
     </div>
-     
   </div>
+</div>
 
 
-  <div class="s-b-s">
+  <div class="s-b-s" *ngIf="eventDetail[0]">
 
       <div class="item brd">
-        <h3 class="ev-hed" style="text-align:center;"><b>{{events[0].events_heading}} </b> </h3>
+        <h3 class="ev-hed" style="text-align:center;"><b>{{ eventDetail[0].title }} </b> </h3>
         <div class="in-li-mr" style="text-align:left;">
-            <p class="inli"><span class="lnr lnr-calendar-full">&nbsp;{{events[0].event_date}}&nbsp; &nbsp; |</span></p> 
-       <p class="inli"><span class="lnr lnr-clock"> {{events[0].event_time}} &nbsp; &nbsp; |</span></p>
-       <p class="inli"><span class="lnr lnr-map-marker"> {{events[0].event_location}}</span></p>
+            <p class="inli"><span class="lnr lnr-calendar-full">&nbsp;{{ eventDetail[0].startEndDate }}&nbsp; &nbsp; |</span></p> 
+       <p class="inli"><span class="lnr lnr-clock">{{ eventDetail[0].startEndTime }} &nbsp; &nbsp; |</span></p>
+       <p class="inli"><span class="lnr lnr-map-marker"> {{ eventDetail[0].location }}</span></p>
       
      </div>
-     <p>{{events[0].events_details}}</p>
+     <p>{{ eventDetail[0].description }}</p>
      <div class="icon-sh" style="text-align:left;">
        <h6><b>Share: &nbsp;</b>  
      
@@ -75,7 +72,7 @@
      
        <div class="img1">
            <div style="text-align:center;">
-         <img class="ev-img" src="{{events_images[0].event_img}}" style="width:100%;" >
+         <img class="ev-img" src="{{ eventDetail[0].event_vipcard }}" style="width:100%;" >
          
             
            <div class="text-block" style="text-align:center;">

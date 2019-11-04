@@ -18,8 +18,8 @@
     <div class="timing-records container">
       <div class="row">
         <div class="col record" *ngFor="let shop of shopOpenHours;let i=index">
-          <div class="timing-title">{{shop.shopName}}</div>
-          <div class="timing-schedule">{{shop.openHours}}</div>
+          <div class="timing-title">{{shop.name}}</div>
+          <div class="timing-schedule">{{shop.time}}</div>
         </div>
       </div>
     </div>
@@ -28,7 +28,7 @@
 
 <div class="home-images container" *ngIf="homeCategories.data">
   <div class="row home-mb-section ">
-    <div class="col-7 home-mb-section-sub">
+    <div class="col-7 home-mb-section-sub" routerLink="/shopping">
       <img src="{{ homeCategories.data[0].image }}">
       <div class="home-image-content" style="background-image: url('/assets/icons/home-gradient-1.png');background-size: cover;">
         <div class="image-caption image-caption-large">
@@ -38,7 +38,7 @@
         </div>
       </div>
     </div>
-    <div class="col-5 home-mb-section-sub">
+    <div class="col-5 home-mb-section-sub" routerLink="/dining">
       <img src="{{ homeCategories.data[1].image }}">
       <div class="home-image-content" style="background-image: url('/assets/icons/home-gradient-2.png');background-size: cover;">
         <div class="image-caption image-caption-small">
@@ -50,7 +50,7 @@
     </div>
   </div>
   <div class="row home-mb-section">
-    <div class="col-5 home-mb-section-sub ">
+    <div class="col-5 home-mb-section-sub" routerLink="/events">
       <img src="{{ homeCategories.data[2].image }}">
       <div class="home-image-content" style="background-image: url('/assets/icons/home-gradient-2.png');background-size: cover;">
         <div class="image-caption image-caption-small">
@@ -60,7 +60,7 @@
         </div>
       </div>
     </div>
-    <div class="col-7 home-mb-section-sub">
+    <div class="col-7 home-mb-section-sub" routerLink="/offers">
       <img src="{{ homeCategories.data[3].image }}">
       <div class="home-image-content" style="background-image: url('/assets/icons/home-gradient-1.png');background-size: cover;">
         <div class="image-caption image-caption-large">
@@ -72,7 +72,7 @@
     </div>
   </div>
   <div class="row home-mb-section ">
-    <div class="col-12 home-mb-section-sub ">
+    <div class="col-12 home-mb-section-sub " routerLink="/entertainment">
       <img src="{{ homeCategories.data[4].image }}">
       <div class="home-image-content" style="background-image: url('/assets/icons/home-gradient-3.png');background-size: cover;">
         <div class="image-caption image-caption-elarge">

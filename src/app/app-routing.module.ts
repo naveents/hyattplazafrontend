@@ -77,11 +77,11 @@ const routes: Routes = [
     component: LeasingComponent
   },
   {
-    path: 'entertainment-detail',
+    path: 'entertainment/detail/:id',
     component: EntertainmentDetailComponent
   },
   {
-    path: 'event-detail',
+    path: 'events/detail/:id',
     component: EventDetailComponent
   },
   {

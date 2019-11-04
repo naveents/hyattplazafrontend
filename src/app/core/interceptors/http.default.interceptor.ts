@@ -9,8 +9,9 @@ export class HttpDefaultInterceptor implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const headersConfig = {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
+     // 'Content-Type': 'multipart/form-data;boundary='+Math.random(),
+    //  'Content-Type': 'application/json',
+    //  'Accept': 'application/json'
     };
     
     const request = req.clone({ setHeaders: headersConfig });

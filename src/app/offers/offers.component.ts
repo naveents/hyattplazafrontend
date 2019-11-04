@@ -35,11 +35,8 @@ export class NgbdModalContent {
   @Input() offerImage;
   @Input() offerSubtitle;
   @Input() offerTitle;
-@Input() offerStore;
+  @Input() offerStore;
   @Input() offerDescription;
-
-
-
 
   constructor(public activeModal: NgbActiveModal, private router: Router) {}
   gotoStore(store) {
@@ -55,12 +52,13 @@ export class NgbdModalContent {
 })
 export class OffersComponent implements OnInit {
 
-  constructor(private pageService: PageService,
+  constructor(
+    private pageService: PageService,
     private modalService: NgbModal) { }
-  offers: any = [];
-  banner = '';
-  pageTitle = '';
-  ngOnInit() {
+    offers: any = [];
+    banner = '';
+    pageTitle = '';
+   ngOnInit() {
 
     this.pageService.getPageBanner('offers', localStorage.getItem('lang'))
       .subscribe(response => {

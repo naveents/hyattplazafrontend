@@ -22,7 +22,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AboutComponent } from './about/about.component';
 import { CareerComponent } from './career/career.component';
- 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,8 +37,7 @@ import { CareerComponent } from './career/career.component';
     ContactComponent,
     AboutComponent,
     CareerComponent,
-    NgbdModalContent,
- 
+    NgbdModalContent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +50,9 @@ import { CareerComponent } from './career/career.component';
     AngularFontAwesomeModule,
     RouterModule,
     CommonModule,
-    LightboxModule
+    LightboxModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

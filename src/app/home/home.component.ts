@@ -1,3 +1,4 @@
+import { PageService } from './../core/services/page.service';
 import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { HomeService } from '../core';
@@ -12,48 +13,18 @@ import { Subscription } from 'rxjs';
 export class HomeComponent implements OnInit {
 
   currentSlideNum = 0;
-
-  gallery : any;
-
-
+  gallery: any;
   showNavigationIndicators = false;
-
   topBanners: any = [];
-  topBannerLoaded: boolean = false;
-
-
-  homeCategories: any =[];
-  homeCategoryLoaded: boolean = false;
-
+  topBannerLoaded = false;
+  homeCategories: any = [];
+  homeCategoryLoaded = false;
   newsData: any = [];
-  newsDataLoaded: boolean = false;
+  newsDataLoaded = false;
 
-  galleryData: any =[];
-  galleryDataLoaded: boolean = false;
-
-  shopOpenHours = [
-    {
-      'shopName': 'Geant Hypermarket',
-      'openHours': '12:30 PM - 5:30 PM'
-    },
-    {
-      'shopName': 'Retail Outlets',
-      'openHours': '02:30 PM - 8:30 PM'
-    },
-    {
-      'shopName': 'Food Court',
-      'openHours': '09:00 AM - 8:30 PM'
-    },
-    {
-      'shopName': 'F&B Outlets',
-      'openHours': '02:30 PM - 8:30 PM'
-    },
-    {
-      'shopName': 'Cafes',
-      'openHours': '09:00 AM - 8:30 PM'
-    },
-  ];
-
+  galleryData: any = [];
+  galleryDataLoaded = false;
+  shopOpenHours: any = [];
 
   slideConfig = {
     dots: false,
@@ -61,8 +32,6 @@ export class HomeComponent implements OnInit {
     speed: 4000,
     slidesToShow: 3,
     slidesToScroll: 3,
-    //  nextArrow: '<i class="fal fa-chevron-right"></i>',
-    // prevArrow: '<a class="carousel-control-prev" role="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span><span class="sr-only">Prev</span></a>',
   };
   slideConfigmobile = {
     dots: false,
@@ -70,12 +39,10 @@ export class HomeComponent implements OnInit {
     speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    //  nextArrow: '<i class="fal fa-chevron-right"></i>',
-    // prevArrow: '<a class="carousel-control-prev" role="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span><span class="sr-only">Prev</span></a>',
   };
 
 
-  constructor(config: NgbCarouselConfig, private homeService: HomeService) {
+  constructor(config: NgbCarouselConfig, private homeService: HomeService, private pageService: PageService) {
     // customize default values of carousels used by this component tree
     config.interval = 10000;
     config.wrap = true;
@@ -89,10 +56,10 @@ export class HomeComponent implements OnInit {
     this.loadCategories();
     this.loadNews();
     this.loadGalleryData();
+    this.getShopTiming();
   }
 
-  loadBanners()
-  {
+  loadBanners() {
     this.homeService.getHomeBanners(localStorage.getItem('lang'))
       .subscribe(banners => {
         this.topBanners = banners;
@@ -100,13 +67,19 @@ export class HomeComponent implements OnInit {
       });
   }
 
-  loadCategories()
-  {
+  getShopTiming() {
+    this.pageService.getShopTiming(localStorage.getItem('lang'))
+      .subscribe(shopTiming => {
+        this.shopOpenHours = shopTiming.data;
+      });
+  }
+
+  loadCategories() {
     this.homeService.getHomeCategories(localStorage.getItem('lang'))
     .subscribe(categories => {
       this.homeCategories = categories;
       this.homeCategoryLoaded = true;
-    }); 
+    });
   }
 
   loadNews(page: number = 1, limit: number = 6)

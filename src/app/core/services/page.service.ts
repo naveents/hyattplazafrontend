@@ -36,9 +36,8 @@ export class PageService {
       .pipe(map(data => data));
   }
 
-  postLeasingForm(formData: any)
-  {
-    return this.apiService.post (
+  postLeasingForm(formData) {
+    return this.apiService.formDataPost (
       '/Category/LeasingMail', formData
     );
   }
@@ -50,6 +49,26 @@ export class PageService {
 
   getRelatedNewsDetail(newsID: number = 0, lang: string = 'en'): Observable<any> {
     return this.apiService.get('/News/loadRelatedNews?language=' + lang + '&newsID=' + newsID )
+      .pipe(map(data => data));
+  }
+
+  getCMSContent(field: string = '', lang: string = 'en'): Observable<any> {
+    return this.apiService.get('/Brands/cmsContentShow?language=' + lang + '&field=' + field )
+      .pipe(map(data => data));
+  }
+
+  getHistory(lang: string = 'en'): Observable<any> {
+    return this.apiService.get('/Category/history?language=' + lang )
+      .pipe(map(data => data));
+  }
+
+  getMarketingData(lang: string = 'en'): Observable<any> {
+    return this.apiService.get('/Category/history?language=' + lang )
+      .pipe(map(data => data));
+  }
+
+  getShopTiming(lang: string = 'en'): Observable<any> {
+    return this.apiService.get('/ShopTimings/loadShopTimings?language=' + lang )
       .pipe(map(data => data));
   }
 }

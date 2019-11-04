@@ -48,7 +48,11 @@
     float: left;
     margin-right: 100px;
 }
- 
+.round span{
+    margin-left: -7px;
+    position: absolute;
+    top: 19px;
+} 
 
 .round::before {
     content: "";
@@ -173,4 +177,7 @@
    
     border:1px solid #000 !important;
     color: #fff !important;
+}
+.slick-slide{
+    outline: none;
 }

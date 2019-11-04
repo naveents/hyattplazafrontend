@@ -26,7 +26,7 @@ export class MediaImagesComponent implements OnInit {
 
   ngOnInit() {
 
-    this.commonService.getPageBanner('media')
+    this.commonService.getPageBanner('gallery')
         .subscribe( banner  => {
           this.pageBanner = banner.data;
           this.pageBannerLoaded = true;
