@@ -1,21 +1,18 @@
-<div class="page-banner">
-    <!-- <img src="/assets/images/cat-01.png" class="banner-image"> -->
-  <img src="assets/hyattplaza-images/blog/banner2.png" class="banner-image original-size" >  
-  
-    <div class="banner-box-shadow">
-      <div class="banner-title">
-      BLOG
-      </div>
+<div class="page-banner" *ngIf="blogDetail[0]">
+  <img *ngIf="pageBanner" src="{{ (pageBannerLoaded ? pageBanner.cover : '') }}" class="banner-image original-size" />
+  <div class="banner-box-shadow">
+    <div class="banner-title">
+      {{ blogDetail[0].title }}
     </div>
-     
   </div>
+</div>
 
   <div class="division">
 
-    <div class="main-blog brd">
-<h2><b>{{main_blog[0].title}}</b></h2>
-<p><b> {{main_blog[0].author}}</b></p>
-<p>{{main_blog[0].blog_des}}</p>
+<div class="main-blog brd" *ngIf="blogDetail[0]">
+<h2><b>{{ blogDetail[0].title }}</b></h2>
+<p><b> {{ blogDetail[0].author }}</b></p>
+<p>{{ blogDetail[0].posted }}</p>
 
 <div class="categories-slider">
     <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
@@ -30,17 +27,10 @@
           </div>
       </div>
     </ngx-slick>
-    <p class="txt">Erat erat dolor At sanctus lorem voluptua sed sea et, est justo no justo rebum eos, ut amet amet sadipscing vero dolore diam.. lorem clita lorem clita magna amet takimata. Diam labore et et sit sed kasd lorem, est sed.</p>
+    <p class="txt">{{ blogDetail[0].description }}</p>
   </div>
 
   <h6><b>Share: &nbsp;</b>  
-    <!-- <img class="icon" src="assets/hyattplaza-images/social-media-icons/facebook.png">
-    <img class="icon"  src="assets/hyattplaza-images/social-media-icons/whatsapp.png">
-    <img class="icon"  src="assets/hyattplaza-images/social-media-icons/twitter.png">
-    <img class="icon"  src="assets/hyattplaza-images/social-media-icons/instagram.png">
-    -->
-
-    <!-- SHare -->
 
 <a href="https://www.addtoany.com/add_to/facebook?linkurl=http%3A%2F%2Fwildherbstechnologies.com%2Fdemos%2Fhyattplaza-beta-version%2Fevents&amp;linkname=HyattPlaza%20events" target="_blank"> <img class="icon" src="assets/hyattplaza-images/social-media-icons/facebook.png"></a>
 <a href="https://www.addtoany.com/add_to/whatsapp?linkurl=http%3A%2F%2Fwildherbstechnologies.com%2Fdemos%2Fhyattplaza-beta-version%2Fevents&amp;linkname=HyattPlaza%20events" target="_blank">
@@ -53,25 +43,10 @@
 <a href="https://www.instagram.com/hyattplaza/" target="_blank">
  <img class="icon"  src="assets/hyattplaza-images/social-media-icons/instagram.png">
  </a>
-<!-- END SHARE -->
-
-    <!-- <i class="fab fa-whatsapp-square"></i>
-    <i class="fab fa-facebook"></i>
-    <i class="fab fa-twitter"></i>
-    <i class="fab fa-instagram"></i> -->
   </h6>
-    </div>
+</div>
     
- 
-
-    
-    
-    
-    
-    <div class="related-blog">
-         
-        
-
+<div class="related-blog">       
 <h4>Related Blogs</h4>
 <div class="rl-bg-rw">
      
