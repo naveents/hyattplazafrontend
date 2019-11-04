@@ -19,9 +19,8 @@
                   <div class="ev-image-caption-large">
                     <p class="ev-tag">{{featuredItems[0].name}}</p>
                     <p class="ev-title" innerHTML="{{featuredItems[0].title}}"></p>
-                    <a routerLink="events_details"> 
-          <button class="link-button button-common-style" type="button"  mdbWavesEffect> EXPLORE more</button>
-
+                    <a [routerLink] = "['detail', featuredItems[0].id]"> 
+                    <button class="link-button button-common-style" type="button"  mdbWavesEffect> EXPLORE more</button>
                     </a> 
                   </div>
                 </div>
@@ -34,7 +33,7 @@
                   <div class="ev-image-caption-small">
                     <p class="ev-tag">{{featuredItems[1].name}}</p>
                     <p class="ev-title" innerHTML="{{featuredItems[1].title}}"></p>
-                  <a routerLink="events_details"> 
+                  <a [routerLink] = "['detail', featuredItems[1].id]"> 
           <button class="link-button button-common-style" type="button"  mdbWavesEffect> EXPLORE more</button>
 
                   </a> 
@@ -51,7 +50,7 @@
                   <div class="ev-image-caption-small">
                     <p class="ev-tag">{{featuredItems[2].name}}</p>
                     <p class="ev-title" innerHTML="{{featuredItems[2].title}}"></p>
-                    <a routerLink="events_details"> 
+                    <a [routerLink] = "['detail', featuredItems[2].id]"> 
           <button class="link-button button-common-style" type="button"  mdbWavesEffect> EXPLORE more</button>
 
                     </a> 
@@ -66,7 +65,7 @@
                   <div class="ev-image-caption-large">
                     <p class="ev-tag">{{featuredItems[3].name}}HELEOSDA</p>
                     <p class="ev-title" innerHTML="{{featuredItems[3].title}}"></p>
-                    <a routerLink="stay-updated"> 
+                    <a [routerLink] = "['detail', featuredItems[3].id]"> 
           <button class="link-button button-common-style" type="button"  mdbWavesEffect> EXPLORE more</button>
 
                     </a> 

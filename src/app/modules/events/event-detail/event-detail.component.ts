@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { CommonService, HyattEventService } from 'src/app/core';
 
 @Component({
   selector: 'app-event-detail',
@@ -8,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class EventDetailComponent implements OnInit {
 
 
+  eventId: number;
   events = [
     {
       event_date:'01/04/2019- 05/05/2019',
@@ -59,8 +62,10 @@ export class EventDetailComponent implements OnInit {
       image: 'assets/hyattplaza-images/events/2.png'
     }
   ];
- 
 
+  pageBanner: Array<string> = [];
+  pageBannerLoaded: boolean = true;
+  eventDetail: Array<string> = [];
  
 
   slideConfig = {
@@ -72,9 +77,33 @@ export class EventDetailComponent implements OnInit {
   };
 
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private commonService: CommonService,
+    private eventService: HyattEventService
+    ) { }
 
   ngOnInit() {
+    this.activatedRoute.params.subscribe(routeParams => {
+      this.eventId = routeParams.id;
+      this.loadEventDetail();
+  });
+
+  this.commonService.getPageBanner('events')
+      .subscribe(banner => {
+      this.pageBanner = banner.data;
+      this.pageBannerLoaded = true;
+  });
+  }
+
+  loadEventDetail()
+  {
+
+    this.eventService.getEventDetail( this.eventId, localStorage.getItem('lang'))
+        .subscribe( event => {
+            this.eventDetail = event.data;
+        });
   }
 
 }
